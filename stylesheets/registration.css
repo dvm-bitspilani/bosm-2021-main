@@ -26,7 +26,8 @@ body {
     height: 90vh;
     background-color: #FF2748;
     padding: 2% 5% 4%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .registration-container>h1 {
