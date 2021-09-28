@@ -1,14 +1,15 @@
 @font-face {
-      font-family: "BlackChancery";
-      src: url("../fonts/blackchancery/BLKCHCRY.TTF");
+      font-family: "anurati";
+      src: url("../fonts/anurati/Anurati-Regular.otf");
 }
+
 
 body {
       overflow: hidden;
       margin: 0;
 }
 .main-section-landing {
-      background: url(../assets/pc/Desktop-3.png) no-repeat;
+      background: url(../assets/pc/new-desktop.png) no-repeat;
       background-size: 100% 100%;
       height: 100vh;
       background-size: cover;
@@ -16,7 +17,16 @@ body {
 
 
 
-
+.main-heading{
+position: absolute;
+bottom: 5%;
+font-size: 6.4rem;
+/* letter-spacing: 0.1em; */
+font-family: 'anurati';
+color: white;
+left: 50%;
+transform: translate(-50%,-50%);
+}
 
 @media (max-width: 768px) {
       .main-div {
