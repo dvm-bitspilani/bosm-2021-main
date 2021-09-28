@@ -99,6 +99,10 @@ select {
 }
 
 
+#name {
+    width: 45%;
+}
+
 /* //////////Radio Buttons ////////// */
 
 
@@ -231,7 +235,7 @@ width: 88%;
         text-align: center;
     }
 
-    .input-column:nth-child(2) {
+    .input-column {
         width: 95%;
     }
 
@@ -268,4 +272,9 @@ width: 88%;
     .input-cell {
         margin: 2.5% 0;
     }
+
+    #name {
+        width: 95%;
+    }
+
 }
