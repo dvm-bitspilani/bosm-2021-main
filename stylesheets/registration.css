@@ -217,7 +217,9 @@ width: 88%;
     .input-row {
         flex-direction: column;
     }
-
+.registration-container{
+    overflow-y: scroll;
+}
     .registration-container>h1 {
         font-size: 2.5rem;
         margin: 0;
@@ -233,19 +235,16 @@ width: 88%;
     }
 
     #register {
-        width: 70%;
-        font-size: 1.5rem;
+        width: unset;
+        font-size: 2rem;
         margin-left: 0;
+        padding: 5%;
+        position: relative;
+        right: 10px;
     }
 
-    .register-wrapper::before {
-
-        height: 40px;
-        width: 70%;
-        right: 35px;
-        bottom: -5px;
-        background-color: #0A322F;
-        border-radius: 3px;
+    .register-button::before {
+display: none;
     }
 
     .input-explanation {

@@ -1,4 +1,43 @@
 
+@font-face {
+  font-family: "affirmative";
+  src: url("../fonts/affirmative/Affirmative.ttf");
+}
+
+*{
+  box-sizing: border-box;
+}
+
+nav *{
+  font-family:  "affirmative";
+}
+
+nav a{
+  color:white;
+  font-size: 30px;
+  padding: 10px 25px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+ 
+}
+
+nav a.active{
+  border: 1px #FF4654 solid;
+  border-radius: 20px;
+  /* padding: 5px 25px 10px; */
+
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+nav div{
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+
   .menu-btn {
     --box-shadow-color: rgba(255, 101, 47, 0.2);
     width: 60px;
@@ -52,6 +91,12 @@
     transform: rotate(-45deg) translate(35px, 35px);
   }
   
+
+
+
+ 
+
+
 
   @media (max-width:768px) {
       
