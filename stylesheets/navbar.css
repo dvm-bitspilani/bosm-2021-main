@@ -12,16 +12,16 @@ nav *{
   font-family:  "affirmative";
 }
 
-nav a{
+nav span{
   color:white;
   font-size: 30px;
   padding: 10px 25px;
   text-decoration: none;
   letter-spacing: 0.1em;
- 
+ cursor: pointer;
 }
 
-nav a.active{
+nav span.active{
   border: 1px #FF4654 solid;
   border-radius: 20px;
   /* padding: 5px 25px 10px; */
