@@ -23,17 +23,19 @@ body {
 
 .registration-container {
     width: 60vw;
-    height: 90vh;
+    height: 85vh;
     background-color: #FF2748;
-    padding: 2% 5% 4%;
+    border-radius: 10px;
+    padding: 2% 5% 1%;
     overflow-x: hidden;
     overflow-y: scroll;
+    opacity: 0.95;
 }
 
 .registration-container>h1 {
     font-family: 'affirmative';
     font-weight: 500;
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin: 0;
     text-align: center;
     color: #EEEEEE;
@@ -42,7 +44,7 @@ body {
 
 .input-row {
     display: flex;
-    margin-top: 4%;
+    margin-top: 1%;
     justify-content: space-around;
 }
 
@@ -68,7 +70,7 @@ select {
     background: none;
     width: 90%;
     padding: 2%;
-    font-size: 1.45rem;
+    font-size: 1rem;
     margin-left: 0;
     border-color: #C4C4C4;
     color: white;
@@ -105,7 +107,7 @@ select {
     margin-top: 0;
 }
 
-.input-column:nth-child(2) {
+.input-column {
     width: 45%;
 }
 
@@ -180,7 +182,7 @@ input[type="radio"]:focus {
     margin-right: 0;
     font-family: 'affirmative';
     letter-spacing: 2px;
-    font-size: 3rem;
+    font-size: 2.75rem;
     background-color: rgb(241, 241, 241);
     border-radius: 3px;
     border: none;
@@ -198,7 +200,7 @@ input[type="radio"]:focus {
     position: absolute;
     z-index: 0;
     height: 70px;
-    width: 35%;
+    width: 280px;
     background-color: #0A322F;
     border-radius: 3px;
     bottom: -5px;
@@ -218,9 +220,11 @@ width: 88%;
     .input-row {
         flex-direction: column;
     }
-.registration-container{
-    overflow-y: scroll;
-}
+
+    .registration-container {
+        overflow-y: scroll;
+    }
+
     .registration-container>h1 {
         font-size: 2.5rem;
         margin: 0;
@@ -245,7 +249,7 @@ width: 88%;
     }
 
     .register-button::before {
-display: none;
+        display: none;
     }
 
     .input-explanation {
