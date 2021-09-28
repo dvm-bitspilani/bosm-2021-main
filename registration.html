@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrations</title>
+    <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/registration.css">
+
+</head>
+
+<body>
+    <div class="registration-container">
+        <h1>Registration</h1>
+
+        <form action="" method="POST">
+            <div class="input-row">
+                <div class="input-cell" style="padding-top: 2%;">
+                    <label for="">Name</label>
+                    <input type="text" required>
+                    <p class="input-explanation">Type in your first and last name here</p>
+                </div>
+                <div class="radio-cell">
+                    <p class="radio-heading">Coach</p>
+                    <p class="input-explanation radio-explanation">Are You A Coach</p>
+                    <div class="radio-wrapper">
+
+                        <div class="radio-option">
+                              <input type="radio" id="yes" name="coach" value="true">
+                              <label class="radio-label not-required" for="yes">Yes</label>
+                        </div>
+                        <div class="radio-option">
+                              <input type="radio" id="no" name="coach" value="false">
+                              <label class="radio-label not-required" for="no">No</label>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="input-row">
+
+                <div class="input-column">
+                    <div class="input-cell" class="input-cell" style="margin-bottom: 5%;">
+                        <label for="">Email</label>
+                        <input type="email" required>
+                        <p class="input-explanation">Type in your Email</p>
+                    </div>
+                    <div class="input-cell" class="input-cell" style="margin-bottom: 5%;">
+                        <label for="">Phone </label>
+                        <input type="tel" pattern="[0-9]{5}-[0-9]{5}" required>
+                        <p class="input-explanation phone-explanation">Type your phone number here</p>
+                    </div>
+                    <div class="input-cell" class="input-cell" style="margin-bottom: 5%;">
+                        <label for="">City </label>
+                        <input type="text" required>
+                        <p class="input-explanation">Type in your City Name</p>
+                    </div>
+                    <div class="input-cell" class="input-cell">
+                        <label for="" class="not-required">State </label>
+                        <select name="year" id="yearofstudy" required>
+                            <!--- India states -->
+                            <option value="AN">Andaman and Nicobar Islands</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="AR">Arunachal Pradesh</option>
+                            <option value="AS">Assam</option>
+                            <option value="BR">Bihar</option>
+                            <option value="CH">Chandigarh</option>
+                            <option value="CT">Chhattisgarh</option>
+                            <option value="DN">Dadra and Nagar Haveli</option>
+                            <option value="DD">Daman and Diu</option>
+                            <option value="DL">Delhi</option>
+                            <option value="GA">Goa</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="HR">Haryana</option>
+                            <option value="HP">Himachal Pradesh</option>
+                            <option value="JK">Jammu and Kashmir</option>
+                            <option value="JH">Jharkhand</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="KL">Kerala</option>
+                            <option value="LA">Ladakh</option>
+                            <option value="LD">Lakshadweep</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
+                            <option value="MZ">Mizoram</option>
+                            <option value="NL">Nagaland</option>
+                            <option value="OR">Odisha</option>
+                            <option value="PY">Puducherry</option>
+                            <option value="PB">Punjab</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="SK">Sikkim</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="TG">Telangana</option>
+                            <option value="TR">Tripura</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="UT">Uttarakhand</option>
+                            <option value="WB">West Bengal</option>
+
+
+                        </select>
+                        <p class="input-explanation">Type in your state name</p>
+                    </div>
+                </div>
+                <div class="input-column">
+
+                    <div class="input-cell" style="margin-bottom: 5%;">
+                        <label for="" class="not-required">College </label>
+                        <input type="text" required>
+                        <p class="input-explanation">Select your College Name</p>
+                    </div>
+                    <div class="input-cell" style="margin-bottom: 5%;">
+                        <label for="" class="not-required">Year Of Study </label>
+                        <select name="year" id="yearofstudy" required>
+                            <option value="1st">1st</option>
+                            <option value="2nd">2nd</option>
+                            <option value="3rd">3rd</option>
+                            <option value="4th">4th</option>
+                        </select>
+
+                        <p class="input-explanation">Select your Year Of Study</p>
+                    </div>
+                    <div class="input-cell" class="input-cell">
+                        <label for="" class="not-required">Sports </label>
+                        <select name="year" id="yearofstudy" required>
+                            <option value="1st">Cricket</option>
+                            <option value="2nd">Football</option>
+                            <option value="3rd">Basketball</option>
+                            <option value="4th">Kabbadi</option>
+                        </select>
+
+                        <p class="input-explanation">You can select multiple Sports</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="register-wrapper">
+                <div class="register-button">
+                    <input type="submit" name="Register" value="Register" id="register">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
