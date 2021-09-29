@@ -142,10 +142,28 @@
                                             </select>
                                             <p class="input-explanation">Type in your state name</p>
                                         </div>
-
+                                        <div class="input-cell" style="padding-top: 2%">
+                                          <label for="">Aadhar Card</label>
+                                          <input type="file" id="myfile" name="myfile" accept="application/pdf">
+                                          <p class="input-explanation">Upload the Aadhar card in pdf format</p>
+                                      </div>
                                     </div>
                                     <div class="input-column">
-
+                                          <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
+                                                <label for="" class="not-required">Games</label>
+                                                <select id="sports_opt" class="select-input" onchange="getsportsvalue()">
+                                                    <option value="" selected disabled>Games</option>
+                                                    <option value="BGMI" class="sports-tag">BGMI</option>
+                                                    <option value="Valorant" class="sports-tag">Valorant</option>
+                                                    <option value="COD-Mobile" class="sports-tag">COD-Mobile</option>
+                                                    <option value="Clash Royale" class="sports-tag">Clash Royale</option>
+                                                    </select>
+                                             
+                                                <div class="selected-sports">
+                                                    <p class="input-explanation">You can select multiple Games</p>
+                                                    </div>
+                                        
+                                            </div>
                                           <div class="input-cell" class="input-cell" style="margin-bottom: 12.5%;">
                                                 <label for="" class="not-required">Occupation </label>
                                                 <select class="form-select student" name="year" id="yearofstudy" required onchange="changeText()">
@@ -156,7 +174,11 @@
                                                 </select>
     
                                             </div>
-                                      
+                                            <div class="input-cell" style="margin-bottom: 2.5%;">
+                                                <label for="" class="not-required">Institution Name </label>
+                                                <input type="text" required>
+                                                <p class="input-explanation collegeName">Select your School Name</p>
+                                            </div>
                                         <div class="input-cell" style="margin-bottom: 2.5%;" id="hideGrad">
                                             <label for="" class="not-required studyYear">Class</label>
                                             <select class="form-select changeYear" name="year" id="yearofstudy" required>
@@ -166,41 +188,13 @@
                                                 <option value="4th">12th</option>
                                             </select>
 
-                                            <p class="input-explanation">Select your Year Of Study</p>
+                                            <p class="input-explanation className">Select your Class</p>
                                         </div>
-                                        <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
-                                            <label for="" class="not-required">Games</label>
-                                            <select id="sports_opt" class="select-input" onchange="getsportsvalue()">
-                                                <option value="" selected disabled>Games</option>
-                                                <option value="BGMI" class="sports-tag">BGMI</option>
-                                                <option value="Valorant" class="sports-tag">Valorant</option>
-                                                <option value="COD-Mobile" class="sports-tag">COD-Mobile</option>
-                                                <option value="Clash Royale" class="sports-tag">Clash Royale</option>
-                                                </select>
-                                         
-                                            <div class="selected-sports">
-                                                <p class="input-explanation">You can select multiple Games</p>
-                                                </div>
-                                    
-                                        </div>
-
-
-                                        <div class="input-cell" style="margin-bottom: 2.5%;">
-                                          <label for="" class="not-required">Institution Name </label>
-                                          <input type="text" required>
-                                          <p class="input-explanation">Select your College Name</p>
-                                      </div>
+                                  
                                     </div>
 
                                 </div>
 
-                                <div class="input-row file-upload">
-                                    <div class="input-cell" style="padding-top: 2%" id="name">
-                                        <label for="">Aadhar Card</label>
-                                        <input type="file" id="myfile" name="myfile" accept="application/pdf">
-                                        <p class="input-explanation">Upload the Aadhar card in pdf format</p>
-                                    </div>
-                                </div>
 
                                 <div class="register-wrapper">
                                     <div class="register-button">

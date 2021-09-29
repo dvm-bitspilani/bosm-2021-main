@@ -24,10 +24,14 @@ window.onload = function () {
 function changeText() {
   if (document.getElementsByClassName('student')[0].value === '1st') {
     document.getElementsByClassName('studyYear')[0].innerHTML = 'Class'
-    document.getElementById('hideGrad').style.display ='initial'
+    document.getElementsByClassName('collegeName')[0].innerHTML='Select Your School Name'
+    document.getElementsByClassName('className')[0].innerHTML='Select Your Class'
+
+    document.getElementById('hideGrad').style.display = 'initial'
   }
   else if (document.getElementsByClassName('student')[0].value === '4th') {
-    document.getElementById('hideGrad').style.display ='none'
+    document.getElementById('hideGrad').style.display = 'none'
+
   }
   else {
     document.getElementsByClassName('studyYear')[0].innerHTML = 'Year of Study'
@@ -35,7 +39,11 @@ function changeText() {
     document.querySelector('.changeYear option:nth-child(1)').innerHTML='1st'
     document.querySelector('.changeYear option:nth-child(2)').innerHTML='2nd'
     document.querySelector('.changeYear option:nth-child(3)').innerHTML='3rd'
-    document.querySelector('.changeYear option:nth-child(4)').innerHTML='4th'
+    document.querySelector('.changeYear option:nth-child(4)').innerHTML = '4th'
+    document.getElementsByClassName('collegeName')[0].innerHTML = 'Select Your College Name'
+    document.getElementsByClassName('className')[0].innerHTML='Select Your Year of Study'
+    
+    
   }
 
 }
@@ -76,7 +84,7 @@ function getsportsvalue() {
     const x = this.getElementsByTagName("span");
     console.log(x[0].innerHTML);
     console.log(document.getElementsByClassName("sports-tag")[5]);
-    for (var i = 1; i < no_of_sports; i++) {
+    for (var i = 0; i < no_of_sports; i++) {
       if (
         x[0].innerHTML ==
         document.getElementsByClassName("sports-tag")[i].innerHTML
