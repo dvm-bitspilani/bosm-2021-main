@@ -169,6 +169,20 @@ input[type="radio"]:focus {
     justify-content: center;
     position: relative;
 }
+.sports{
+    display: inline-block;
+   color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.sports::after{
+    content: 'x'
+    
+}
 
 #register {
     margin-right: 0;

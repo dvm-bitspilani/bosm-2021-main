@@ -4,15 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-BOSM 2021</title>
+    <title>BOSM BLITZ</title>
     <link rel="stylesheet" href="./stylesheets/landing.css" />
     <link rel="stylesheet" href="./stylesheets/navbar.css" />
     <link rel="stylesheet" href="./stylesheets/registration.css">
+    <link rel="stylesheet" href="./stylesheets/loader.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 
 <body>
+
+    <div class="spinner">
+        <div class="spin-con">
+            <span class="ball"></span>
+        </div>
+    </div>
+
     <section class="main-section-landing">
         <nav>
             <div>
@@ -138,47 +146,50 @@
                                     </div>
                                     <div class="input-column">
 
-                                        <div class="input-cell" style="margin-bottom: 2.5%;">
-                                            <label for="" class="not-required">College </label>
-                                            <input type="text" required>
-                                            <p class="input-explanation">Select your College Name</p>
-                                        </div>
-                                        <div class="input-cell" style="margin-bottom: 2.5%;">
-                                            <label for="" class="not-required">Year Of Study </label>
-                                            <select class="form-select" name="year" id="yearofstudy" required>
-                                                <option value="1st">1st</option>
-                                                <option value="2nd">2nd</option>
-                                                <option value="3rd">3rd</option>
-                                                <option value="4th">4th</option>
+                                          <div class="input-cell" class="input-cell" style="margin-bottom: 12.5%;">
+                                                <label for="" class="not-required">Occupation </label>
+                                                <select class="form-select student" name="year" id="yearofstudy" required onchange="changeText()">
+                                                    <option value="1st">School Student</option>
+                                                    <option value="2nd">College Student</option>
+                                                    <option value="3rd">University Student</option>
+                                                    <option value="4th">Graduated</option>
+                                                </select>
+    
+                                            </div>
+                                      
+                                        <div class="input-cell" style="margin-bottom: 2.5%;" id="hideGrad">
+                                            <label for="" class="not-required studyYear">Class</label>
+                                            <select class="form-select changeYear" name="year" id="yearofstudy" required>
+                                                <option value="1st">9th</option>
+                                                <option value="2nd">10th</option>
+                                                <option value="3rd">11th</option>
+                                                <option value="4th">12th</option>
                                             </select>
 
                                             <p class="input-explanation">Select your Year Of Study</p>
                                         </div>
                                         <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
                                             <label for="" class="not-required">Games</label>
-                                            <select class="form-select" name="year" id="yearofstudy" required>
-                                                <option value="1">Cricket</option>
-                                                <option value="2">Football</option>
-                                                <option value="3">Basketball</option>
-                                                <option value="4">Kabbadi</option>
-                                            </select>
-
-                                            <p class="input-explanation">You can select multiple Sports</p>
-                                        </div>
-
-                                        <div class="input-cell" class="input-cell">
-                                            <label for="" class="not-required">Occupation </label>
-                                            <select class="form-select" name="year" id="yearofstudy" required>
-                                                <option value="1st">School Student</option>
-                                                <option value="2nd">College Student</option>
-                                                <option value="3rd">University Student</option>
-                                                <option value="4th">Graduated</option>
-                                            </select>
-
-                                            <p class="input-explanation">You can select your Sport</p>
+                                            <select id="sports_opt" class="select-input" onchange="getsportsvalue()">
+                                                <option value="" selected disabled>Games</option>
+                                                <option value="BGMI" class="sports-tag">BGMI</option>
+                                                <option value="Valorant" class="sports-tag">Valorant</option>
+                                                <option value="COD-Mobile" class="sports-tag">COD-Mobile</option>
+                                                <option value="Clash Royale" class="sports-tag">Clash Royale</option>
+                                                </select>
+                                         
+                                            <div class="selected-sports">
+                                                <p class="input-explanation">You can select multiple Games</p>
+                                                </div>
+                                    
                                         </div>
 
 
+                                        <div class="input-cell" style="margin-bottom: 2.5%;">
+                                          <label for="" class="not-required">Institution Name </label>
+                                          <input type="text" required>
+                                          <p class="input-explanation">Select your College Name</p>
+                                      </div>
                                     </div>
 
                                 </div>
