@@ -314,3 +314,17 @@ select{
 .file-upload{
     justify-content: center;
 } */
+
+
+
+.form-select{
+    background-color: #FF2748 !important;
+    color: white !important;
+    border: none !important;
+    border-bottom: 1px solid white !important;
+}
+
+.form-select:active{
+    border: none !important;
+    outline: none !important;
+}
