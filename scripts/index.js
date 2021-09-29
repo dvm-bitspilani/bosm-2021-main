@@ -37,7 +37,7 @@ function changeText() {
 
 var selected_sport = document.getElementsByClassName("selected-sports")[0];
 var sports_opt = document.getElementById("sports_opt");
-var sportsarr = ['BGMI','Valorant','COD-Mobile', 'Clash Royale'];
+sportsarr = [];
 var a = [];
 var yos_value;
 var gender_value;
