@@ -1,19 +1,3 @@
-// const $menuBtn = document.querySelector(".menu-btn");
-// let isMenuOpen = false;
-// $menuBtn.addEventListener("click", () => {
-//   if (!isMenuOpen) {
-//     $menuBtn.classList.add("open");
-//   } else {
-//     $menuBtn.classList.remove("open");
-//   }
-
-//   isMenuOpen = !isMenuOpen;
-// });
-
-// function postData() {
-//   const inputs = document.querySelectorAll("input");
-//   console.log(inputs);
-// }
 
 window.onload = function () {
   document.querySelector(".spinner").style.display = "none";
@@ -121,67 +105,28 @@ function getcollegeid() {
   console.log(collegeid);
 }
 
-// window.onload = function() {
-//   const URL = "https://bits-bosm.org/registrations/get_sports";
-//   const URL2 = "https://bits-bosm.org/registrations/get_colleges";
-
-//   fetch(URL)
-//     .then(resp => resp.json())
-//     .then(function(resp) {
-//       console.log(resp);
-//       for (var i = 0; i < resp.data.length; i++) {
-//         var opt = document.createElement("option");
-//         opt.value = resp.data[i].name;
-//         opt.innerHTML = resp.data[i].name;
-//         opt.setAttribute("id", resp.data[i].id);
-//         opt.className += "sports-tag";
-//         opt.onclick = function() {
-//           console.log(1);
-//         };
-//         sports_opt.appendChild(opt);
-//         no_of_sports++;
-//       }
-//       console.log(no_of_sports);
-//     })
-//     .catch(function(error) {
-//       console.log(error);
-//     });
-
-//   fetch(URL2)
-//     .then(resp => resp.json())
-//     .then(function(resp) {
-//       console.log(resp);
-//       for (var i = 0; i < resp.data.length; i++) {
-//         var opt = document.createElement("option");
-//         opt.value = resp.data[i].id;
-//         opt.innerHTML = resp.data[i].name;
-//         college_opt.appendChild(opt);
-//       }
-//     })
-//     .catch(function(error) {
-//       console.log(error);
-//     });
-// };
 
 function bosmreg() {
+  if (document.getElementById('no').checked) {
+      console.log(document.getElementsByName('coach')[0].value);
+      alert("You need to be above 18 to apply");
+    } 
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
   const city = document.getElementById("city").value;
   const state = document.getElementById("state").value;
-  grecaptcha.execute();
-  var v = grecaptcha.getResponse();
-  console.log(v);
+
   if (
     name == "" ||
     email == "" ||
     phone == "" ||
     city == "" ||
     state == "" ||
-    sportsarr == [] ||
-    collegeid == null ||
-    yos_value == null ||
-    gender_value == null
+    sportsarr == [] 
+    // collegeid == null ||
+    // yos_value == null ||
+    // gender_value == null
   ) {
     alert("Please fill all mentioned feilds");
   } else {
@@ -189,17 +134,17 @@ function bosmreg() {
       name: name,
       email_id: email,
       phone: phone,
-      gender: gender_value,
-      year_of_study: yos_value,
+      // gender: gender_value,
+      // year_of_study: yos_value,
       sports_ids: sportsarr,
-      college_id: collegeid,
+      // college_id: collegeid,
       city: city,
       state: state,
-      captcha: v,
-      is_coach
+      // captcha: v,
+      // is_coach
     };
 
-    fetch(" https://bits-bosm.org/registrations/register/", {
+    fetch("https://bits-bosm.org/bosm2021/registrations/register", {
       method: "post",
       headers: {
         Accept: "application/json, text/plain, */*",
