@@ -9,3 +9,8 @@ $menuBtn.addEventListener("click", () => {
 
   isMenuOpen = !isMenuOpen;
 });
+
+function postData() {
+  const inputs = document.querySelectorAll("input");
+  console.log(inputs);
+}

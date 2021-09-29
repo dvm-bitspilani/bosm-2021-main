@@ -44,7 +44,7 @@ label {
 
 label::after {
     content: '*';
-    color: #FF0000;
+    color: #FFFFFF;
     font-size: 1.25rem;
     margin: 0 2.5% 5%
 }
@@ -102,7 +102,7 @@ select {
     width: 45%;
 }
 
-.radio-heading {    
+.radio-heading {
     font-family: 'Gilroy-Medium', sans-serif;
     font-size: 1rem;
     margin-bottom: 0;
@@ -184,10 +184,20 @@ input[type="radio"]:focus {
     color: black;
     width: 120%;
     padding: 2% 5%;
+    box-shadow:
+        3.3px 2.1px 2.7px rgba(0, 0, 0, 0.19),
+        8.3px 5.2px 6.9px rgba(0, 0, 0, 0.131),
+        16.8px 10.6px 14.2px rgba(0, 0, 0, 0.106),
+        34.7px 21.9px 29.2px rgba(0, 0, 0, 0.084),
+        95px 60px 80px rgba(0, 0, 0, 0.059);
+
 }
 
+#register:hover {
+    transform: scale(0.96);
+}
 
-.register-button::before {
+/* .register-button::before {
     content: '';
     position: absolute;
     z-index: 0;
@@ -196,7 +206,7 @@ input[type="radio"]:focus {
     background-color: #0A322F;
     border-radius: 3px;
     bottom: -5px;
-}
+} */
 
 
 /* For paragraph in focus
@@ -238,6 +248,13 @@ width: 88%;
         padding: 5%;
         position: relative;
         right: 10px;
+        box-shadow:
+            3.3px 2.1px 2.7px rgba(0, 0, 0, 0.19),
+            8.3px 5.2px 6.9px rgba(0, 0, 0, 0.131),
+            16.8px 10.6px 14.2px rgba(0, 0, 0, 0.106),
+            34.7px 21.9px 29.2px rgba(0, 0, 0, 0.084),
+            95px 60px 80px rgba(0, 0, 0, 0.059);
+
     }
 
     .register-button::before {
@@ -260,7 +277,8 @@ width: 88%;
     .input-cell {
         margin: 2.5% 0;
     }
-    .modal-dialog{
+
+    .modal-dialog {
         max-width: inherit !important;
     }
 
@@ -274,37 +292,36 @@ width: 88%;
 ////// SCROLLBAR/// */
 
 
-.modal-body::-webkit-scrollbar-track
-{
-	background-color: #FF2748;
+.modal-body::-webkit-scrollbar-track {
+    background-color: #FF2748;
 }
 
-.modal-body::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #FF2748;
+.modal-body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #FF2748;
 }
 
-.modal-body::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: rgb(241, 241, 241);
+.modal-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgb(241, 241, 241);
 }
 
-#name{
+#name {
     width: 45%;
 }
 
-.radio-cell{
+.radio-cell {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-label{display: unset !important;}
+label {
+    display: unset !important;
+}
 
-select{
+select {
     margin-top: 7.5px;
 }
 
@@ -317,14 +334,14 @@ select{
 
 
 
-.form-select{
+.form-select {
     background-color: #FF2748 !important;
     color: white !important;
     border: none !important;
     border-bottom: 1px solid white !important;
 }
 
-.form-select:active{
+.form-select:active {
     border: none !important;
     outline: none !important;
 }

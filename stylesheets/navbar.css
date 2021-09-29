@@ -19,14 +19,16 @@ nav span{
   text-decoration: none;
   letter-spacing: 0.1em;
  cursor: pointer;
+
 }
 
-nav span.active{
-  border: 1px #FF4654 solid;
-  border-radius: 20px;
+nav span:hover{
+  transform: scale(1.02);
+  transition: linear 0.4s;
   /* padding: 5px 25px 10px; */
 
 }
+
 nav{
   display: flex;
   justify-content: space-between;
