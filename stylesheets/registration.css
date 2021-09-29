@@ -297,7 +297,7 @@ width: 88%;
 }
 
 .modal-body::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
     background-color: #FF2748;
 }
 
