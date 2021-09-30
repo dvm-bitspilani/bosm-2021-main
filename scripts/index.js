@@ -116,6 +116,11 @@ function bosmreg() {
   const phone = document.getElementById("phone").value;
   const city = document.getElementById("city").value;
   const state = document.getElementById("state").value;
+  const college = document.getElementById("college").value;
+  const yearofstudy = document.getElementById("yearofstudy").value;
+  const aadharFile = document.getElementById("myfile").value;
+  const aadharFormData = new FormData();
+  aadharFormData.append('applications/pdf', aadharFile);
 
   if (
     name == "" ||
@@ -123,7 +128,8 @@ function bosmreg() {
     phone == "" ||
     city == "" ||
     state == "" ||
-    sportsarr == [] 
+    sportsarr == [] ||
+    aadharFile == null
     // collegeid == null ||
     // yos_value == null ||
     // gender_value == null
@@ -134,12 +140,15 @@ function bosmreg() {
       name: name,
       email_id: email,
       phone: phone,
+      college: college,
+      year_of_study: yearofstudy,
       // gender: gender_value,
       // year_of_study: yos_value,
       sports_ids: sportsarr,
       // college_id: collegeid,
       city: city,
       state: state,
+      aadharFile: aadharFormData,
       // captcha: v,
       // is_coach
     };

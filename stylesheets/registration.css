@@ -86,7 +86,7 @@ select {
 }
 
 
-#name {
+#name-wrap {
     width: 45%;
 }
 
@@ -296,7 +296,7 @@ width: 88%;
         max-width: inherit !important;
     }
 
-    #name {
+    #name-wrap {
         width: 95% !important;
     }
 
@@ -321,7 +321,7 @@ width: 88%;
     background-color: rgb(241, 241, 241);
 }
 
-#name {
+#name-wrap {
     width: 45%;
 }
 

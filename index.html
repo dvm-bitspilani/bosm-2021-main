@@ -53,9 +53,9 @@
 
             <div>
                                 <div class="input-row">
-                                    <div class="input-cell" style="padding-top: 2%" id="name">
+                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
                                         <label for="">Name</label>
-                                        <input type="text" required>
+                                        <input type="text" required id="name">
                                         <p class="input-explanation">Type in your first and last name here</p>
                                     </div>
                                     <div class="radio-cell">
@@ -166,7 +166,7 @@
                                             </div>
                                           <div class="input-cell" class="input-cell" style="margin-bottom: 12.5%;">
                                                 <label for="" class="not-required">Occupation </label>
-                                                <select class="form-select student" name="year" id="yearofstudy" required onchange="changeText()">
+                                                <select class="form-select student" name="year" required onchange="changeText()">
                                                     <option value="1st">School Student</option>
                                                     <option value="2nd">College Student</option>
                                                     <option value="3rd">University Student</option>
@@ -176,7 +176,7 @@
                                             </div>
                                             <div class="input-cell" style="margin-bottom: 2.5%;">
                                                 <label for="" class="not-required">Institution Name </label>
-                                                <input type="text">
+                                                <input type="text" id="college">
                                                 <p class="input-explanation collegeName">Select your School Name</p>
                                             </div>
                                         <div class="input-cell" style="margin-bottom: 2.5%;" id="hideGrad">
