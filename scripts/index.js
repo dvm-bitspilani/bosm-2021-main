@@ -6,28 +6,36 @@ window.onload = function () {
 
 
 function changeText() {
-  if (document.getElementsByClassName('student')[0].value === '1st') {
-    document.getElementsByClassName('studyYear')[0].innerHTML = 'Class'
-    document.getElementsByClassName('collegeName')[0].innerHTML='Select Your School Name'
-    document.getElementsByClassName('className')[0].innerHTML='Select Your Class'
-
-    document.getElementById('hideGrad').style.display = 'initial'
+  if (document.getElementsByClassName('student')[0].value === 'School Student') {
+    document.getElementsByClassName('studyYear')[0].innerHTML = 'Class';
+    document.getElementsByClassName('collegeName')[0].innerHTML = 'Select Your School Name';
+    document.getElementsByClassName('className')[0].innerHTML = 'Select Your Class';
+    document.getElementById('hideGrad').style.display = 'initial';
+    document.querySelector('.changeYear option:nth-child(1)').innerHTML='Class'
+    document.querySelector('.changeYear option:nth-child(2)').disabled=false
+    document.querySelector('.changeYear option:nth-child(3)').disabled=false
+    document.querySelector('.changeYear option:nth-child(4)').disabled = true
+    document.querySelector('.changeYear option:nth-child(5)').disabled = true
+    document.querySelector('.changeYear option:nth-child(6)').disabled = true
+    document.querySelector('.changeYear option:nth-child(7)').disabled = true
+    document.querySelector('.changeYear option:nth-child(8)').disabled = true
   }
-  else if (document.getElementsByClassName('student')[0].value === '4th') {
+  else if (document.getElementsByClassName('student')[0].value === 'Graduated') {
     document.getElementById('hideGrad').style.display = 'none'
-
   }
   else {
     document.getElementsByClassName('studyYear')[0].innerHTML = 'Year of Study'
     document.getElementById('hideGrad').style.display ='initial'
-    document.querySelector('.changeYear option:nth-child(1)').innerHTML='1st'
-    document.querySelector('.changeYear option:nth-child(2)').innerHTML='2nd'
-    document.querySelector('.changeYear option:nth-child(3)').innerHTML='3rd'
-    document.querySelector('.changeYear option:nth-child(4)').innerHTML = '4th'
+    document.querySelector('.changeYear option:nth-child(1)').innerHTML='Year of Study'
+    document.querySelector('.changeYear option:nth-child(2)').disabled=true
+    document.querySelector('.changeYear option:nth-child(3)').disabled=true
+    document.querySelector('.changeYear option:nth-child(4)').disabled = false
+    document.querySelector('.changeYear option:nth-child(5)').disabled = false
+    document.querySelector('.changeYear option:nth-child(6)').disabled = false
+    document.querySelector('.changeYear option:nth-child(7)').disabled = false
+    document.querySelector('.changeYear option:nth-child(8)').disabled = false
     document.getElementsByClassName('collegeName')[0].innerHTML = 'Select Your College Name'
     document.getElementsByClassName('className')[0].innerHTML='Select Your Year of Study'
-    
-    
   }
 
 }
@@ -108,71 +116,75 @@ function getcollegeid() {
 
 function bosmreg() {
   if (document.getElementById('no').checked) {
-      console.log(document.getElementsByName('coach')[0].value);
-      alert("You need to be above 18 to apply");
-    } 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const city = document.getElementById("city").value;
-  const state = document.getElementById("state").value;
-  const college = document.getElementById("college").value;
-  const yearofstudy = document.getElementById("yearofstudy").value;
-  const aadharFile = document.getElementById("myfile").value;
-  const aadharFormData = new FormData();
-  aadharFormData.append('applications/pdf', aadharFile);
-
-  if (
-    name == "" ||
-    email == "" ||
-    phone == "" ||
-    city == "" ||
-    state == "" ||
-    sportsarr == [] ||
-    aadharFile == null
-    // collegeid == null ||
-    // yos_value == null ||
-    // gender_value == null
-  ) {
-    alert("Please fill all mentioned feilds");
-  } else {
-    data = {
-      name: name,
-      email_id: email,
-      phone: phone,
-      college: college,
-      year_of_study: yearofstudy,
-      // gender: gender_value,
-      // year_of_study: yos_value,
-      sports_ids: sportsarr,
-      // college_id: collegeid,
-      city: city,
-      state: state,
-      aadharFile: aadharFormData,
-      // captcha: v,
-      // is_coach
-    };
-
-    fetch("https://bits-bosm.org/bosm2021/registrations/register", {
-      method: "post",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(result) {
-        alert(result.message);
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-    console.log(data);
+    console.log(document.getElementsByName('coach')[0].value);
+    alert("You need to be above 18 to apply");
   }
+  else {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const city = document.getElementById("city").value;
+    const state = document.getElementById("state").value;
+    const college = document.getElementById("college").value;
+    const yearofstudy = parseInt(document.getElementById("yearofstudy").value);
+    const aadharFile = document.getElementById("myfile").files[0]
+
+   console.log(aadharFile)
+    const occupation = document.getElementById("occupation").value
+   
+   
+    var aadharFormData = new FormData();
+    aadharFormData.append('pdf', aadharFile);
+
+    if (
+      name == "" ||
+      email == "" ||
+      phone == "" ||
+      city == "" ||
+      state == "" ||
+      sportsarr == []||
+      aadharFile == null
+      // collegeid == null ||
+      // yos_value == null ||
+      // gender_value == null
+    ) {
+      alert("Please fill all mentioned feilds");
+    } else {
+      data = {
+        name: name,
+        email: email,
+        phone: phone,
+        college: college,
+        year_of_study: yearofstudy,
+        games_ids: sportsarr,
+        city: city,
+        state: state,
+        occupation: occupation,
+        is_eighteen: true,
+        file : aadharFormData
+      };
+     
+
+      fetch("https://bits-bosm.org/bosm2021/registrations/register/", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "multipart/form-data"
+        },
+        body: JSON.stringify(data)
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (result) {
+          alert(result.message);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      console.log(data);
+    }
+  }
+
+
 }
-
-
-
