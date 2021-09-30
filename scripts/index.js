@@ -134,7 +134,18 @@ function bosmreg() {
    
    
     var aadharFormData = new FormData();
-    aadharFormData.append('pdf', aadharFile);
+    aadharFormData.append('file', aadharFile);
+    aadharFormData.append('name', name);
+    aadharFormData.append('email', email)
+    aadharFormData.append('phone', phone)
+    aadharFormData.append('city', city)
+    aadharFormData.append('state', state)
+    aadharFormData.append('college', college)
+    aadharFormData.append('occupation', occupation)
+    aadharFormData.append('is_eighteen', true)
+    aadharFormData.append('games_ids', sportsarr)
+    aadharFormData.append('year_of_study', yearofstudy)
+
 
     if (
       name == "" ||
@@ -167,11 +178,7 @@ function bosmreg() {
 
       fetch("https://bits-bosm.org/bosm2021/registrations/register/", {
         method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "multipart/form-data"
-        },
-        body: JSON.stringify(data)
+        body: aadharFormData
       })
         .then(function (response) {
           return response.json();
