@@ -174,9 +174,9 @@ function bosmreg() {
         is_eighteen: true,
         file : aadharFormData
       };
-     
+      
 
-      fetch("http://localhost:8000/bosm2021/registrations/register/", {
+      fetch("https://bits-bosm.org/bosm2021/registrations/register/", {
         method: "POST",
         body: aadharFormData
       })
@@ -189,7 +189,7 @@ function bosmreg() {
         .catch(function (error) {
           console.log(error);
         });
-      console.log(data);
+      console.log(aadharFormData);
     }
   }
 
