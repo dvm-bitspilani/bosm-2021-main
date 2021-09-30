@@ -126,7 +126,7 @@ function bosmreg() {
     const city = document.getElementById("city").value;
     const state = document.getElementById("state").value;
     const college = document.getElementById("college").value;
-    const yearofstudy = parseInt(document.getElementById("yearofstudy").value);
+    const yearofstudy = document.getElementById("yearofstudy").value
     const aadharFile = document.getElementById("myfile").files[0]
 
    console.log(aadharFile)
