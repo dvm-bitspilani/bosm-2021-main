@@ -23,7 +23,7 @@ function changeText() {
     document.querySelector(".changeYear option:nth-child(6)").disabled = true;
     document.querySelector(".changeYear option:nth-child(7)").disabled = true;
     document.querySelector(".changeYear option:nth-child(8)").disabled = true;
-    document.querySelector(".changeYear option:nth-child(9)").disabled = false;
+    document.querySelector(".changeYear option:nth-child(9)").disabled = true;
   } else if (
     document.getElementsByClassName("student")[0].value === "Graduated"
   ) {
