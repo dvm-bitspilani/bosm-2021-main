@@ -169,10 +169,9 @@ input[type="radio"]:focus {
     justify-content: center;
     position: relative;
 }
-
-.sports {
+.sports{
     display: inline-block;
-    color: white;
+   color: white;
     border: 1px solid white;
     border-radius: 20px;
     padding: 5px 10px;
@@ -180,10 +179,9 @@ input[type="radio"]:focus {
     margin-top: 5px;
     cursor: pointer;
 }
-
-.sports::after {
+.sports::after{
     content: 'x'
-
+    
 }
 
 #register {
@@ -360,13 +358,4 @@ select {
 .form-select:active {
     border: none !important;
     outline: none !important;
-}
-
-
-#disclaimer {
-    font-family: 'Gilroy';
-    color: white;
-    font-style: italic;
-    font-weight: 600;
-    width: 100%;
 }
