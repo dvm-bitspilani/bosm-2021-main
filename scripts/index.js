@@ -177,7 +177,7 @@ function bosmreg() {
       
 
       fetch("https://bits-bosm.org/bosm2021/registrations/register/", {
-        method: "POST",
+        method: "PUT",
         body: aadharFormData
       })
         .then(function (response) {
