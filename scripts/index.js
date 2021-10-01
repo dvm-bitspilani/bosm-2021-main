@@ -18,11 +18,12 @@ function changeText() {
       "Class";
     document.querySelector(".changeYear option:nth-child(2)").disabled = false;
     document.querySelector(".changeYear option:nth-child(3)").disabled = false;
-    document.querySelector(".changeYear option:nth-child(4)").disabled = true;
-    // document.querySelector(".changeYear option:nth-child(5)").disabled = true;
-    // document.querySelector(".changeYear option:nth-child(6)").disabled = true;
-    // document.querySelector(".changeYear option:nth-child(7)").disabled = true;
-    // document.querySelector(".changeYear option:nth-child(8)").disabled = true;
+    document.querySelector(".changeYear option:nth-child(4)").disabled = false;
+    document.querySelector(".changeYear option:nth-child(5)").disabled = true;
+    document.querySelector(".changeYear option:nth-child(6)").disabled = true;
+    document.querySelector(".changeYear option:nth-child(7)").disabled = true;
+    document.querySelector(".changeYear option:nth-child(8)").disabled = true;
+    document.querySelector(".changeYear option:nth-child(9)").disabled = false;
   } else if (
     document.getElementsByClassName("student")[0].value === "Graduated"
   ) {
@@ -34,11 +35,12 @@ function changeText() {
       "Year of Study";
     document.querySelector(".changeYear option:nth-child(2)").disabled = true;
     document.querySelector(".changeYear option:nth-child(3)").disabled = true;
-    document.querySelector(".changeYear option:nth-child(4)").disabled = false;
-    // document.querySelector(".changeYear option:nth-child(5)").disabled = false;
-    // document.querySelector(".changeYear option:nth-child(6)").disabled = false;
-    // document.querySelector(".changeYear option:nth-child(7)").disabled = false;
-    // document.querySelector(".changeYear option:nth-child(8)").disabled = false;
+    document.querySelector(".changeYear option:nth-child(4)").disabled = true;
+    document.querySelector(".changeYear option:nth-child(5)").disabled = false;
+    document.querySelector(".changeYear option:nth-child(6)").disabled = false;
+    document.querySelector(".changeYear option:nth-child(7)").disabled = false;
+    document.querySelector(".changeYear option:nth-child(8)").disabled = false;
+    document.querySelector(".changeYear option:nth-child(9)").disabled = false;
     document.getElementsByClassName("collegeName")[0].innerHTML =
       "Select Your College Name";
     document.getElementsByClassName("className")[0].innerHTML =
