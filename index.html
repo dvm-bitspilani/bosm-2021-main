@@ -168,10 +168,11 @@
                                         <div class="input-cell" class="input-cell" style="margin-bottom: 12.5%;">
                                             <label for="" class="not-required">Occupation </label>
                                             <select class="form-select student" name="year" required
-                                                onchange="changeText()" id="occupation">
-                                                <option value="School Student">School Student</option>
-                                                <option value="College Student">College Student</option>
-                                                <option value="Graduated">Graduated</option>
+                                                onchange="changeText()">
+                                                <option value="1st">School Student</option>
+                                                <option value="2nd">College Student</option>
+                                                <option value="3rd">University Student</option>
+                                                <option value="4th">Graduated</option>
                                             </select>
 
                                         </div>
@@ -180,57 +181,37 @@
                                             <input type="text" id="college">
                                             <p class="input-explanation collegeName">Select your School Name</p>
                                         </div>
+                                        <div class="input-cell" style="margin-bottom: 2.5%;" id="hideGrad">
+                                            <label for="" class="not-required studyYear">Class</label>
+                                            <select class="form-select changeYear" name="year" id="yearofstudy"
+                                                required>
+                                                <option value="1st">9th</option>
+                                                <option value="2nd">10th</option>
+                                                <option value="3rd">11th</option>
+                                                <option value="4th">12th</option>
+                                            </select>
 
-                                    </div>
-                                    <div class="input-cell" class="input-cell" style="margin-bottom: 12.5%;">
-                                        <label for="" class="not-required">Occupation </label>
-                                        <select class="form-select student" name="year" required
-                                            onchange="changeText()">
-                                            <option value="1st">School Student</option>
-                                            <option value="2nd">College Student</option>
-                                            <option value="4th">Graduated</option>
-                                        </select>
+                                            <p class="input-explanation className">Select your Class</p>
+                                        </div>
 
-                                    </div>
-                                    <div class="input-cell" style="margin-bottom: 2.5%;">
-                                        <label for="" class="not-required">Institution Name </label>
-                                        <input type="text" id="college">
-                                        <p class="input-explanation collegeName">Select your School Name</p>
-                                    </div>
-                                    <div class="input-cell" style="margin-bottom: 2.5%;" id="hideGrad">
-                                        <label for="" class="not-required studyYear">Class</label>
-                                        <select class="form-select changeYear" name="year" id="yearofstudy" required>
-                                            <option value="">Class</option>
-                                            <option value=11>11th</option>
-                                            <option value=12>12th</option>
-                                            <option value=1 disabled>1st</option>
-                                            <option value=2 disabled>2nd</option>
-                                            <option value=3 disabled>3rd</option>
-                                            <option value=4 disabled>4th</option>
-                                            <option value=5 disabled>5th</option>
-                                        </select>
-
-                                        <p class="input-explanation className">Select your Class</p>
                                     </div>
 
                                 </div>
 
-                            </div>
-
-                            <p id="disclaimer">Note: You should be above 18 years to register.</p>
-                            <div class="register-wrapper">
-                                <div class="register-button">
-                                    <input type="submit" name="Register" value="Register" id="register"
-                                        onclick="bosmreg()">
+                                <p id="disclaimer">Note: You should be above 18 years to register.</p>
+                                <div class="register-wrapper">
+                                    <div class="register-button">
+                                        <input type="submit" name="Register" value="Register" id="register"
+                                            onclick="bosmreg()">
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
-
             </div>
-        </div>
         </div>
 
 
