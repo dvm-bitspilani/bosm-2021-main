@@ -51,7 +51,7 @@
                                 aria-label="Close"></button>
                             <h1>Registration</h1>
 
-            <div>
+                            <div>
                                 <div class="input-row">
                                     <div class="input-cell" style="padding-top: 2%" id="name-wrap">
                                         <label for="">Name</label>
@@ -143,45 +143,47 @@
                                             <p class="input-explanation">Type in your state name</p>
                                         </div>
                                         <div class="input-cell" style="padding-top: 2%">
-                                          <label for="">Aadhar Card</label>
-                                          <input type="file" id="myfile" name="myfile" accept="application/pdf">
-                                          <p class="input-explanation">Upload the Aadhar card in pdf format</p>
-                                      </div>
+                                            <label for="">Aadhar Card</label>
+                                            <input type="file" id="myfile" name="myfile" accept="application/pdf">
+                                            <p class="input-explanation">Upload the Aadhar card in pdf format</p>
+                                        </div>
                                     </div>
                                     <div class="input-column">
-                                          <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
-                                                <label for="" class="not-required">Games</label>
-                                                <select id="sports_opt" class="select-input" onchange="getsportsvalue()">
-                                                    <option value="" selected disabled>Games</option>
-                                                    <option value="BGMI" class="sports-tag" id="1">BGMI</option>
-                                                    <option value="Valorant" class="sports-tag" id="2">Valorant</option>
-                                                    <option value="COD-Mobile" class="sports-tag" id="3">COD-Mobile</option>
-                                                    <option value="Clash Royale" class="sports-tag" id="4">Clash Royale</option>
-                                                    </select>
-                                             
-                                                <div class="selected-sports">
-                                                    <p class="input-explanation">You can select multiple Games</p>
-                                                    </div>
-                                        
+                                        <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
+                                            <label for="" class="not-required">Games</label>
+                                            <select id="sports_opt" class="select-input" onchange="getsportsvalue()">
+                                                <option value="" selected disabled>Games</option>
+                                                <option value="BGMI" class="sports-tag" id="1">BGMI</option>
+                                                <option value="Valorant" class="sports-tag" id="2">Valorant</option>
+                                                <option value="COD-Mobile" class="sports-tag" id="3">COD-Mobile</option>
+                                                <option value="Clash Royale" class="sports-tag" id="4">Clash Royale
+                                                </option>
+                                            </select>
+
+                                            <div class="selected-sports">
+                                                <p class="input-explanation">You can select multiple Games</p>
                                             </div>
-                                          <div class="input-cell" class="input-cell" style="margin-bottom: 12.5%;">
-                                                <label for="" class="not-required">Occupation </label>
-                                                <select class="form-select student" name="year" required onchange="changeText()">
-                                                    <option value="1st">School Student</option>
-                                                    <option value="2nd">College Student</option>
-                                                    <option value="3rd">University Student</option>
-                                                    <option value="4th">Graduated</option>
-                                                </select>
-    
-                                            </div>
-                                            <div class="input-cell" style="margin-bottom: 2.5%;">
-                                                <label for="" class="not-required">Institution Name </label>
-                                                <input type="text" id="college">
-                                                <p class="input-explanation collegeName">Select your School Name</p>
-                                            </div>
+
+                                        </div>
+                                        <div class="input-cell" class="input-cell" style="margin-bottom: 12.5%;">
+                                            <label for="" class="not-required">Occupation </label>
+                                            <select class="form-select student" name="year" required
+                                                onchange="changeText()">
+                                                <option value="1st">School Student</option>
+                                                <option value="2nd">College Student</option>
+                                                <option value="4th">Graduated</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="input-cell" style="margin-bottom: 2.5%;">
+                                            <label for="" class="not-required">Institution Name </label>
+                                            <input type="text" id="college">
+                                            <p class="input-explanation collegeName">Select your School Name</p>
+                                        </div>
                                         <div class="input-cell" style="margin-bottom: 2.5%;" id="hideGrad">
                                             <label for="" class="not-required studyYear">Class</label>
-                                            <select class="form-select changeYear" name="year" id="yearofstudy" required>
+                                            <select class="form-select changeYear" name="year" id="yearofstudy"
+                                                required>
                                                 <option value="1st">9th</option>
                                                 <option value="2nd">10th</option>
                                                 <option value="3rd">11th</option>
@@ -190,18 +192,19 @@
 
                                             <p class="input-explanation className">Select your Class</p>
                                         </div>
-                                  
+
                                     </div>
 
                                 </div>
 
-
+                                <p id="disclaimer">Note: You should be above 18 years to register.</p>
                                 <div class="register-wrapper">
                                     <div class="register-button">
-                                        <input type="submit" name="Register" value="Register" id="register" onclick="bosmreg()">
+                                        <input type="submit" name="Register" value="Register" id="register"
+                                            onclick="bosmreg()">
                                     </div>
                                 </div>
-                        </div>
+                            </div>
                         </div>
 
                     </div>
