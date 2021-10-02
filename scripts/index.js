@@ -12,7 +12,7 @@ function changeText() {
                   ".changeYear option:nth-child(1)"
             ).selected = true;
             document.getElementsByClassName("collegeName")[0].innerHTML =
-                  "Select Your School Name";
+                  "Type Your School Name";
             document.getElementsByClassName("className")[0].innerHTML =
                   "Select Your Class";
             document.getElementById("hideGrad").style.display = "initial";
@@ -76,7 +76,7 @@ function changeText() {
                   ".changeYear option:nth-child(8)"
             ).disabled = false;
             document.getElementsByClassName("collegeName")[0].innerHTML =
-                  "Select Your College Name";
+                  "Type Your College Name";
             document.getElementsByClassName("className")[0].innerHTML =
                   "Select Your Year of Study";
       }
