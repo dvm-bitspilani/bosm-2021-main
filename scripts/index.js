@@ -8,6 +8,7 @@ window.onload = function () {
 function changeText() {
   if (document.getElementsByClassName('student')[0].value === 'School Student') {
     document.getElementsByClassName('studyYear')[0].innerHTML = 'Class';
+    document.querySelector('.changeYear option:nth-child(1)').selected=true
     document.getElementsByClassName('collegeName')[0].innerHTML = 'Select Your School Name';
     document.getElementsByClassName('className')[0].innerHTML = 'Select Your Class';
     document.getElementById('hideGrad').style.display = 'initial';
@@ -26,7 +27,8 @@ function changeText() {
   else {
     document.getElementsByClassName('studyYear')[0].innerHTML = 'Year of Study'
     document.getElementById('hideGrad').style.display ='initial'
-    document.querySelector('.changeYear option:nth-child(1)').innerHTML='Year of Study'
+    document.querySelector('.changeYear option:nth-child(1)').innerHTML = 'Year of Study'
+    document.querySelector('.changeYear option:nth-child(1)').selected=true
     document.querySelector('.changeYear option:nth-child(2)').disabled=true
     document.querySelector('.changeYear option:nth-child(3)').disabled=true
     document.querySelector('.changeYear option:nth-child(4)').disabled = false
