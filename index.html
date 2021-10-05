@@ -165,7 +165,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="input-cell" class="input-cell" style="margin-bottom: 12.5%;">
+                                        <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
                                             <label for="" class="not-required">Occupation </label>
                                             <select class="form-select student" name="year" required
                                                 onchange="changeText()" id="occupation">
@@ -173,11 +173,13 @@
                                                 <option value="College Student">College Student</option>
                                                 <option value="Graduated">Graduated</option>
                                             </select>
-<p class="input-explanation">Select Your Occupation</p>
+                                            <p class="input-explanation">Select Your Occupation</p>
                                         </div>
                                         <div class="input-cell" style="margin-bottom: 2.5%;">
                                             <label for="" class="not-required">Institution Name </label>
-                                            <input type="text" id="college">
+                                            <select type="text" id="college" required class="form-select college_opt">
+
+                                            </select>
                                             <p class="input-explanation collegeName">Type your School Name</p>
                                         </div>
                                         <div class="input-cell" style="margin-bottom: 2.5%;" id="hideGrad">
