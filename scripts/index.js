@@ -207,3 +207,10 @@ window.onload = function () {
       console.log(error);
     });
 };
+  
+$(document).ready(function() {
+      $('.college_opt').select2({
+            dropdownParent: $('#exampleModal')
+      });
+  });
+
