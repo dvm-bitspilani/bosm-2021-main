@@ -236,7 +236,7 @@ function bosmreg() {
 
 window.onload = function () {
       document.querySelector(".spinner").style.display = "none";
-      const URL = "https://bits-bosm.org/registrations/get_colleges";
+      const URL = "https://bits-bosm.org/bosm2021/registrations/get_colleges";
       const college_opt = document.querySelector(".college_opt");
 
       fetch(URL)
@@ -261,14 +261,18 @@ $(document).ready(function () {
       });    
 });
 
-const li = document.createElement("LI");
-li.innerHTML = "Thisss";
-document.querySelector("#select2-college-results").appendChild(li);
+function changeInput() {
+  console.log("hanjii");
+  $('#hideInput').hide();
+  $('#newInput').show()
+}
+
 
 function addCollege() {
-  const collegeName = document.querySelector(".select2-search__field").value;
-  fetch("https://bits-bosm.org/bosm2021/registrations/add_college", {
+  const collegeName = document.querySelector("#newCollegeInput").value;
+  fetch("https://bits-bosm.org/bosm2021/registrations/add_college/", {
     method: "POST",
+    headers: { "content-type":"application/json"},
     body: JSON.stringify({
       name: collegeName,
     }),
@@ -278,5 +282,6 @@ function addCollege() {
     })
     .then((result) => {
       console.log(result);
+      window.location.reload()
     });
 }
