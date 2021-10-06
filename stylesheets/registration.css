@@ -369,3 +369,8 @@ select {
     color: white;
     font-weight: 600;
 }
+
+select option:disabled {
+    color: rgb(197, 197, 197);
+    font-style: italic;
+}
