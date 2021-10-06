@@ -207,10 +207,29 @@ window.onload = function () {
       console.log(error);
     });
 };
-  
-$(document).ready(function() {
-      $('.college_opt').select2({
-            dropdownParent: $('#exampleModal')
-      });
-  });
 
+$(document).ready(function () {
+  $(".college_opt").select2({
+    dropdownParent: $("#exampleModal"),
+  });
+});
+
+const li = document.createElement("LI");
+li.innerHTML = "Thisss";
+document.querySelector("#select2-college-results").appendChild(li);
+
+function addCollege() {
+  const collegeName = document.querySelector(".select2-search__field").value;
+  fetch("https://bits-bosm.org/bosm2021/registrations/add_college", {
+    method: "POST",
+    body: JSON.stringify({
+      name: collegeName,
+    }),
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then((result) => {
+      console.log(result);
+    });
+}
