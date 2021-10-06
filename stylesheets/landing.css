@@ -85,3 +85,13 @@ body {
 .select2-search__field{
       color: black;
 }
+
+
+/* 
+.select2-results__message{
+      color: blue !important;
+} */
+
+#add-college{
+cursor: pointer;
+}
