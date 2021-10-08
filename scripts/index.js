@@ -258,6 +258,8 @@ window.onload = function () {
 $(document).ready(function () {
       $(".college_opt").select2({
             dropdownParent: $("#exampleModal"),
+            // placeholder: "Select your institution"
+
       });    
 });
 
@@ -285,3 +287,8 @@ function addCollege() {
       window.location.reload()
     });
 }
+
+// CSS
+
+
+// $('.select2-container--default .select2-selection--single').css('background-color', 'none !important')
