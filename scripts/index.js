@@ -5,7 +5,7 @@ function changeText() {
   ) {
     console.log("I'm school");
     document.getElementsByClassName("studyYear")[0].innerHTML = "Class";
-
+    document.querySelector('.changeYear option:nth-child(1)').selected=true
     document.getElementsByClassName("className")[0].innerHTML =
       "Select Your Class";
     document.getElementById("hideGrad").style.display = "initial";
@@ -26,6 +26,7 @@ function changeText() {
   } else {
     document.getElementsByClassName("studyYear")[0].innerHTML = "Year of Study";
     document.getElementById("hideGrad").style.display = "initial";
+    document.querySelector('.changeYear option:nth-child(1)').selected=true
     document.querySelector(".changeYear option:nth-child(1)").innerHTML =
       "Year of Study";
     document.querySelector(".changeYear option:nth-child(2)").disabled = true;
