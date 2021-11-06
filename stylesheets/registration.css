@@ -374,3 +374,13 @@ select option:disabled {
     color: rgb(197, 197, 197);
     font-style: italic;
 }
+
+
+
+
+/* TEAM MEMBERS  */
+
+ul{
+    display: flex;
+    color: white;
+}

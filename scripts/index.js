@@ -5,7 +5,7 @@ function changeText() {
   ) {
     console.log("I'm school");
     document.getElementsByClassName("studyYear")[0].innerHTML = "Class";
-    document.querySelector('.changeYear option:nth-child(1)').selected=true
+    document.querySelector(".changeYear option:nth-child(1)").selected = true;
     document.getElementsByClassName("className")[0].innerHTML =
       "Select Your Class";
     document.getElementById("hideGrad").style.display = "initial";
@@ -26,7 +26,7 @@ function changeText() {
   } else {
     document.getElementsByClassName("studyYear")[0].innerHTML = "Year of Study";
     document.getElementById("hideGrad").style.display = "initial";
-    document.querySelector('.changeYear option:nth-child(1)').selected=true
+    document.querySelector(".changeYear option:nth-child(1)").selected = true;
     document.querySelector(".changeYear option:nth-child(1)").innerHTML =
       "Year of Study";
     document.querySelector(".changeYear option:nth-child(2)").disabled = true;
@@ -52,6 +52,36 @@ var gender_value;
 var collegeid;
 var no_of_sports = 4;
 var is_coach = false;
+var membersArr = [
+  {
+    name: "Mohit Makwana",
+    email: "f2020xxxx@pilani.bits-pilani.ac.in",
+    phone: "8810608387",
+    bits_id: "2020A7PS0048P",
+    gender: "male",
+  },
+  {
+    name: "Mohit Makwana 2",
+    email: "f2020xxxx1@pilani.bits-pilani.ac.in",
+    phone: "8810608387",
+    bits_id: "2020A7xxx3P",
+    gender: "male",
+  },
+  {
+    name: "Mohit Makwana 3",
+    email: "f2020xxx2@pilani.bits-pilani.ac.in",
+    phone: "8810608387",
+    bits_id: "2020A7xxx2",
+    gender: "male",
+  },
+  {
+    name: "Mohit Makwana 4",
+    email: "f2020xxx3@pilani.bits-pilani.ac.in",
+    phone: "8810608387",
+    bits_id: "2020A7xxxxP",
+    gender: "male",
+  },
+];
 
 function getsportsvalue() {
   if (sportsarr.length == 0) {
@@ -237,7 +267,13 @@ function addCollege() {
     });
 }
 
-// CSS
+function addMember() {
+  membersArr.forEach((elem) => {
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(`${elem.name}`); // Create a text node
+    node.appendChild(textnode); // Append the text to <li>
+    document.getElementById("members").appendChild(node);
+  });
+}
 
-
-// $('.select2-container--default .select2-selection--single').css('background-color', 'none !important')
+addMember();
