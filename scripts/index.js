@@ -267,7 +267,7 @@ function addCollege() {
     });
 }
 
-function addMember() {
+function showMember() {
   membersArr.forEach((elem) => {
     var node = document.createElement("LI");
     var textnode = document.createTextNode(`${elem.name}`); // Create a text node
@@ -276,7 +276,7 @@ function addMember() {
   });
 }
 
-addMember();
+showMember();
 
 
 
@@ -286,4 +286,5 @@ function showNewMemberForm(){
 
 function addTeamMember(){
   document.querySelector(".add-team-member").style.display = "none";
+  showMember();
 }
