@@ -277,3 +277,13 @@ function addMember() {
 }
 
 addMember();
+
+
+
+function showNewMemberForm(){
+  document.querySelector(".add-team-member").style.display = "block";
+}
+
+function addTeamMember(){
+  document.querySelector(".add-team-member").style.display = "none";
+}

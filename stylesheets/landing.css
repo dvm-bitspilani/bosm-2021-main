@@ -96,7 +96,7 @@ body {
 cursor: pointer;
 }
 
-#newCollegeBtn{
+#newCollegeBtn, #newMemberBtn{
     border: none;
     font-weight: 400;
     width: 100px;

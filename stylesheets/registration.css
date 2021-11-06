@@ -380,7 +380,43 @@ select option:disabled {
 
 /* TEAM MEMBERS  */
 
+#team-members-wrap{
+    width: 100%;
+}
+
 ul{
     display: flex;
     color: white;
+}
+
+ul li{
+    margin: 2% ;
+}
+
+ul li:nth-child(1){
+    margin-left: 0;
+}
+
+.add-team-row{
+    display: flex;
+}
+
+.add-team-member{
+    background: #14070926;
+    padding-left: 3%;
+    border-radius: 10px;
+    display: none;
+}
+
+.team-input-explanation{
+    font-size: 0.65rem;
+}
+
+
+#newMemberBtn {    
+    width: 150px;
+}
+
+.gender-team{
+    background-color: unset !important;
 }
