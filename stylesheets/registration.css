@@ -424,3 +424,7 @@ ul li:nth-child(1){
 .gender-team{
     background-color: unset !important;
 }
+
+.gender-team option{
+    color: #000;
+}

@@ -52,36 +52,38 @@ var gender_value;
 var collegeid;
 var no_of_sports = 4;
 var is_coach = false;
-var membersArr = [
-  {
-    name: "Mohit Makwana",
-    email: "f2020xxxx@pilani.bits-pilani.ac.in",
-    phone: "8810608387",
-    bits_id: "2020A7PS0048P",
-    gender: "male",
-  },
-  {
-    name: "Mohit Makwana 2",
-    email: "f2020xxxx1@pilani.bits-pilani.ac.in",
-    phone: "8810608387",
-    bits_id: "2020A7xxx3P",
-    gender: "male",
-  },
-  {
-    name: "Mohit Makwana 3",
-    email: "f2020xxx2@pilani.bits-pilani.ac.in",
-    phone: "8810608387",
-    bits_id: "2020A7xxx2",
-    gender: "male",
-  },
-  {
-    name: "Mohit Makwana 4",
-    email: "f2020xxx3@pilani.bits-pilani.ac.in",
-    phone: "8810608387",
-    bits_id: "2020A7xxxxP",
-    gender: "male",
-  },
-];
+// var membersArr = [
+//   {
+//     name: "Mohit Makwana",
+//     email: "f2020xxxx@pilani.bits-pilani.ac.in",
+//     phone: "8810608387",
+//     bits_id: "2020A7PS0048P",
+//     gender: "male",
+//   },
+//   {
+//     name: "Mohit Makwana 2",
+//     email: "f2020xxxx1@pilani.bits-pilani.ac.in",
+//     phone: "8810608387",
+//     bits_id: "2020A7xxx3P",
+//     gender: "male",
+//   },
+//   {
+//     name: "Mohit Makwana 3",
+//     email: "f2020xxx2@pilani.bits-pilani.ac.in",
+//     phone: "8810608387",
+//     bits_id: "2020A7xxx2",
+//     gender: "male",
+//   },
+//   {
+//     name: "Mohit Makwana 4",
+//     email: "f2020xxx3@pilani.bits-pilani.ac.in",
+//     phone: "8810608387",
+//     bits_id: "2020A7xxxxP",
+//     gender: "male",
+//   },
+// ];
+
+let membersArr = [];
 
 function getsportsvalue() {
   if (sportsarr.length == 0) {
@@ -267,24 +269,40 @@ function addCollege() {
     });
 }
 
-function showMember() {
-  membersArr.forEach((elem) => {
-    var node = document.createElement("LI");
-    var textnode = document.createTextNode(`${elem.name}`); // Create a text node
-    node.appendChild(textnode); // Append the text to <li>
-    document.getElementById("members").appendChild(node);
-  });
+function showMember(memberDetails) {
+  var node = document.createElement("LI");
+  var textnode = document.createTextNode(memberDetails.name); // Create a text node
+  node.appendChild(textnode); // Append the text to <li>
+  document.getElementById("members").appendChild(node);
 }
 
-showMember();
+// showMember(membersArr);
 
 
 
-function showNewMemberForm(){
+function showNewMemberForm() {
   document.querySelector(".add-team-member").style.display = "block";
 }
 
-function addTeamMember(){
+function addTeamMember() {
   document.querySelector(".add-team-member").style.display = "none";
-  showMember();
+  const teamname = document.getElementById("team-name").value;
+  const teamemail = document.getElementById("team-email").value;
+  const teambitsid = document.getElementById("team-bitsid").value;
+  const teamphone = document.getElementById("team-phone").value;
+  const membergender = document.getElementById("team-member-gender").value;
+
+  console.log(teamname)
+
+  let memberDetails = {
+    name: teamname,
+    email: teamemail,
+    phone: teamphone,
+    bits_id: teambitsid,
+    gender: membergender,
+  }
+  membersArr.push(memberDetails);
+  console.log(membersArr)
+
+  showMember(memberDetails);
 }
