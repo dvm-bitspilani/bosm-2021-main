@@ -69,33 +69,13 @@
 
                             <div>
                                 <div class="input-row">
-                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                        <label for="">Name</label>
-                                        <input type="text" required id="name">
-                                        <p class="input-explanation">Type in your first and last name here</p>
-                                    </div>
-                                    <div class="radio-cell">
-                                        <p class="radio-heading">Age</p>
-                                        <p class="input-explanation radio-explanation">Are You above 18?</p>
-                                        <div class="radio-wrapper">
-
-                                            <div class="radio-option">
-                                                <input type="radio" id="yes" name="coach" value="true">
-                                                <label class="radio-label not-required" for="yes">Yes</label>
-                                            </div>
-                                            <div class="radio-option">
-                                                <input type="radio" id="no" name="coach" value="false">
-                                                <label class="radio-label not-required" for="no">No</label>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="input-row">
 
                                     <div class="input-column">
+                                        <div class="input-cell" style="padding-top: 2%" id="name-wrap">
+                                            <label for="">Name</label>
+                                            <input type="text" required id="name">
+                                            <p class="input-explanation">Type in your first and last name here</p>
+                                        </div>
                                         <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
                                             <label for="">Email</label>
                                             <input type="email" required id="email">
@@ -107,11 +87,7 @@
                                             <p class="input-explanation phone-explanation">Type your phone number here
                                             </p>
                                         </div>
-                                        <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
-                                            <label for="">City </label>
-                                            <input type="text" required id="city">
-                                            <p class="input-explanation">Type in your City Name</p>
-                                        </div>
+
                                         <div class="input-cell" class="input-cell">
                                             <label for="" class="not-required">State </label>
                                             <select class="form-select" name="year" id="state" required>
@@ -166,6 +142,11 @@
                                     </div>
                                     <div class="input-column">
                                         <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
+                                            <label for="">BITS ID </label>
+                                            <input type="text" required id="bits-id">
+                                            <p class="input-explanation">Type in your BITS ID</p>
+                                        </div>
+                                        <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
                                             <label for="" class="not-required">Games</label>
                                             <select id="sports_opt" class="form-select select-input"
                                                 onchange="getsportsvalue()">
@@ -182,27 +163,8 @@
                                             </div>
 
                                         </div>
-                                        <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
-                                            <label for="" class="not-required">Occupation </label>
-                                            <select class="form-select student" name="year" required
-                                                onchange="changeText()" id="occupation">
-                                                <option value="School Student">School Student</option>
-                                                <option value="College Student">College Student</option>
-                                                <option value="Graduated">Graduated</option>
-                                            </select>
-                                            <p class="input-explanation">Select Your Occupation</p>
-                                        </div>
-                                        <div class="input-cell"
-                                            style="display: flex;margin-bottom: 2.5%;flex-direction: column;"
-                                            id="hideInput">
-                                            <label for="" class="not-required">Institution Name </label>
-                                            <select type="text" id="college" required class="form-select college_opt"
-                                                placeholder="Pick a college">
-                                            </select>
-                                            <p class="input-explanation collegeName">Type your Institution Name <i
-                                                    id="add-college" onclick="changeInput()"><u>Institute name not in
-                                                        the list</u></i></p>
-                                        </div>
+
+
 
                                         <div class="input-cell" id="newInput"
                                             style="margin-bottom: 2.5%;display: none;">
@@ -216,18 +178,20 @@
                                             <label for="" class="not-required studyYear">Class</label>
                                             <select class="form-select changeYear" name="year" id="yearofstudy"
                                                 required>
-                                                <option value="">Class</option>
-                                                <option value=11>11th</option>
-                                                <option value=12>12th</option>
-                                                <option value=13>Drop Year</option>
-                                                <option value=1 disabled>1st</option>
-                                                <option value=2 disabled>2nd</option>
-                                                <option value=3 disabled>3rd</option>
-                                                <option value=4 disabled>4th</option>
-                                                <option value=5 disabled>5th</option>
+                                               
+                                                <option value=1>1st</option>
+                                                <option value=2>2nd</option>
+                                                <option value=3>3rd</option>
+                                                <option value=4>4th</option>
+                                                <option value=5>5th</option>
                                             </select>
 
-                                            <p class="input-explanation className">Select your Class</p>
+                                            <p class="input-explanation className">Select your year of study</p>
+                                        </div>
+                                        <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
+                                            <label for="">City </label>
+                                            <input type="text" required id="city">
+                                            <p class="input-explanation">Type in your City Name</p>
                                         </div>
 
                                     </div>

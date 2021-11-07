@@ -86,10 +86,6 @@ select {
 }
 
 
-#name-wrap {
-    width: 45%;
-}
-
 /* //////////Radio Buttons ////////// */
 
 
@@ -324,9 +320,7 @@ width: 88%;
     background-color: rgb(241, 241, 241);
 }
 
-#name-wrap {
-    width: 45%;
-}
+
 
 .radio-cell {
     display: flex;

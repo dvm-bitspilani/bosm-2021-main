@@ -244,10 +244,14 @@ function addCollege() {
 }
 
 function showMember(memberDetails) {
-  var node = document.createElement("LI");
-  var textnode = document.createTextNode(memberDetails.name); // Create a text node
-  node.appendChild(textnode); // Append the text to <li>
-  document.getElementById("members").appendChild(node);
+
+  if (memberDetails.name != ""){
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(memberDetails.name); // Create a text node
+    node.appendChild(textnode); // Append the text to <li>
+    document.getElementById("members").appendChild(node);
+  }
+  
 }
 
 // showMember(membersArr);
