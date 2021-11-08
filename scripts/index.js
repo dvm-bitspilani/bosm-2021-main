@@ -9,7 +9,15 @@ var no_of_sports = 4;
 var is_coach = false;
 let membersArr = [];
 
-function runAnimations() {}
+let rulesArr = [
+  { name: "tennisdouble", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
+  { name: "bgmi", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
+  { name: "valorant", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
+  { name: "codmobile", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
+  { name: "clashroyale", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" }
+]
+
+function runAnimations() { }
 
 function getcollegeid() {
   const val = document.getElementById("college_opt").value;
@@ -40,6 +48,7 @@ function bosmreg() {
     members: membersArr,
   };
 
+  console.log(sport);
   console.log(JSON.stringify(data));
 
   if (
@@ -104,26 +113,31 @@ function addCollege() {
 }
 
 function showGenderStatus() {
+  let sport = document.getElementById("sports_opt").value;
   const game = document.getElementById("sports_opt").value.trim();
+  let rule = rulesArr.filter(el => el.name == game)
+  console.log(rule[0].link);
+  window.open(rule[0].link, "_blank");
   const data = {
     game: game,
   };
   console.log(data);
   fetch("https://bits-bosm.org/bosm2021/registrations/game_data/", {
     method: "POST",
-    body:JSON.stringify(data),
-    headers: {"Content-type":"application/json;charset=utf-8"}})
+    body: JSON.stringify(data),
+    headers: { "Content-type": "application/json;charset=utf-8" }
+  })
     .then(function (response) {
       return response.json();
     })
     .then(function (result) {
-      let totalMales= result.num_male;
+      let totalMales = result.num_male;
       let totalFemales = result.num_female;
-      membersArr.forEach((member)=>{
-        if(member.gender == "Male"){
+      membersArr.forEach((member) => {
+        if (member.gender == "Male") {
           totalMales--;
         }
-        else{
+        else {
           totalFemales--;
         }
       })
