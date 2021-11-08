@@ -93,7 +93,7 @@ function bosmreg() {
     const sport = document.getElementById("sports_opt").value;
     const gender = document.getElementById("member-gender").value;
     const bits_id = document.getElementById("bits-id").value;
-    const team_name = "d";
+    const team_name = document.getElementById("team-name").value;;
 
     const data ={
       name: name,
@@ -105,6 +105,8 @@ function bosmreg() {
       team_name : team_name,
       members: membersArr,
     }
+
+    console.log(data);
 
 
     if (
