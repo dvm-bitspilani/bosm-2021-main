@@ -184,6 +184,13 @@ function showGenderStatus() {
         isMale = 1;
         isFemale = 0;
       }
+      console.log(totalMales - isMale + totalFemales - isFemale)
+      if(totalMales - isMale + totalFemales - isFemale === 0 ){
+        document.getElementById('newMemberBtn').disabled = 'true';
+      }
+      else {
+        document.getElementById('newMemberBtn').disabled = '';
+      }
       document.getElementById(
         "team-gender-status"
       ).innerHTML = `Remaining Team Members: ${totalMales-isMale} Males and ${totalFemales-isFemale} Females `;
