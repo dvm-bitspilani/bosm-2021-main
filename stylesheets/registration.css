@@ -190,7 +190,7 @@ input[type="radio"]:focus {
     margin-right: 0;
     font-family: 'affirmative';
     letter-spacing: 2px;
-    font-size: 2.75rem;
+    font-size: 2.25rem;
     background-color: rgb(241, 241, 241);
     border-radius: 3px;
     border: none;
@@ -232,77 +232,6 @@ color: white;
 width: 88%;
 } */
 
-
-@media only screen and (max-width:968px) {
-
-    .input-row {
-        flex-direction: column;
-    }
-
-    .registration-container {
-        overflow-y: scroll;
-    }
-
-    .registration-container>h1 {
-        font-size: 2rem;
-        margin: 0;
-        text-align: center;
-    }
-
-    .input-column {
-        width: 95%;
-    }
-
-    .register-wrapper {
-        justify-content: center;
-    }
-
-    #register {
-        width: unset;
-        font-size: 2rem;
-        margin-left: 0;
-        padding: 5%;
-        position: relative;
-        right: 10px;
-        box-shadow:
-            3.3px 2.1px 2.7px rgba(0, 0, 0, 0.19),
-            8.3px 5.2px 6.9px rgba(0, 0, 0, 0.131),
-            16.8px 10.6px 14.2px rgba(0, 0, 0, 0.106),
-            34.7px 21.9px 29.2px rgba(0, 0, 0, 0.084),
-            95px 60px 80px rgba(0, 0, 0, 0.059);
-
-    }
-
-    .register-button::before {
-        display: none;
-    }
-
-    .input-explanation {
-        font-size: 0.75rem;
-    }
-
-    label {
-        font-size: 1rem;
-    }
-
-    .registration-container {
-        width: initial;
-        padding-bottom: 8%;
-    }
-
-    .input-cell {
-        margin: 2.5% 0;
-    }
-
-    .modal-dialog {
-        max-width: inherit !important;
-    }
-
-    #name-wrap {
-        width: 95% !important;
-    }
-
-}
 
 /* 
 ////// SCROLLBAR/// */
@@ -439,4 +368,91 @@ ul li:nth-child(1){
 #team-gender-status{
     color: white;
     font-weight: 600;
+}
+
+
+/* Media Queries  */
+
+
+@media only screen and (max-width:968px) {
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .registration-container {
+        overflow-y: scroll;
+    }
+
+    .registration-container>h1 {
+        font-size: 2rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .input-column {
+        width: 95%;
+    }
+
+    .register-wrapper {
+        justify-content: center;
+    }
+
+    #register {
+        width: unset;
+        font-size: 2rem;
+        margin-left: 0;
+        padding: 5%;
+        position: relative;
+        right: 10px;
+        box-shadow:
+            3.3px 2.1px 2.7px rgba(0, 0, 0, 0.19),
+            8.3px 5.2px 6.9px rgba(0, 0, 0, 0.131),
+            16.8px 10.6px 14.2px rgba(0, 0, 0, 0.106),
+            34.7px 21.9px 29.2px rgba(0, 0, 0, 0.084),
+            95px 60px 80px rgba(0, 0, 0, 0.059);
+
+    }
+
+    .register-button::before {
+        display: none;
+    }
+
+    .input-explanation {
+        font-size: 0.75rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    .registration-container {
+        width: initial;
+        padding-bottom: 8%;
+    }
+
+    .input-cell {
+        margin: 2.5% 0;
+    }
+
+    .modal-dialog {
+        max-width: inherit !important;
+    }
+
+    #name-wrap {
+        width: 95% !important;
+    }
+    #newMemberBtn, #newMemberAddBtn{
+        margin-left: 0;
+    }
+    input{
+        width: 100%;
+    }
+    .add-team-row{
+        display: unset !important;
+    }
+    .add-team-member{
+        padding: 10px 20px 20px
+    }
+
 }
