@@ -455,5 +455,8 @@ ul li:nth-child(1){
     .add-team-member{
         padding: 10px 20px 20px
     }
+    hr{
+        display: none;
+    }
 
 }
