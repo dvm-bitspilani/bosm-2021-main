@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BOSM: Bits Open Sports Meet</title>
+    <title>BPL: Bits Premier League</title>
 
     <link rel="icon" href="./assets/bosm-logo.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -76,19 +76,19 @@
                                             id="name-wrap">
                                             <label for="">Name</label>
                                             <input type="text" required id="name">
-                                            <p class="input-explanation">Type in your first and last name here</p>
+                                            <p class="input-explanation">Type in your first and last name</p>
                                         </div>
                                         <div class="input-cell" data-aos="zoom-in" class="input-cell"
                                             style="margin-bottom: 2.5%;">
-                                            <label for="">Email</label>
-                                            <input type="email" required id="email">
+                                            <label for="">BITS Mail</label>
+                                            <input type="email" required id="email" pattern="[a-zA-Z][0-9]+@[a-zA-Z]+\.bits-pilani\.ac\.in">
                                             <p class="input-explanation">Type in your Email</p>
                                         </div>
                                         <div class="input-cell" data-aos="zoom-in" class="input-cell"
                                             style="margin-bottom: 2.5%;">
                                             <label for="">Phone </label>
                                             <input type="tel" required id="phone">
-                                            <p class="input-explanation phone-explanation">Type your phone number here
+                                            <p class="input-explanation phone-explanation">Type your Phone Number
                                             </p>
                                         </div>
 
@@ -101,9 +101,9 @@
                                             <p class="input-explanation">Type in your BITS ID</p>
                                         </div>
                                         <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
-                                            <label for="" class="not-required">Games</label>
+                                            <label for="" class="not-required">Sports</label>
                                             <select id="sports_opt" class="form-select select-input" onchange="showGenderStatus()">
-                                                <option value="" selected disabled>Tennis Double</option>
+                                                <option value="" selected disabled>Select Your Sport</option>
                                                 <option value=" Tennis Double" class="sports-tag" id="0">Tennis Double</option>
                                                 <option value=" BGMI" class="sports-tag" id="1">BGMI</option>
                                                 <option value="Valorant" class="sports-tag" id="2">Valorant</option>
@@ -113,7 +113,7 @@
                                             </select>
 
                                             <div class="selected-sports">
-                                                <p class="input-explanation">You can select your Game</p>
+                                                <p class="input-explanation">You can select your Sport</p>
                                             </div>
 
                                         </div>
@@ -126,7 +126,7 @@
                                                 <option value="Male">Male </option>
                                                 <option value="Female">Female </option>
                                             </select>
-                                            <p class="input-explanation">Select Gender of the member</p>
+                                            <p class="input-explanation">Select Your Gender</p>
                                         </div>
 
 
@@ -164,7 +164,7 @@
                                                 </div>
                                                 <div class="input-cell" style="padding-top: 2%" id="name-wrap">
                                                     <label for="">BITS ID</label>
-                                                    <input type="text" required id="team-bitsid">
+                                                    <input pattern="[a-zA-Z][0-9]+[a-zA-Z]\d[a-zA-Z]+[0-9]+[a-zA-Z]|[a-zA-Z][0-9]+[a-zA-Z]\d[a-zA-Z]\d[0-9]+[a-zA-Z]" type="text" required id="team-bitsid">
                                                     <p class="input-explanation team-input-explanation">Type in BITS ID
                                                         of the member</p>
                                                 </div>
