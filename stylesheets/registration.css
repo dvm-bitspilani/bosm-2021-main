@@ -11,7 +11,9 @@
 .registration-container {
     /* width: 60vw; */
     /* height: 85vh; */
-    background-color: #ff2749;
+    background-image: url("../assets/Bg.png");
+    background-size: cover;
+    background-position: center;
     /* border-radius: 10px; */
     padding: 2% 5% 1%;
     overflow-x: hidden;
@@ -307,12 +309,12 @@ width: 88%;
 
 
 .modal-body::-webkit-scrollbar-track {
-    background-color: #FF2748;
+    background-color:#261939;
 }
 
 .modal-body::-webkit-scrollbar {
     width: 8px;
-    background-color: #FF2748;
+    background-color: #261939;
 }
 
 .modal-body::-webkit-scrollbar-thumb {
@@ -347,7 +349,7 @@ select {
 
 
 .form-select {
-    background-color: #FF2748 !important;
+    background-color: unset !important;
     color: white !important;
     border: none !important;
     border-bottom: 1px solid white !important;
@@ -406,7 +408,7 @@ ul li:nth-child(1){
 }
 
 .add-team-member{
-    background: #7c001324;
+    background: #a1a1a149;
     padding-left: 3%;
     border-radius: 10px;
     display: none;
