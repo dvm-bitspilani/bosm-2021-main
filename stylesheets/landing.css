@@ -136,3 +136,6 @@ cursor: pointer;
 ;
 
 }
+select option {
+      color: black;
+}
