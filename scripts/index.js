@@ -21,9 +21,10 @@ function runAnimations() { }
 
 function getcollegeid() {
   const val = document.getElementById("college_opt").value;
-  console.log(val);
+
   collegeid = parseInt(val);
-  console.log(collegeid);
+
+
 }
 
 // FORM Submission
@@ -48,8 +49,6 @@ function bosmreg() {
     members: membersArr,
   };
 
-  console.log(sport);
-  console.log(JSON.stringify(data));
 
   if (
     name == "" ||
@@ -80,6 +79,16 @@ function bosmreg() {
 
 window.onload = function () {
   document.querySelector(".spinner").style.display = "none";
+
+  fetch("https://bits-bosm.org/bosm2021/registrations/all_games/")
+  .then(response => response.json())
+  .then((result) =>{
+   document.getElementById("sports_opt").innerHTML = `<option value="" selected disabled>Select Your Sport</option>`;
+    result.data.forEach((game)=>{
+      document.getElementById("sports_opt").innerHTML = document.getElementById("sports_opt").innerHTML + `<option value="${game.name}" class="sports-tag" id="2">${game.name} (${game.gender})</option>`;
+    })
+    console.log(result.data);
+  })
 };
 
 $(document).ready(function () {
@@ -115,9 +124,11 @@ function addCollege() {
 function showGenderStatus() {
   let sport = document.getElementById("sports_opt").value;
   const game = document.getElementById("sports_opt").value.trim();
-  let rule = rulesArr.filter(el => el.name == game)
-  console.log(rule[0].link);
-  window.open(rule[0].link, "_blank");
+  if(membersArr.length == 0){
+    // let rule = rulesArr.filter(el => el.name == game)
+    // console.log(rule[0].link);
+    // window.open(rule[0].link, "_blank");
+  }
   const data = {
     game: game,
   };
@@ -131,8 +142,14 @@ function showGenderStatus() {
       return response.json();
     })
     .then(function (result) {
+      console.log(result);
       let totalMales = result.num_male;
       let totalFemales = result.num_female;
+      if(result.team_size == 1){
+        document.getElementById("add-team-wrapper").style.display = "none";
+      }
+
+      document.getElementById("add-team-wrapper").style.display = "block";
       membersArr.forEach((member) => {
         if (member.gender == "Male") {
           totalMales--;
@@ -141,9 +158,7 @@ function showGenderStatus() {
           totalFemales--;
         }
       })
-
       console.log(result);
-
       document.getElementById(
         "team-gender-status"
       ).innerHTML = `Remaining Team Members: ${totalMales} Males and ${totalFemales} Females `;
