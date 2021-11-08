@@ -282,7 +282,6 @@ select {
     color: white !important;
     border: none !important;
     border-bottom: 1px solid white !important;
-    width: 90%;
 }
 
 .form-select:active {
@@ -439,10 +438,7 @@ ul li:nth-child(1){
     .modal-dialog {
         max-width: inherit !important;
     }
-
-    #name-wrap {
-        width: 95% !important;
-    }
+    
     #newMemberBtn, #newMemberAddBtn{
         margin-left: 0;
     }
