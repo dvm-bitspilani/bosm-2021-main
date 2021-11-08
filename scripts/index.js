@@ -85,7 +85,7 @@ window.onload = function () {
   .then((result) =>{
    document.getElementById("sports_opt").innerHTML = `<option value="" selected disabled>Select Your Sport</option>`;
     result.data.forEach((game)=>{
-      document.getElementById("sports_opt").innerHTML = document.getElementById("sports_opt").innerHTML + `<option value="${game.name}" class="sports-tag" id="2">${game.name} (${game.gender})</option>`;
+      document.getElementById("sports_opt").innerHTML = document.getElementById("sports_opt").innerHTML + `<option value="${game.name}" class="sports-tag" id="2">${game.name}</option>`;
     })
     console.log(result.data);
   })
@@ -143,8 +143,8 @@ function showGenderStatus() {
     })
     .then(function (result) {
       console.log(result);
-      let totalMales = result.num_male;
-      let totalFemales = result.num_female;
+      let totalMales = result.games[0].num_male;
+      let totalFemales = result.games[0].num_female;
       if(result.team_size == 1){
         document.getElementById("add-team-wrapper").style.display = "none";
       }

@@ -60,8 +60,9 @@ body {
 @media (max-width: 768px) {
 
       .main-section-landing {
-            background: url(../assets/mobile/new-mobile.png) no-repeat;
-            background-size: 100% 100%;
+            background: url(../assets/mobile/mobile_bg.png) no-repeat;
+            background-size: cover;
+            background-position: center center;
             height: 100vh;
       }
 
@@ -69,6 +70,7 @@ body {
       .main-heading {
             font-size: 10vw;
             width: 70%;
+            top: 40%;
       }
 
       .main-section-landing a {
@@ -79,6 +81,14 @@ body {
       span {
             width: 100%;
             text-align: center;
+      }
+      nav span {
+            border: #FF4654 solid 2px;
+            border-radius: 12px;
+            position: relative;
+            top: 85vh;
+            margin: 0px 15vw;
+        
       }
 }
 
