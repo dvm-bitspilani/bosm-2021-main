@@ -102,10 +102,10 @@
                                         </div>
                                         <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
                                             <label for="" class="not-required">Games</label>
-                                            <select id="sports_opt" class="form-select select-input"
-                                                onchange="getsportsvalue()">
-                                                <option value="" selected disabled>Games</option>
-                                                <option value="BGMI" class="sports-tag" id="1">BGMI</option>
+                                            <select id="sports_opt" class="form-select select-input" onchange="showGenderStatus()">
+                                                <option value="" selected disabled>Tennis Double</option>
+                                                <option value=" Tennis Double" class="sports-tag" id="0">Tennis Double</option>
+                                                <option value=" BGMI" class="sports-tag" id="1">BGMI</option>
                                                 <option value="Valorant" class="sports-tag" id="2">Valorant</option>
                                                 <option value="COD-Mobile" class="sports-tag" id="3">COD-Mobile</option>
                                                 <option value="Clash Royale" class="sports-tag" id="4">Clash Royale
@@ -125,7 +125,6 @@
                                                 id="member-gender">
                                                 <option value="Male">Male </option>
                                                 <option value="Female">Female </option>
-                                                <option value="No">Prefer Not To Say </option>
                                             </select>
                                             <p class="input-explanation">Select Gender of the member</p>
                                         </div>
@@ -143,6 +142,7 @@
                                         <input type="text" required id="team-name">
                                         <p class="input-explanation team-input-explanation">Type in Team Name</p>
                                     </div>
+                                    <span id="team-gender-status"></span>
                                     <div class="input-cell" style="padding-top: 2%" id="team-members-wrap">
                                         <label for="">Team Members</label>
                                         <button id="newMemberBtn" onclick="showNewMemberForm()">Add a Teammate</button>
@@ -183,7 +183,6 @@
                                                         id="team-member-gender">
                                                         <option value="Male">Male </option>
                                                         <option value="Female ">Female </option>
-                                                        <option value="No">Prefer Not To Say </option>
                                                     </select>
                                                     <p class="input-explanation">Select Gender of the member</p>
                                                 </div>

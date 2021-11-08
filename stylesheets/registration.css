@@ -434,8 +434,7 @@ ul li:nth-child(1){
 }
 
 
-/* ANIMATION */
-
-button:hover{
-
+#team-gender-status{
+    color: white;
+    font-weight: 600;
 }
