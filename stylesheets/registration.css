@@ -165,6 +165,7 @@ input[type="radio"]:focus {
     display: flex;
     justify-content: center;
     position: relative;
+    margin: 25px;
 }
 
 .sports {
@@ -393,10 +394,11 @@ ul li:nth-child(1){
 
 .add-team-row{
     display: flex;
+    align-items: center;
 }
 
 .add-team-member{
-    background: #14070926;
+    background: #7c001324;
     padding-left: 3%;
     border-radius: 10px;
     display: none;
