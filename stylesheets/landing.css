@@ -111,3 +111,18 @@ cursor: pointer;
       height: 50px !important;
       margin-left: 50px;
 }
+
+
+#newCollegeBtn:hover, #newMemberBtn:hover, #newMemberAddBtn:hover{
+      background-color: rgb(247, 247, 247);
+      color: rgb(143, 2, 2);
+      transform: scale(1.05);
+      transition: 0.5s all ease-in-out;
+      box-shadow:
+  3.3px 3.4px 6px -45px rgba(0, 0, 0, 0.031),
+  9.1px 9.5px 16.5px -45px rgba(0, 0, 0, 0.045),
+  22px 22.9px 39.8px -45px rgba(0, 0, 0, 0.059),
+  73px 76px 132px -45px rgba(0, 0, 0, 0.09)
+;
+
+}

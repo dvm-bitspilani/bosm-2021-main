@@ -76,6 +76,10 @@ let membersArr = [];
 //Lite
 
 
+function runAnimations(){
+ 
+}
+
 function getcollegeid() {
   const val = document.getElementById("college_opt").value;
   console.log(val);
@@ -106,7 +110,7 @@ function bosmreg() {
       members: membersArr,
     }
 
-    console.log(data);
+    console.log(JSON.stringify(data));
 
 
     if (
@@ -123,7 +127,7 @@ function bosmreg() {
       fetch("https://bits-bosm.org/bosm2021/registrations/register/", {
         headers: {'content-type': 'application/json'},
         method: "PUT",
-        body: data,
+        body: JSON.stringify(data),
       })
         .then(function (response) {
           return response.json();

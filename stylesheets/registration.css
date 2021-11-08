@@ -11,7 +11,7 @@
 .registration-container {
     /* width: 60vw; */
     /* height: 85vh; */
-    background-color: #FF2748;
+    background-color: #ff2749;
     /* border-radius: 10px; */
     padding: 2% 5% 1%;
     overflow-x: hidden;
@@ -375,6 +375,14 @@ select option:disabled {
 
 /* TEAM MEMBERS  */
 
+
+hr{
+    opacity: 0.75;
+    color: white;
+    height: 2.5px !important;
+    border-radius: 50px;
+    margin: 6% 5% 4%;
+}
 #team-members-wrap{
     width: 100%;
 }
@@ -423,4 +431,11 @@ ul li:nth-child(1){
 
 .gender-team option{
     color: #000;
+}
+
+
+/* ANIMATION */
+
+button:hover{
+
 }
