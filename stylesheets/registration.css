@@ -57,7 +57,7 @@ select {
     margin: 0 3%;
     border-bottom: 1px solid rgb(89, 89, 89);
     background: none;
-    width: 100%;
+    width: 90%;
     padding: 2%;
     font-size: 1rem;
     margin-left: 0;
@@ -283,7 +283,7 @@ select {
     border: none !important;
     border-bottom: 1px solid white !important;
     margin-top: 1.5%;
-    width: 100%;
+    width: 90%;
 }
 
 .form-select:active {
@@ -307,7 +307,9 @@ select option:disabled {
 
 
 /* TEAM MEMBERS  */
-
+#team-name{
+    width: 96%;
+}
 
 hr{
     opacity: 0.75;
