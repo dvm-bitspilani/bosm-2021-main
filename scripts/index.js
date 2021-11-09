@@ -204,7 +204,7 @@ function showGenderStatus() {
         isFemale = 0;
       }
       totalMalesCopy = totalMales - isMale;
-      totalFemalesCopy = totaFemales - iFemale;
+      totalFemalesCopy = totalFemales - isFemale;
 
       console.log(totalMales - isMale + totalFemales - isFemale)
       if(totalMales - isMale + totalFemales - isFemale === 0 ){
