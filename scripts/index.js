@@ -13,6 +13,8 @@ var isMale = 1;
 var isFemale = 0;
 var male;
 var female;
+var totalMalesCopy = 0;
+var totalFemalesCopy = 0;
 
 let rulesArr = [
   { name: "tennisdouble", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
@@ -23,6 +25,7 @@ let rulesArr = [
 ]
 
 var genderSelect = document.getElementById("member-gender");
+var sportSelect = document.getElementById("sports_opt");
 genderSelect.addEventListener("change", function () {
     if(genderSelect.value === 'Male') {
         isMale = 1;
@@ -34,6 +37,21 @@ genderSelect.addEventListener("change", function () {
     }
 })
 
+sportSelect.addEventListener("change", function () {
+  // console.log("changed")
+      if (totalMalesCopy < 0 ){
+        totalMalesCopy = 0;
+        document.getElementById(
+          "team-gender-status"
+        ).innerHTML = `Remaining Team Members: ${totalMalesCopy} Males and ${totalFemalesCopy} Females `;
+      }
+      if (totalFemalesCopy < 0 ){
+        totalFemalesCopy = 0;
+        document.getElementById(
+          "team-gender-status"
+        ).innerHTML = `Remaining Team Members: ${totalMalesCopy} Males and ${totalFemalesCopy} Females `;
+      }
+})
 function runAnimations() { }
 
 function getcollegeid() {
@@ -75,7 +93,7 @@ function bosmreg() {
     // yos_value == null ||
     // gender_value == null
   ) {
-    alert("Please fill all mentioned feilds");
+    alert("Please fill all mentioned fields");
   } else {
     fetch("https://bits-bosm.org/bosm2021/registrations/register/", {
       headers: { "content-type": "application/json" },
@@ -87,6 +105,7 @@ function bosmreg() {
       })
       .then(function (result) {
         alert(result.message);
+        console.log(result)
       })
       .catch(function (error) {
         console.log(error);
@@ -184,6 +203,9 @@ function showGenderStatus() {
         isMale = 1;
         isFemale = 0;
       }
+      totalMalesCopy = totalMales - isMale;
+      totalFemalesCopy = totaFemales - iFemale;
+
       console.log(totalMales - isMale + totalFemales - isFemale)
       if(totalMales - isMale + totalFemales - isFemale === 0 ){
         document.getElementById('newMemberBtn').disabled = 'true';
