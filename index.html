@@ -63,159 +63,159 @@
                     <!-- </div> -->
 
                     <div class="modal-body">
-                        <form>
-                            <div class="registration-container">
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                                <h1>Registration</h1>
 
-                                <div>
+                        <div class="registration-container">
+                            <button class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            <h1>Registration</h1>
+                            <form action="#" method="PUT">
+                                <div class="input-row">
+                                    <div class="input-column">
+                                        <div class="input-cell" data-aos="zoom-in" style="padding-top: 2%"
+                                            id="name-wrap">
+                                            <label for="">Captain's Name</label>
+                                            <input name="name" type="text" required id="name">
+                                            <p class="input-explanation">Type in your first and last name</p>
+                                        </div>
+                                        <div class="input-cell" data-aos="zoom-in" class="input-cell"
+                                            style="padding-top: 2%;">
+                                            <label for="">Captain's BITS Mail</label>
+                                            <input name="email" type="email" required id="email"
+                                                pattern="[a-zA-Z][0-9]+@[a-zA-Z]+\.bits-pilani\.ac\.in">
+                                            <p class="input-explanation">Type in your BITS Mail</p>
+                                        </div>
+                                        <div class="input-cell" data-aos="zoom-in" class="input-cell"
+                                            style="padding-top: 2%;">
+                                            <label for="">Captain's Phone </label>
+                                            <input name="phone" type="tel" required id="phone">
+                                            <p class="input-explanation phone-explanation">Type your Phone Number
+                                            </p>
+                                        </div>
 
 
+                                    </div>
+                                    <div class="input-column">
 
-                                    <div class="input-row">
+                                        <div class="input-cell" class="input-cell" style="padding-top: 2%;">
 
-
-                                        <div class="input-column">
-                                            <div class="input-cell" data-aos="zoom-in" style="padding-top: 2%"
-                                                id="name-wrap">
-                                                <label for="">Captain's Name</label>
-                                                <input type="text" required id="name">
-                                                <p class="input-explanation">Type in your first and last name</p>
-                                            </div>
-                                            <div class="input-cell" data-aos="zoom-in" class="input-cell"
-                                                style="padding-top: 2%;">
-                                                <label for="">Captain's BITS Mail</label>
-                                                <input type="email" required id="email"
-                                                    pattern="[a-zA-Z][0-9]+@[a-zA-Z]+\.bits-pilani\.ac\.in">
-                                                <p class="input-explanation">Type in your BITS Mail</p>
-                                            </div>
-                                            <div class="input-cell" data-aos="zoom-in" class="input-cell"
-                                                style="padding-top: 2%;">
-                                                <label for="">Captain's Phone </label>
-                                                <input type="tel" required id="phone">
-                                                <p class="input-explanation phone-explanation">Type your Phone Number
-                                                </p>
-                                            </div>
-
+                                            <label for="">Captain's BITS ID </label>
+                                            <input name="bits-id" type="text"
+                                                pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]" required id="bits-id">
+                                            <p class="input-explanation">Type in your BITS ID</p>
 
                                         </div>
-                                        <div class="input-column">
-                                            <div class="input-cell" class="input-cell" style="padding-top: 2%;">
-                                                <label for="">Captain's BITS ID </label>
-                                                <input type="text" pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]"
-                                                    required id="bits-id">
-                                                <p class="input-explanation">Type in your BITS ID</p>
+
+                                        <div class="input-cell" class="input-cell" style="padding-top: 2%;">
+
+                                            <label for="" class="not-required">Sports</label>
+                                            <select name="sports" id="sports_opt" class="form-select select-input"
+                                                onchange="showGenderStatus()">
+                                            </select>
+
+                                            <div class="selected-sports">
+                                                <p class="input-explanation">You can select your Sport</p>
                                             </div>
-                                            <div class="input-cell" class="input-cell" style="padding-top: 2%;">
-                                                <label for="" class="not-required">Sports</label>
-                                                <select id="sports_opt" class="form-select select-input"
-                                                    onchange="showGenderStatus()">
-
-                                                </select>
-
-                                                <div class="selected-sports">
-                                                    <p class="input-explanation">You can select your Sport</p>
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="input-cell" class="input-cell" style="margin-top: 2%;">
-                                                <label for="" class="not-required">Captain's Gender </label>
-                                                <select class="form-select gender-team" name="year" required
-                                                    onchange="showGenderStatus()" id="member-gender">
-                                                    <option value="Male">Male</option>
-                                                    <option value="Female">Female</option>
-                                                </select>
-                                                <p class="input-explanation">Select Your Gender</p>
-                                            </div>
-
 
                                         </div>
+
+
+                                        <div class="input-cell" class="input-cell" style="margin-top: 2%;">
+                                            <label for="" class="not-required">Captain's Gender </label>
+                                            <select name="gender" class="form-select gender-team" name="year" required
+                                                onchange="showGenderStatus()" id="member-gender">
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                            <p class="input-explanation">Select Your Gender</p>
+                                        </div>
+
 
                                     </div>
 
+                                </div>
 
-                                    <div id="add-team-wrapper">
 
-                                        <hr>
-                                        <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                            <label for="">Team Name</label>
-                                            <input type="text" required id="team-name">
-                                            <p class="input-explanation team-input-explanation">Type in Team Name</p>
-                                        </div>
-                                        <span id="team-gender-status"></span>
-                                        <div class="input-cell" style="padding-top: 2%" id="team-members-wrap">
-                                            <label for="">Team Members</label>
-                                            <button id="newMemberBtn" onclick="showNewMemberForm()">Add a
-                                                Teammate</button>
-                                            <ul id="members"></ul>
-                                            <div class="add-team-member">
+                                <div id="add-team-wrapper">
 
-                                                <div class="add-team-row">
-                                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                        <label for="">Name</label>
-                                                        <input type="text" required id="team-member-name">
-                                                        <p class="input-explanation team-input-explanation">Type in Name
-                                                            of
-                                                            the member</p>
-                                                    </div>
-                                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                        <label for="">Email</label>
-                                                        <input type="email" required id="team-email">
-                                                        <p class="input-explanation team-input-explanation">Type in
-                                                            Email of
-                                                            the member</p>
-                                                    </div>
-                                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                        <label for="">BITS ID</label>
-                                                        <input pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]"
-                                                            type="text" required id="team-bitsid">
-                                                        <p class="input-explanation team-input-explanation">Type in BITS
-                                                            ID
-                                                            of the member</p>
-                                                    </div>
+                                    <hr>
+                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
+                                        <label for="">Team Name</label>
+                                        <input name="team-name" type="text" required id="team-name">
+                                        <p class="input-explanation team-input-explanation">Type in Team Name</p>
+                                    </div>
+                                    <span id="team-gender-status"></span>
+                                    <div class="input-cell" style="padding-top: 2%" id="team-members-wrap">
+                                        <label for="">Team Members</label>
+                                        <button id="newMemberBtn" onclick="showNewMemberForm()">Add a
+                                            Teammate</button>
+                                        <ul id="members"></ul>
+                                        <div class="add-team-member">
+
+                                            <div class="add-team-row">
+                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
+                                                    <label for="">Name</label>
+                                                    <input name="team-member-name" type="text" id="team-member-name">
+                                                    <p class="input-explanation team-input-explanation">Type in Name
+                                                        of
+                                                        the member</p>
+                                                </div>
+                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
+                                                    <label for="">Email</label>
+                                                    <input name="team-member-email" type="email" id="team-email">
+                                                    <p class="input-explanation team-input-explanation">Type in
+                                                        Email of
+                                                        the member</p>
+                                                </div>
+                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
+                                                    <label for="">BITS ID</label>
+                                                    <input name="team-member-bitsid"
+                                                        pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]" type="text"
+                                                        id="team-bitsid">
+                                                    <p class="input-explanation team-input-explanation">Type in BITS
+                                                        ID
+                                                        of the member</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="add-team-row">
+                                                <div class="input-cell" style="padding-top: 2%" id="">
+                                                    <label for="">Phone Number</label>
+                                                    <input name="team-member-phone" type="text" id="team-phone">
+                                                    <p class="input-explanation team-input-explanation">Type in
+                                                        Phone
+                                                        Number of the member</p>
+                                                </div>
+                                                <div class="input-cell" class="input-cell" style="margin-top: 2%;">
+                                                    <label for="" class="not-required">Gender </label>
+                                                    <select name="team-gender" class="form-select gender-team"
+                                                        name="year" required id="team-member-gender">
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                    </select>
+                                                    <p class="input-explanation">Select Gender of the member</p>
                                                 </div>
 
-                                                <div class="add-team-row">
-                                                    <div class="input-cell" style="padding-top: 2%" id="">
-                                                        <label for="">Phone Number</label>
-                                                        <input type="text" required id="team-phone">
-                                                        <p class="input-explanation team-input-explanation">Type in
-                                                            Phone
-                                                            Number of the member</p>
-                                                    </div>
-                                                    <div class="input-cell" class="input-cell" style="margin-top: 2%;">
-                                                        <label for="" class="not-required">Gender </label>
-                                                        <select class="form-select gender-team" name="year" required
-                                                            id="team-member-gender">
-                                                            <option value="Male">Male</option>
-                                                            <option value="Female">Female</option>
-                                                        </select>
-                                                        <p class="input-explanation">Select Gender of the member</p>
-                                                    </div>
-
-                                                    <button id="newMemberAddBtn"
-                                                        onclick="addTeamMember()">Submit</button>
-
-                                                </div>
-
+                                                <button id="newMemberAddBtn" onclick="addTeamMember()">Submit</button>
 
                                             </div>
 
-                                        </div>
-                                    </div>
 
-                                    <div class="register-wrapper">
-                                        <div class="register-button">
-                                            <input type="submit" name="Register" value="Register" id="register"
-                                                onsubmit="bosmreg()">
                                         </div>
+
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+
+                                <div class="register-wrapper">
+                                    <div class="register-button">
+                                        <button type="submit" name="Register" value="Register"
+                                            id="register">Register</button>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+
                     </div>
 
                 </div>

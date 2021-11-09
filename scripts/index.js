@@ -102,7 +102,8 @@ function getcollegeid() {
 
 // FORM Submission
 
-function bosmreg() {
+document.getElementById("register").addEventListener("click", function(event){
+  event.preventDefault();
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
@@ -143,12 +144,16 @@ function bosmreg() {
       })
       .then(function (result) {
         alert(result.message);
-        console.log(result)
+  
       })
       .catch(function (error) {
         console.log(error);
       });
   }
+});
+
+function bosmreg(e) {
+  
 }
 
 window.onload = function () {
@@ -161,15 +166,6 @@ window.onload = function () {
     result.data.forEach((game)=>{
       document.getElementById("sports_opt").innerHTML = document.getElementById("sports_opt").innerHTML + `<option value="${game.name}" class="sports-tag" id="2">${game.name}</option>`;
     })
-    let gamesArr = result.data;
-    let newGamesArr = [];
-    gamesArr.forEach((game)=>{
-      let gameNew = {name: game.name, link: game.rules}
-      newGamesArr.push(gameNew);
-    })
-    console.log(newGamesArr);
-
-  
   })
 };
 
