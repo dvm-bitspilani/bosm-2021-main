@@ -282,6 +282,7 @@ select {
     color: white !important;
     border: none !important;
     border-bottom: 1px solid white !important;
+    margin-top: 1.5%;
 }
 
 .form-select:active {
