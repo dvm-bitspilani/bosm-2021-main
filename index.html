@@ -97,7 +97,7 @@
                                     <div class="input-column">
                                         <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
                                             <label for="">BITS ID </label>
-                                            <input type="text" required id="bits-id">
+                                            <input type="text" pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]" required id="bits-id">
                                             <p class="input-explanation">Type in your BITS ID</p>
                                         </div>
                                         <div class="input-cell" class="input-cell" style="margin-bottom: 2.5%;">
@@ -121,6 +121,7 @@
                                         <div class="input-cell" class="input-cell" style="margin-top: 2%;">
                                             <label for="" class="not-required">Gender </label>
                                             <select class="form-select gender-team" name="year" required
+                                            onchange="showGenderStatus()"
                                                 id="member-gender">
                                                 <option value="Male">Male </option>
                                                 <option value="Female">Female </option>
@@ -163,7 +164,7 @@
                                                 </div>
                                                 <div class="input-cell" style="padding-top: 2%" id="name-wrap">
                                                     <label for="">BITS ID</label>
-                                                    <input pattern="[a-zA-Z][0-9]+[a-zA-Z]\d[a-zA-Z]+[0-9]+[a-zA-Z]|[a-zA-Z][0-9]+[a-zA-Z]\d[a-zA-Z]\d[0-9]+[a-zA-Z]" type="text" required id="team-bitsid">
+                                                    <input pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]" type="text" required id="team-bitsid">
                                                     <p class="input-explanation team-input-explanation">Type in BITS ID
                                                         of the member</p>
                                                 </div>

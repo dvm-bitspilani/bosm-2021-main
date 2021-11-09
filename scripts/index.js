@@ -2,12 +2,17 @@ var selected_sport = document.getElementsByClassName("selected-sports")[0];
 var sports_opt = document.getElementById("sports_opt");
 sportsarr = [];
 var a = [];
+var totalMembers = 0;
 var yos_value;
 var gender_value;
 var collegeid;
 var no_of_sports = 4;
 var is_coach = false;
 let membersArr = [];
+var isMale = 1;
+var isFemale = 0;
+var male;
+var female;
 
 let rulesArr = [
   { name: "tennisdouble", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
@@ -16,6 +21,18 @@ let rulesArr = [
   { name: "codmobile", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
   { name: "clashroyale", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" }
 ]
+
+var genderSelect = document.getElementById("member-gender");
+genderSelect.addEventListener("change", function () {
+    if(genderSelect.value === 'Male') {
+        isMale = 1;
+        isFemale = 0;
+    }
+    else {
+        isFemale = 1;
+        isMale = 0;
+    }
+})
 
 function runAnimations() { }
 
@@ -85,7 +102,7 @@ window.onload = function () {
   .then((result) =>{
    document.getElementById("sports_opt").innerHTML = `<option value="" selected disabled>Select Your Sport</option>`;
     result.data.forEach((game)=>{
-      document.getElementById("sports_opt").innerHTML = document.getElementById("sports_opt").innerHTML + `<option value="${game.name}" class="sports-tag" id="2">${game.name} (${game.gender})</option>`;
+      document.getElementById("sports_opt").innerHTML = document.getElementById("sports_opt").innerHTML + `<option value="${game.name}" class="sports-tag" id="2">${game.name}</option>`;
     })
     console.log(result.data);
   })
@@ -143,8 +160,8 @@ function showGenderStatus() {
     })
     .then(function (result) {
       console.log(result);
-      let totalMales = result.num_male;
-      let totalFemales = result.num_female;
+      let totalMales = result.games[0].num_male;
+      let totalFemales = result.games[0].num_female;
       if(result.team_size == 1){
         document.getElementById("add-team-wrapper").style.display = "none";
       }
@@ -159,9 +176,24 @@ function showGenderStatus() {
         }
       })
       console.log(result);
+      if(totalMales - isMale <0 ){
+        isMale = 0;
+        isFemale = 1;
+      }
+      if(totalFemales - isFemale <0 ){
+        isMale = 1;
+        isFemale = 0;
+      }
+      console.log(totalMales - isMale + totalFemales - isFemale)
+      if(totalMales - isMale + totalFemales - isFemale === 0 ){
+        document.getElementById('newMemberBtn').disabled = 'true';
+      }
+      else {
+        document.getElementById('newMemberBtn').disabled = '';
+      }
       document.getElementById(
         "team-gender-status"
-      ).innerHTML = `Remaining Team Members: ${totalMales} Males and ${totalFemales} Females `;
+      ).innerHTML = `Remaining Team Members: ${totalMales-isMale} Males and ${totalFemales-isFemale} Females `;
     })
     .catch(function (error) {
       console.log(error);
@@ -192,6 +224,7 @@ function addTeamMember() {
   const teambitsid = document.getElementById("team-bitsid").value;
   const teamphone = document.getElementById("team-phone").value;
   const membergender = document.getElementById("team-member-gender").value;
+
 
   let memberDetails = {
     name: teamMemberName,
