@@ -69,7 +69,7 @@ function bosmreg() {
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
   const sport = document.getElementById("sports_opt").value;
-  const gender = document.getElementById("member-gender").value;
+  const gender = document.getElementById("member-gender").value.trim();
   const bits_id = document.getElementById("bits-id").value;
   const team_name = document.getElementById("team-name").value;
 
