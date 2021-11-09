@@ -23,7 +23,7 @@ let rulesArr = [
   { name: "codmobile", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
   { name: "clashroyale", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" }
 ]
-
+document.getElementById('newMemberBtn').disabled = 'true';
 var genderSelect = document.getElementById("member-gender");
 var sportSelect = document.getElementById("sports_opt");
 genderSelect.addEventListener("change", function () {
@@ -35,10 +35,12 @@ genderSelect.addEventListener("change", function () {
         isFemale = 1;
         isMale = 0;
     }
+    showGenderStatus();
 })
 
 sportSelect.addEventListener("change", function () {
   // console.log("changed")
+
       if (totalMalesCopy < 0 ){
         totalMalesCopy = 0;
         document.getElementById(
@@ -51,6 +53,8 @@ sportSelect.addEventListener("change", function () {
           "team-gender-status"
         ).innerHTML = `Remaining Team Members: ${totalMalesCopy} Males and ${totalFemalesCopy} Females `;
       }
+      membersArr = [];
+      document.getElementById("members").innerHTML = '';
 })
 function runAnimations() { }
 
@@ -209,9 +213,11 @@ function showGenderStatus() {
       console.log(totalMales - isMale + totalFemales - isFemale)
       if(totalMales - isMale + totalFemales - isFemale === 0 ){
         document.getElementById('newMemberBtn').disabled = 'true';
+        document.getElementById('newMemberAddBtn').disabled = 'true';
       }
       else {
         document.getElementById('newMemberBtn').disabled = '';
+        document.getElementById('newMemberAddBtn').disabled = '';
       }
       document.getElementById(
         "team-gender-status"
