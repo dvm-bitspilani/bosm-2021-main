@@ -325,13 +325,15 @@ hr{
 ul{
     display: flex;
     color: white;
+    flex-wrap: wrap;
+    padding-left: 1rem;
 }
 
 ul li{
-    margin: 2% ;
+    margin: 1% 2%;
 }
 
-ul li:nth-child(1){
+ul li:nth-child(4n+1){
     margin-left: 0;
 }
 
