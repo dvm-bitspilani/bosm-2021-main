@@ -283,6 +283,7 @@ select {
     border: none !important;
     border-bottom: 1px solid white !important;
     margin-top: 1.5%;
+    width: 90%;
 }
 
 .form-select:active {
