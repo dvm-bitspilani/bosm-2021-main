@@ -285,4 +285,23 @@ function addTeamMember() {
     showGenderStatus();
     clearTeamInput();
   }
+  console.log(membergender);
+  if (totalMalesCopy<=0){
+    if(membergender==='Male'){
+      alert("You have filled the maximum number of Males required");
+      clearTeamInput();
+      membersArr = [];
+      document.getElementById("members").innerHTML = '';
+    }
+
+  }
+  if (totalFemalesCopy<=0){
+    if(membergender==='Female'){
+      alert("You have filled the maximum number of Females required");
+      clearTeamInput();
+      membersArr = [];
+      document.getElementById("members").innerHTML = '';
+    }
+  }
+  
 }
