@@ -377,16 +377,16 @@ ul li {
 }
 
 #delete {
-    padding: 4px 7.5px 5px 7px;
-    margin-left: 10px;
+    height: 25px;
+    margin-left: 5px;
     font-size: 0.85rem;
     background-color: #ffffff7a;
     border-radius: 100px;
     cursor: pointer;
 }
 
-#delete:hover{
-    background-color: rgba(250, 1, 1, 0.74);
+#delete:hover {
+    background-color: rgba(226, 4, 4, 0.74);
 }
 
 /* Media Queries  */

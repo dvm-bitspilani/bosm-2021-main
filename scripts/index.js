@@ -248,7 +248,7 @@ function deleteMember(member){
 function showMember(memberDetails) {
   console.log(memberDetails);
   if (memberDetails.name != "") {
-    document.getElementById("members").innerHTML = document.getElementById("members").innerHTML + `<li data-bitsid= "${memberDetails.bits_id}"> ${memberDetails.name} ( ${memberDetails.gender.slice(0, 1)} ) <span id ="delete" onclick="deleteMember(this)"> X </span> </li>`;
+    document.getElementById("members").innerHTML = document.getElementById("members").innerHTML + `<li data-bitsid= "${memberDetails.bits_id}"> ${memberDetails.name} ( ${memberDetails.gender.slice(0, 1)} ) <img id ="delete" onclick="deleteMember(this)" src="../assets/cross.png"></img> </li>`;
   }
 }
 
