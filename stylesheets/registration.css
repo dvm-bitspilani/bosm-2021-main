@@ -306,18 +306,22 @@ select option:disabled {
 
 
 
-/* TEAM MEMBERS  */
+/* TEAM MEMBERS */
+
 #team-name{
     width: 96%;
 }
 
 hr{
-    opacity: 0.75;
+    opacity: 0.35;
     color: white;
     height: 2.5px !important;
     border-radius: 50px;
     margin: 6% 10% 4%;
+    position: relative !important;
+    right: 10px !important;
 }
+
 #team-members-wrap{
     width: 100%;
 }
@@ -332,8 +336,6 @@ ul{
 ul li{
     margin: 1% 2%;
 }
-
-
 
 .add-team-row{
     display: flex;
