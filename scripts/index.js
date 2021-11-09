@@ -220,18 +220,32 @@ function showGenderStatus() {
     .catch(function (error) {
       console.log(error);
     });
+
+}
+
+
+function deleteMember(member){
+  const bitsIdRemove = member.parentElement.dataset.bitsid;
+  const removeMember = membersArr.filter(elem => elem.bits_id == bitsIdRemove)
+  membersArr.pop(removeMember[0]);
+  console.log(membersArr);
+
+  const liArray = document.querySelectorAll("li");
+  liArray.forEach((elem)=>{
+    if(elem.dataset.bitsid == bitsIdRemove){
+      elem.remove();
+    }
+  })
 }
 
 function showMember(memberDetails) {
+  console.log(memberDetails);
   if (memberDetails.name != "") {
-    var node = document.createElement("LI");
-    var textnode = document.createTextNode(
-      `${memberDetails.name} ( ${memberDetails.gender.slice(0, 1)} )`
-    ); // Create a text node
-    node.appendChild(textnode); // Append the text to <li>
-    document.getElementById("members").appendChild(node);
+    document.getElementById("members").innerHTML = document.getElementById("members").innerHTML + `<li data-bitsid= "${memberDetails.bits_id}"> ${memberDetails.name} ( ${memberDetails.gender.slice(0, 1)} ) <span id ="delete" onclick="deleteMember(this)"> X </span> </li>`;
   }
 }
+
+
 
 // showMember(membersArr);
 

@@ -238,7 +238,7 @@ width: 88%;
 
 
 .modal-body::-webkit-scrollbar-track {
-    background-color:#261939;
+    background-color: #261939;
 }
 
 .modal-body::-webkit-scrollbar {
@@ -308,11 +308,11 @@ select option:disabled {
 
 /* TEAM MEMBERS */
 
-#team-name{
+#team-name {
     width: 96%;
 }
 
-hr{
+hr {
     opacity: 0.35;
     color: white;
     height: 2.5px !important;
@@ -322,60 +322,72 @@ hr{
     right: 10px !important;
 }
 
-#team-members-wrap{
+#team-members-wrap {
     width: 100%;
 }
 
-ul{
+ul {
     display: flex;
     color: white;
     flex-wrap: wrap;
     padding-left: 1rem;
 }
 
-ul li{
+ul li {
     margin: 1% 2%;
 }
 
-.add-team-row{
+.add-team-row {
     display: flex;
     align-items: center;
 }
 
-.add-team-member{
+.add-team-member {
     background: #a1a1a149;
     padding-left: 3%;
     border-radius: 10px;
     display: none;
 }
 
-.team-input-explanation{
+.team-input-explanation {
     font-size: 0.65rem;
 }
 
 
-#newMemberBtn {    
+#newMemberBtn {
     width: 150px;
 }
 
-#newMemberAddBtn {    
+#newMemberAddBtn {
     height: 75px;
 }
 
-.gender-team{
+.gender-team {
     background-color: unset !important;
 }
 
-.gender-team option{
+.gender-team option {
     color: #000;
 }
 
 
-#team-gender-status{
+#team-gender-status {
     color: white;
     font-weight: 600;
 }
 
+#delete {
+    padding: 4px 7.5px 5px 7px;
+    margin-left: 10px;
+    font-size: 0.85rem;
+    background-color: #ffffff7a;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#delete:hover{
+    background-color: rgba(250, 1, 1, 0.74);
+}
 
 /* Media Queries  */
 
@@ -444,20 +456,25 @@ ul li{
     .modal-dialog {
         max-width: inherit !important;
     }
-    
-    #newMemberBtn, #newMemberAddBtn{
+
+    #newMemberBtn,
+    #newMemberAddBtn {
         margin-left: 0;
     }
-    input{
+
+    input {
         width: 100%;
     }
-    .add-team-row{
+
+    .add-team-row {
         display: unset !important;
     }
-    .add-team-member{
+
+    .add-team-member {
         padding: 10px 20px 20px
     }
-    hr{
+
+    hr {
         display: none;
     }
 
