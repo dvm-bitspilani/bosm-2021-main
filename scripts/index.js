@@ -242,6 +242,7 @@ function deleteMember(member){
       elem.remove();
     }
   })
+  showGenderStatus();
 }
 
 function showMember(memberDetails) {
