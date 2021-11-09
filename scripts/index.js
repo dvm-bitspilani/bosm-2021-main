@@ -239,6 +239,14 @@ function showNewMemberForm() {
   document.querySelector(".add-team-member").style.display = "block";
 }
 
+function clearTeamInput(){
+  document.getElementById("team-member-name").value = "" ;
+  document.getElementById("team-email").value = "" ;
+  document.getElementById("team-bitsid").value = "" ;
+  document.getElementById("team-phone").value = "" ;
+  document.getElementById("team-member-gender").value = "" ;
+}
+
 function addTeamMember() {
   document.querySelector(".add-team-member").style.display = "none";
   const teamMemberName = document.getElementById("team-member-name").value;
@@ -256,22 +264,19 @@ function addTeamMember() {
     gender: membergender,
   };
 
-  if (
+  if(
     teamMemberName == "" ||
     teamemail == "" ||
     teambitsid == "" ||
     teamphone == "" ||
     membergender == ""
-    // collegeid == null ||
-    // yos_value == null ||
-    // gender_value == null
-  ) {
+  ){
     alert("Please fill all details of member.");
   } else {
     membersArr.push(memberDetails);
     console.log(membersArr);
-
     showMember(memberDetails);
     showGenderStatus();
+    clearTeamInput();
   }
 }
