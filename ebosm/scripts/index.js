@@ -16,47 +16,13 @@ var female;
 var totalMalesCopy = 0;
 var totalFemalesCopy = 0;
 
-
 let rulesArr = [
-  {name: 'Athletics (100m) (Female)', link: 'https://docs.google.com/document/d/1fLfYwhk_cx_3cdWx4PSMDQOONFOBfcq-/edit'},
-  {name: 'Athletics (100m) (Male)', link: 'https://docs.google.com/document/d/1g0JxtB1iyDMgp1Zn1sNSV582IXavCrH6/edit'},
-  {name: 'Athletics (200m) (Female)', link: 'https://docs.google.com/document/d/1fLfYwhk_cx_3cdWx4PSMDQOONFOBfcq-/edit'},
-  {name: 'Athletics (200m) (Male)', link: 'https://docs.google.com/document/d/1g0JxtB1iyDMgp1Zn1sNSV582IXavCrH6/edit'},
-  {name: 'Athletics (400m 1-Lap) (Female)', link: 'https://docs.google.com/document/d/1fLfYwhk_cx_3cdWx4PSMDQOONFOBfcq-/edit'},
-  {name: 'Athletics (400m 1-Lap) (Male)', link: 'https://docs.google.com/document/d/1g0JxtB1iyDMgp1Zn1sNSV582IXavCrH6/edit'},
-  {name: 'Athletics (4x100m Relay) (Mix)', link: 'https://docs.google.com/document/d/1g0JxtB1iyDMgp1Zn1sNSV582IXavCrH6/edit'},
-  {name: 'Athletics (4x400m Relay) (Male)', link: 'https://docs.google.com/document/d/1g0JxtB1iyDMgp1Zn1sNSV582IXavCrH6/edit'},
-  {name: 'Athletics (800m 2-Lap) (Male)', link: 'https://docs.google.com/document/d/1g0JxtB1iyDMgp1Zn1sNSV582IXavCrH6/edit'},
-  {name: 'Athletics (Long Jump) (Female)', link: 'https://docs.google.com/document/d/1fLfYwhk_cx_3cdWx4PSMDQOONFOBfcq-/edit'},
-  {name: 'Athletics (Long Jump) (Male)', link: 'https://docs.google.com/document/d/1g0JxtB1iyDMgp1Zn1sNSV582IXavCrH6/edit'},
-  {name: 'Athletics (Shot Put) (Male)', link: 'https://docs.google.com/document/d/1g0JxtB1iyDMgp1Zn1sNSV582IXavCrH6/edit'},
-  {name: 'Badminton (Mix)', link: 'https://docs.google.com/document/d/1DMVK7zPAEKoIeakuiKZsSBG6u3BPPB45/edit'},
-  {name: 'Basketball (Female)', link: 'https://docs.google.com/document/d/17UoTUdkWFjMHHU2repDxHlFNrvCtfPIyMzR25vEgTNs/edit'},
-  {name: 'Basketball (Male)', link: 'https://docs.google.com/document/d/1EB7yxhM5SOZuQ0QSJqKAACi5BccBx0Q3/edit'},
-  {name: 'Carrom (Male)', link: 'https://docs.google.com/document/d/15SrFpbGeAOJ39r6wgfnhdfyDQoHTD5TLnnYjOn7Cgh8/edit'},
-  {name: 'Chess (Female)', link: 'https://docs.google.com/document/d/15SrFpbGeAOJ39r6wgfnhdfyDQoHTD5TLnnYjOn7Cgh8/edit'},
-  {name: 'Chess (Female)', link: 'https://docs.google.com/document/d/15SrFpbGeAOJ39r6wgfnhdfyDQoHTD5TLnnYjOn7Cgh8/edit'},
-  {name: 'Chess (Male)', link: 'https://docs.google.com/document/d/15SrFpbGeAOJ39r6wgfnhdfyDQoHTD5TLnnYjOn7Cgh8/edit'},
-  {name: 'Chess (Mix)', link: 'https://docs.google.com/document/d/15SrFpbGeAOJ39r6wgfnhdfyDQoHTD5TLnnYjOn7Cgh8/edit'},
-  {name: 'Chess (Mix)', link: 'https://docs.google.com/document/d/15SrFpbGeAOJ39r6wgfnhdfyDQoHTD5TLnnYjOn7Cgh8/edit'},
-  {name: 'Cricket (Male)', link: 'https://docs.google.com/document/d/17Cvxjhd0EPUh7K-LG_QMU3M0FyGmCUuf/edit'},
-  {name: 'Football (Male)', link: 'https://docs.google.com/document/d/1ukDYQf0mvneTZG-3AwQp4gWW1xzKKXjF/edit'},
-  {name: 'Frisbee (Mix)', link: 'https://drive.google.com/file/d/1HynQ9cwamBYUYfxfigU3zEDPExYtEwj7/view?usp=sharing'},
-  {name: 'Snooker (Female)', link: 'https://drive.google.com/file/d/1kCN4DvqbUzJcgZeWdiTBuCke8T-YII_f/view?usp=sharing'},
-  {name: 'Snooker (Male)', link: 'https://drive.google.com/file/d/1kCN4DvqbUzJcgZeWdiTBuCke8T-YII_f/view?usp=sharing'},
-  {name: 'Squash (Male)', link: 'https://docs.google.com/document/d/1XNh3mgdKyNUgRfaXFfvRtcAtHyZDFqUs8pVTTDlxcFw/edit'},
-  {name: 'Table Tennis Double (Female)', link: 'https://docs.google.com/document/d/1azuwwqAaIGaPVBg957w6Gu2duivzSODU/edit'},
-  {name: 'Table Tennis Double (Male)', link: 'https://docs.google.com/document/d/1azuwwqAaIGaPVBg957w6Gu2duivzSODU/edit'},
-  {name: 'Table Tennis Single (Female)', link: 'https://docs.google.com/document/d/1azuwwqAaIGaPVBg957w6Gu2duivzSODU/edit'},
-  {name: 'Table Tennis Single (Male)', link: 'https://docs.google.com/document/d/1azuwwqAaIGaPVBg957w6Gu2duivzSODU/edit'},
-  {name: 'Tennis Double (Male)', link: 'https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit'},
-  {name: 'Tennis Double (Mix)', link: 'https://docs.google.com/document/d/1r_tiaNa0JdCie--WigXAc8l7N3mX9HbxCWp7Gdk7pfM/edit'},
-  {name: 'Tennis Single (Female)', link: 'https://docs.google.com/document/d/1r_tiaNa0JdCie--WigXAc8l7N3mX9HbxCWp7Gdk7pfM/edit'},
-  {name: 'Tennis Single (Male)', link: 'https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit'},
-  {name: 'Volleyball (Male)', link: 'https://docs.google.com/document/d/1l2wiSFVtSArU8hNsvkCdNCVNlPileHTd/edit'},
-  {name: 'Volleyball (Mix)', link: 'https://docs.google.com/document/d/1l3AcXJg6YmTc8aGVS6TrRtfRpQu3JEb5/edit'}
+  { name: "tennisdouble", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
+  { name: "bgmi", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
+  { name: "valorant", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
+  { name: "codmobile", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" },
+  { name: "clashroyale", link: "https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" }
 ]
-
 document.getElementById('newMemberBtn').disabled = 'true';
 var genderSelect = document.getElementById("member-gender");
 var sportSelect = document.getElementById("sports_opt");
@@ -102,8 +68,7 @@ function getcollegeid() {
 
 // FORM Submission
 
-document.getElementById("register").addEventListener("click", function(event){
-  event.preventDefault();
+function bosmreg() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
@@ -144,16 +109,12 @@ document.getElementById("register").addEventListener("click", function(event){
       })
       .then(function (result) {
         alert(result.message);
-  
+        console.log(result)
       })
       .catch(function (error) {
         console.log(error);
       });
   }
-});
-
-function bosmreg(e) {
-  
 }
 
 window.onload = function () {
@@ -166,6 +127,7 @@ window.onload = function () {
     result.data.forEach((game)=>{
       document.getElementById("sports_opt").innerHTML = document.getElementById("sports_opt").innerHTML + `<option value="${game.name}" class="sports-tag" id="2">${game.name}</option>`;
     })
+    console.log(result.data);
   })
 };
 
@@ -199,17 +161,14 @@ function addCollege() {
     });
 }
 
-document.getElementById("sports_opt").addEventListener("change", ()=>{
+function showGenderStatus() {
+  let sport = document.getElementById("sports_opt").value;
   const game = document.getElementById("sports_opt").value.trim();
   if(membersArr.length == 0){
-    let rule = rulesArr.filter(el => el.name == game)
-    console.log(rule[0].link);
-    window.open(rule[0].link, "_blank");
+    // let rule = rulesArr.filter(el => el.name == game)
+    // console.log(rule[0].link);
+    // window.open(rule[0].link, "_blank");
   }
-})
-
-function showGenderStatus() {
-  const game = document.getElementById("sports_opt").value.trim();
   const data = {
     game: game,
   };
@@ -267,33 +226,18 @@ function showGenderStatus() {
     .catch(function (error) {
       console.log(error);
     });
-
-}
-
-
-function deleteMember(member){
-  const bitsIdRemove = member.parentElement.dataset.bitsid;
-  const removeMember = membersArr.filter(elem => elem.bits_id == bitsIdRemove)
-  membersArr.pop(removeMember[0]);
-  console.log(membersArr);
-
-  const liArray = document.querySelectorAll("li");
-  liArray.forEach((elem)=>{
-    if(elem.dataset.bitsid == bitsIdRemove){
-      elem.remove();
-    }
-  })
-  showGenderStatus();
 }
 
 function showMember(memberDetails) {
-  console.log(memberDetails);
   if (memberDetails.name != "") {
-    document.getElementById("members").innerHTML = document.getElementById("members").innerHTML + `<li data-bitsid= "${memberDetails.bits_id}"> ${memberDetails.name} ( ${memberDetails.gender.slice(0, 1)} ) <img id ="delete" onclick="deleteMember(this)" src="../assets/cross.png"></img> </li>`;
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(
+      `${memberDetails.name} ( ${memberDetails.gender.slice(0, 1)} )`
+    ); // Create a text node
+    node.appendChild(textnode); // Append the text to <li>
+    document.getElementById("members").appendChild(node);
   }
 }
-
-
 
 // showMember(membersArr);
 
@@ -361,8 +305,3 @@ function addTeamMember() {
   }
   
 }
-
-$( "#frm" ).submit(function( event ) {
-  alert( "Handler for .submit() called." );
-  event.preventDefault();
-});
