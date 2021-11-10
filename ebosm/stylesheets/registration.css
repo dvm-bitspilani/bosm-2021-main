@@ -353,7 +353,6 @@ ul li{
     font-size: 0.65rem;
 }
 
-
 #newMemberBtn {    
     width: 150px;
 }
@@ -417,7 +416,6 @@ ul li{
             16.8px 10.6px 14.2px rgba(0, 0, 0, 0.106),
             34.7px 21.9px 29.2px rgba(0, 0, 0, 0.084),
             95px 60px 80px rgba(0, 0, 0, 0.059);
-
     }
 
     .register-button::before {
