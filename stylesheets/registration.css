@@ -326,14 +326,14 @@ hr {
     width: 100%;
 }
 
-ul {
+modal ul {
     display: flex;
     color: white;
     flex-wrap: wrap;
     padding-left: 1rem;
 }
 
-ul li {
+modal ul li {
     margin: 1% 2%;
 }
 

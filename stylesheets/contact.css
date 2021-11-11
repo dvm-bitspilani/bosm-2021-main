@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "affirmative";
+    src: url("../fonts/affirmative/Affirmative.ttf");
+  }
+
+body {
+      overflow: hidden;
+      margin: 0;
+}
+
+.main-section-landing {
+      background-image: url("../assets/Bg.png");
+      background-size: cover;
+      background-position: center;
+      padding: 2% 5% 1%;
+      overflow-x: hidden;
+      opacity: 0.95;
+}
+
+
+.contactContainer h2 {
+      margin-bottom: 1rem;
+      color: white;
+      font-family:'affirmative' ;
+      text-align: center;
+}
+
+.cardsContainer {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 40px;
+      justify-content: center;
+}
+
+.contactCard {
+  
+      /* margin: 1rem; */
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      /* justify-content: space-around; */
+      align-items: center;
+      padding: 1rem;
+      border-radius: 5px;
+}
+
+.contactCard .profile {
+      width: 7rem;
+      height: 7rem;
+      overflow: hidden;
+      border-radius: 50%;
+      display: flex;
+      object-fit: cover;
+      justify-content: center;
+      align-items: center;
+}
+
+.contact-info{
+    color: whitesmoke;
+    margin-left: 8px;
+}
+.contact-info p{
+    font-size: 12px;
+    font-weight: 300;
+}
+.contact-info span{
+    letter-spacing: 0.3px;
+    font-weight: 700;
+}
+.contact-info h6{
+font-size: 14px;
+font-weight: 400;
+
+}
+
+.contactCard img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+      .cardsContainer {
+          display: flex;
+            flex-direction: column;
+      }
+
+      .contactCard {
+            width: 100%;
+      }
+
+      nav {
+            display: block;
+      }
+
+      nav span {
+            top: 0;
+            border-radius: 0;
+            border: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+      }
+}
