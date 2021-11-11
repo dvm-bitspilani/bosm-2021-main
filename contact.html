@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./ebosm/stylesheets/registration.css">
     <link rel="stylesheet" href="./ebosm/stylesheets/loader.css">
     <link rel="stylesheet" href="./ebosm/stylesheets/contact.css">
+
     <style>
         .select2-container--default .select2-selection--single {
             background: none !important;
@@ -47,203 +48,84 @@
 
     <section class="main-section-landing">
         <nav>
-            <!-- <div> -->
-                <!-- <a href="/" class="active">Home</a> -->
-                <!-- <a href="/games">Games</a> -->
-            <!-- </div> -->
-
-
-            <!-- <a href="/contact">Contact</a> -->
-            <div><span><a style = "text-decoration: none; color: white" href="https://dvm-bitspilani.github.io/bosm-2021-main/" target="_blank">Home</a></span></div>
-            <!-- <div><span><a style = "text-decoration: none; color: white" href="contact.html" target="_blank">Contact</a></span></div> -->
+          <div><span><a style = "text-decoration: none; color: white" href="https://dvm-bitspilani.github.io/bosm-2021-main/" target="_blank">Home</a></span></div>
             </div>
         </nav>
 
-        <div class="main-heading">E - BOSM</div>
-
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <!-- <div class="modal-header"> -->
-                    <!-- <h1 class="modal-title" id="exampleModalLabel">Registration</h1> -->
-                    <!-- </div> -->
-                    <div class="modal-body">
-
-                        <div class="registration-container">
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                            <h1>Registration</h1>
-
-                            <div>
-                                <div class="input-row">
-
-                                    <div class="input-column">
-                                        <div class="input-cell" data-aos="zoom-in" style="padding-top: 2%"
-                                            id="name-wrap">
-                                            <label for="">Captain's Name</label>
-                                            <input type="text" required id="name">
-                                            <p class="input-explanation">Type in your first and last name</p>
-                                        </div>
-                                        <div class="input-cell" data-aos="zoom-in" class="input-cell"
-                                            style="padding-top: 2%;">
-                                            <label for="">Captain's BITS Mail</label>
-                                            <input type="email" required id="email" pattern="[a-zA-Z][0-9]+@[a-zA-Z]+\.bits-pilani\.ac\.in">
-                                            <p class="input-explanation">Type in your BITS Mail</p>
-                                        </div>
-                                        <div class="input-cell" data-aos="zoom-in" class="input-cell"
-                                            style="padding-top: 2%;">
-                                            <label for="">Captain's Phone </label>
-                                            <input type="tel" required id="phone">
-                                            <p class="input-explanation phone-explanation">Type your Phone Number
-                                            </p>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="input-column">
-                                        <div class="input-cell" class="input-cell" style="padding-top: 2%;">
-                                            <label for="">Captain's BITS ID </label>
-                                            <input type="text" pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]" required id="bits-id">
-                                            <p class="input-explanation">Type in your BITS ID</p>
-                                        </div>
-                                        <div class="input-cell" class="input-cell" style="padding-top: 2%;">
-                                            <label for="" class="not-required">Sports</label>
-                                            <select id="sports_opt" class="form-select select-input" onchange="showGenderStatus()">
-                                                
-                                                <option value="tennisdouble" class="sports-tag https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" id="0" links="https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit">Tennis Double</option>
-                                                <option value="bgmi" class="sports-tag" id="1">BGMI</option>
-                                                <option value="valorant" class="sports-tag" id="2">Valorant</option>
-                                                <option value="codmobile" class="sports-tag" id="3">COD-Mobile</option>
-                                                <option value="clashroyale" class="sports-tag" id="4">Clash Royale</option>
-                                            </select>
-
-                                            <div class="selected-sports">
-                                                <p class="input-explanation">You can select your Sport</p>
-                                            </div>
-
-                                        </div>
-
-
-                                        <div class="input-cell" class="input-cell" style="margin-top: 2%;">
-                                            <label for="" class="not-required">Captain's Gender </label>
-                                            <select class="form-select gender-team" name="year" required
-                                            onchange="showGenderStatus()"
-                                                id="member-gender">
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                            </select>
-                                            <p class="input-explanation">Select Your Gender</p>
-                                        </div>
-
-
-                                    </div>
-
-                                </div>
-
-                                <div id="add-team-wrapper">
-
-                                    <hr>
-                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                        <label for="">Team Name</label>
-                                        <input type="text" required id="team-name">
-                                        <p class="input-explanation team-input-explanation">Type in Team Name</p>
-                                    </div>
-                                    <span id="team-gender-status"></span>
-                                    <div class="input-cell" style="padding-top: 2%" id="team-members-wrap">
-                                        <label for="">Team Members</label>
-                                        <button id="newMemberBtn" onclick="showNewMemberForm()">Add a Teammate</button>
-                                        <ul id="members"></ul>
-                                        <div class="add-team-member">
-
-                                            <div class="add-team-row">
-                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                    <label for="">Name</label>
-                                                    <input type="text" required id="team-member-name">
-                                                    <p class="input-explanation team-input-explanation">Type in Name of
-                                                        the member</p>
-                                                </div>
-                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                    <label for="">Email</label>
-                                                    <input type="email" required id="team-email">
-                                                    <p class="input-explanation team-input-explanation">Type in Email of
-                                                        the member</p>
-                                                </div>
-                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                    <label for="">BITS ID</label>
-                                                    <input pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]" type="text" required id="team-bitsid">
-                                                    <p class="input-explanation team-input-explanation">Type in BITS ID
-                                                        of the member</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="add-team-row">
-                                                <div class="input-cell" style="padding-top: 2%" id="">
-                                                    <label for="">Phone Number</label>
-                                                    <input type="text" required id="team-phone">
-                                                    <p class="input-explanation team-input-explanation">Type in Phone
-                                                        Number of the member</p>
-                                                </div>
-                                                <div class="input-cell" class="input-cell" style="margin-top: 2%;">
-                                                    <label for="" class="not-required">Gender </label>
-                                                    <select class="form-select gender-team" name="year" required
-                                                        id="team-member-gender">
-                                                        <option value="Male">Male</option>
-                                                        <option value="Female">Female</option>
-                                                    </select>
-                                                    <p class="input-explanation">Select Gender of the member</p>
-                                                </div>
-
-                                                <button id="newMemberAddBtn" onclick="addTeamMember()">Submit</button>
-
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="register-wrapper">
-                                    <div class="register-button">
-                                        <input type="submit" name="Register" value="Register" id="register"
-                                            onclick="bosmreg()">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
 
         <div class="contactContainer">
-            <h2>Contact</h2>
+            <h2>Contact Us</h2>
             <div class="cardsContainer">
                 <div class="contactCard">
                     <div class="profile"><img src="ebosm/assets/contact/SiddharthMalik_SportsSecretary.jpg" alt=""></div>
-                    Siddharth Malik <br/> 9424055555
+                 <div class="contact-info">  
+                      <span>Siddharth Malik</span> 
+                      <h6>Sports Secretary</h6>
+                    <p>9424055555</p> 
                 </div>
+                </div>
+
                 <div class="contactCard">
                     <div class="profile"><img src="ebosm/assets/contact/SatyamPandey_JointSportsSecretary.png" alt=""></div>
-                    Satyam Pandey <br/> 6205744606
-                </div><div class="contactCard">
-                    <div class="profile"><img src="ebosm/assets/contact/RishikaJain_JSS.JPG" alt=""></div>
-                    Rishika Jain <br/> 7014469514     
-                </div><div class="contactCard">
-                    <div class="profile"><img src="ebosm/assets/contact/SisirSanagala_BOCO .jpg" alt=""></div>
-                    Sisir Sanagala <br/> 8277179848
-                </div><div class="contactCard">
-                    <div class="profile"><img src="ebosm/assets/contact/MihirDeshmukh_RecnAcc.jpg" alt=""></div>
-                    Mihir Deshmukh <br/> 9130004290
-                </div><div class="contactCard">
-                    <div class="profile"><img src="ebosm/assets/contact/DevanshJain_Sponz.png" alt=""></div>
-                    Devansh Jain <br/> 8160360994
-                </div><div class="contactCard">
+                 <div class="contact-info">  
+                      <span>Satyam Pandey</span> 
+                      <h6>Joint Sports Secretary</h6>
+                    <p>6205744606</p> 
+                </div>
+                </div>
+
+                <div class="contactCard">
                     <div class="profile"><img src="ebosm/assets/contact/DwijMehta_JSS.jpeg" alt=""></div>
-                    Dwij Mehta <br/> 8866869177
+                 <div class="contact-info">  
+                      <span>Dwij Mehta</span> 
+                      <h6>Joint Sports Secretary</h6>
+                    <p>8866869177</p> 
+                </div>
+                </div>
+
+                <div class="contactCard">
+                    <div class="profile"><img src="ebosm/assets/contact/RishikaJain_JSS.JPG" alt=""></div>
+                 <div class="contact-info">  
+                      <span>Rishika Jain</span> 
+                      <h6>Joint Sports Secretary</h6>
+                    <p>7014469514</p> 
+                </div>
+                </div>
+
+                <div class="contactCard">
+                    <div class="profile"><img src="ebosm/assets/contact/DevanshJain_Sponz.png" alt=""></div>
+                 <div class="contact-info">  
+                      <span>Devansh Jain</span> 
+                      <h6>Department of Sponsorship</h6>
+                    <p>8160360994</p> 
+                </div>
+                </div>
+
+                <div class="contactCard">
+                    <div class="profile"><img src="ebosm/assets/contact/SisirSanagala_BOCO .jpg" alt=""></div>
+                 <div class="contact-info">  
+                      <span>Sisir Sanagala</span> 
+                      <h6>Department of Controls</h6>
+                    <p>8277179848</p> 
+                </div>
+                </div>
+
+                <div class="contactCard">
+                    <div class="profile"><img src="ebosm/assets/contact/NanditaMathur_PCr.jpg" alt=""></div>
+                 <div class="contact-info">  
+                      <span>Nandita Mathur</span> 
+                      <h6>Department of PcR</h6>
+                    <p>9818462837</p> 
+                </div>
+                </div>
+
+                <div class="contactCard">
+                    <div class="profile"><img src="ebosm/assets/contact/MihirDeshmukh_RecnAcc.jpg" alt=""></div>
+                 <div class="contact-info">  
+                      <span>Mihir Deshmukh</span> 
+                      <h6>Department of RaC</h6>
+                    <p>9130004290</p> 
+                </div>
                 </div>
             </div>
         </div>
@@ -263,6 +145,9 @@
         AOS.init({
             duration: 1200,
         });
+
+        window.onload = document.querySelector(".spinner").style.display = "none";
+      
     </script>
 
 </body>
