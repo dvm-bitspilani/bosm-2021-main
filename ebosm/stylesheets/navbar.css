@@ -99,13 +99,7 @@ nav div {
     top: 10px;
   }
 
-  nav {
-    flex-direction: column;
-    flex-wrap: wrap;
-    display: none;
-  }
-
-  nav span {
-    margin: 1rem 3rem;
+  nav span{
+    padding: 2px 1rem;
   }
 }

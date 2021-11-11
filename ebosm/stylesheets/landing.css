@@ -76,17 +76,17 @@ body {
     padding: 10px;
   }
 
-  span {
+  /* span {
     width: 100%;
     text-align: center;
-  }
-  nav span {
+  } */
+  /* nav span {
     border: #ff4654 solid 2px;
     border-radius: 12px;
     position: relative;
     top: 85vh;
     margin: 0px 15vw;
-  }
+  } */
 }
 
 .select2-search__field {
@@ -136,26 +136,65 @@ select option {
 }
 
 .gamesContainer {
-  display: none;
-  font-family: "Gilroy-Medium", sans-serif;
-  font-size: 1rem;
+  /* display: none; */
+  font-family: affirmative;
+  font-size: 1.5rem;
   position: relative;
-  top: 50%;
-  font-weight: 600;
+  top: 75vh;
+  /* font-weight: 600; */
   text-align: center;
-  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  text-transform: uppercase;
 }
+
+.gamesContainer div{
+  padding: 0 4rem;
+}
+
+/* .gamesContainer div:hover {
+  transform: scale(1.02);
+  transition: linear 0.4s;
+} */
 
 @media screen and (max-width: 768px) {
   .gamesContainer {
     display: block;
+    font-size: 1rem;
+    flex-direction: column;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+
+  .gamesContainer div {
+    border: #ff4654 solid 2px;
+    border-radius: 12px;
+    margin: 0px 15vw;
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
 }
 
-.gamesContainer div {
-  border: #ff4654 solid 2px;
-  border-radius: 12px;
-  margin: 0px 15vw;
-  padding: 1rem;
-  margin-bottom: 2rem;
+.underline{
+  position: relative;
+}
+
+.underline::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff4654;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }
