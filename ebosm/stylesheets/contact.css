@@ -16,9 +16,7 @@ body {
       overflow-x: hidden;
       opacity: 0.95;
 }
-.contactContainer {
-    
-}
+
 
 .contactContainer h2 {
       margin-bottom: 1rem;
@@ -82,13 +80,12 @@ font-weight: 400;
 
 @media screen and (max-width: 768px) {
       .cardsContainer {
+          display: flex;
             flex-direction: column;
       }
 
       .contactCard {
             width: 100%;
-            margin: 1rem 0;
-            justify-content: space-between;
       }
 
       nav {
