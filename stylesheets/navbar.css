@@ -32,7 +32,7 @@ nav span:hover{
 nav{
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 2rem;
 }
 nav div{
   display: flex;

@@ -74,11 +74,6 @@ body {
             top: 40%;
       }
 
-      .main-section-landing a {
-            font-size: 20px;
-            padding: 10px;
-      }
-
       span {
             width: 100%;
             text-align: center;
@@ -88,7 +83,8 @@ body {
             border-radius: 12px;
             position: relative;
             top: 85vh;
-            margin: 0px 15vw;
+            padding: 10px !important;
+            font-size: 1.5rem !important;
         
       }
 }
