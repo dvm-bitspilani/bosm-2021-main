@@ -1,79 +1,102 @@
+
+:root {
+    --yellow: #feb60a;
+    --red: #ff0062;
+    --blue: #00dbf9;
+    --violet: rgb(2, 85, 2);
+}
 .spinner {
-    width: 100vw;
+     z-index: 2000;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    background-color: black;
+    background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.15) 0%,
+          rgba(0, 153, 212, 0) calc(15% + 100px),
+          rgba(0, 99, 138, 0) calc(85% + 100px),
+          rgba(0, 0, 0, 0.15) 100%
+    );
+}
+
+
+
+div.loader-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(2, 2, 2);
-    position: relative;
-    z-index: 2;
+   
 }
 
-.spin-con {
-    --size: 200px;
-    --thickness: 25px;
-    width: var(--size);
-    height: var(--size);
-    position: absolute;
-    border-radius: 50%;
-    background-color: #000000;
-    box-shadow: 0 0 30px #7a216e;
-    animation: spinner 2.5s linear infinite;
+
+.spinner img{
+  width: 10%;
+}
+.spinner div > div {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 100%;
+    margin: 2vw;
+    background-image: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.5) 0%,
+          rgba(0, 0, 0, 0) 100%
+    );
+    animation: bounce 1.5s 0.5s linear infinite;
+}
+.blue {
+  background-color: var(--blue);
 }
 
-.spin-con::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to bottom, #7a216e, transparent);
-    background-size: 100% 80%;
-    background-repeat: no-repeat;
-    border-top-left-radius: calc(var(--size)/2);
-    border-bottom-left-radius: calc(var(--size)/2);
+.yellow {
+  background-color: var(--yellow);
+    animation-delay: 0.1s !important;
 }
 
-.spin-con::after {
-    content: '';
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: var(--thickness);
-    left: var(--thickness);
-    border-radius: 50%;
-    background-color: #000000;
-    box-shadow: 0 0 50px inset #000000;
+.red {
+background-color: var(--red);
+    animation-delay: 0.2s !important;
 }
 
-.ball {
-    width: var(--thickness);
-    height: var(--thickness);
-    --neon-border-color: #7a216e;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #7a216e;
-    border-radius: 50%;
-    box-shadow:
-        0 0 .5rem #7a216e,
-        inset 0 0 .5rem #7a216e,
-        0 0 2rem var(--neon-border-color),
-        inset 0 0 2rem var(--neon-border-color),
-        0 0 4rem var(--neon-border-color),
-        inset 0 0 4rem var(--neon-border-color);
-
+.violet {
+    background-color: var(--violet);
+    animation-delay: 0.3s !important;
 }
 
-@keyframes spinner {
-    to {
-        transform: rotateZ(0deg);
+@keyframes bounce {
+    0%,
+    50%,
+    100% {
+          transform: scale(1);
+          filter: blur(0px);
     }
-
-    from {
-        transform: rotateZ(-360deg);
+    25% {
+          transform: scale(0.6);
+          filter: blur(3px);
+    }
+    75% {
+          filter: blur(3px);
+          transform: scale(1.4);
     }
 }
+
+
+
+@media (max-width:768px) {
+
+  .spinner img{
+      width: 30%;
+  }
+
+
+  .spinner div > div{
+      width: 5vw;
+      height: 5vw;
+  }
+}
+
+
