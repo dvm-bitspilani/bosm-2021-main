@@ -65,13 +65,16 @@ body {
             background-size: cover;
             background-position: center center;
             height: 100vh;
+            width: 100vw;
+            overflow: hidden;
       }
 
 
       .main-heading {
             font-size: 10vw;
             width: 70%;
-            top: 40%;
+            color: #998b8b;
+            top: 56%;
       }
 
       span {
