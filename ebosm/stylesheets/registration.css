@@ -11,7 +11,8 @@
 .registration-container {
     /* width: 60vw; */
     /* height: 85vh; */
-    background-image: url("../assets/Bg.png");
+    /* background-image: url("../assets/Bg.png"); */
+    background-color: #FF2748;
     background-size: cover;
     background-position: center;
     /* border-radius: 10px; */

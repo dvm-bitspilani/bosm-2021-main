@@ -33,7 +33,7 @@
 
 <body>
     <div class="spinner">
-      
+
         <img src="./assets/bosm-logo.png" alt="">
 
         <div class="loader-container">
@@ -47,167 +47,74 @@
     <section class="main-section-landing">
         <nav>
             <!-- <div> -->
-                <!-- <a href="/" class="active">Home</a> -->
-                <!-- <a href="/games">Games</a> -->
+            <!-- <a href="/" class="active">Home</a> -->
+            <!-- <a href="/games">Games</a> -->
             <!-- </div> -->
 
 
             <!-- <a href="/contact">Contact</a> -->
-            <div><span><a style = "text-decoration: none; color: white" href="https://www.bits-bosm.org/" target="_blank">BPL</a></span></div>
-            <div><span><a style = "text-decoration: none; color: white" href="contact.html" target="_blank">Contact</a></span></div>
+            <div><span><a style="text-decoration: none; color: white" href="https://www.bits-bosm.org/"
+                        target="_blank">BPL</a></span></div>
+            <div><span><a style="text-decoration: none; color: white" href="contact.html"
+                        target="_blank">Contact</a></span></div>
             </div>
         </nav>
 
         <div class="main-heading">E - BOSM</div>
 
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="fifaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
-                    <!-- <div class="modal-header"> -->
-                    <!-- <h1 class="modal-title" id="exampleModalLabel">Registration</h1> -->
-                    <!-- </div> -->
                     <div class="modal-body">
-
                         <div class="registration-container">
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
-                            <h1>Registration</h1>
-
-                            <div>
-                                <div class="input-row">
-
-                                    <div class="input-column">
-                                        <div class="input-cell" data-aos="zoom-in" style="padding-top: 2%"
-                                            id="name-wrap">
-                                            <label for="">Captain's Name</label>
-                                            <input type="text" required id="name">
-                                            <p class="input-explanation">Type in your first and last name</p>
-                                        </div>
-                                        <div class="input-cell" data-aos="zoom-in" class="input-cell"
-                                            style="padding-top: 2%;">
-                                            <label for="">Captain's BITS Mail</label>
-                                            <input type="email" required id="email" pattern="[a-zA-Z][0-9]+@[a-zA-Z]+\.bits-pilani\.ac\.in">
-                                            <p class="input-explanation">Type in your BITS Mail</p>
-                                        </div>
-                                        <div class="input-cell" data-aos="zoom-in" class="input-cell"
-                                            style="padding-top: 2%;">
-                                            <label for="">Captain's Phone </label>
-                                            <input type="tel" required id="phone">
-                                            <p class="input-explanation phone-explanation">Type your Phone Number
-                                            </p>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="input-column">
-                                        <div class="input-cell" class="input-cell" style="padding-top: 2%;">
-                                            <label for="">Captain's BITS ID </label>
-                                            <input type="text" pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]" required id="bits-id">
-                                            <p class="input-explanation">Type in your BITS ID</p>
-                                        </div>
-                                        <div class="input-cell" class="input-cell" style="padding-top: 2%;">
-                                            <label for="" class="not-required">Sports</label>
-                                            <select id="sports_opt" class="form-select select-input" onchange="showGenderStatus()">
-                                                
-                                                <option value="tennisdouble" class="sports-tag https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit" id="0" links="https://docs.google.com/document/d/1BrAT6jcDlk-8nIRdxoao6FqHZ1K2bki0/edit">Tennis Double</option>
-                                                <option value="bgmi" class="sports-tag" id="1">BGMI</option>
-                                                <option value="valorant" class="sports-tag" id="2">Valorant</option>
-                                                <option value="codmobile" class="sports-tag" id="3">COD-Mobile</option>
-                                                <option value="clashroyale" class="sports-tag" id="4">Clash Royale</option>
-                                            </select>
-
-                                            <div class="selected-sports">
-                                                <p class="input-explanation">You can select your Sport</p>
-                                            </div>
-
-                                        </div>
-
-
-                                        <div class="input-cell" class="input-cell" style="margin-top: 2%;">
-                                            <label for="" class="not-required">Captain's Gender </label>
-                                            <select class="form-select gender-team" name="year" required
-                                            onchange="showGenderStatus()"
-                                                id="member-gender">
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                            </select>
-                                            <p class="input-explanation">Select Your Gender</p>
-                                        </div>
-
-
-                                    </div>
-
+                            <h2>FIFA</h2>
+                            <div class="game-details">
+                                <div class="game-details-img"><img src="./ebosm/assets/bosm-logo.png" alt=""></div>
+                                <div class="game-details-text">
+                                    <!-- <span>FIFA</span> -->
+                                    <div>BITSIAN ONLY FIFA tournament</div>
+                                    <div>Knockout Elimination: <br />
+                                        The event will have single match elimination (Neutral stadium) until the Round
+                                        of 16.
+                                        After that, there will be a two-match Home-Away type of Elimination.</div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                                <div id="add-team-wrapper">
-
-                                    <hr>
-                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                        <label for="">Team Name</label>
-                                        <input type="text" required id="team-name">
-                                        <p class="input-explanation team-input-explanation">Type in Team Name</p>
-                                    </div>
-                                    <span id="team-gender-status"></span>
-                                    <div class="input-cell" style="padding-top: 2%" id="team-members-wrap">
-                                        <label for="">Team Members</label>
-                                        <button id="newMemberBtn" onclick="showNewMemberForm()">Add a Teammate</button>
-                                        <ul id="members"></ul>
-                                        <div class="add-team-member">
-
-                                            <div class="add-team-row">
-                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                    <label for="">Name</label>
-                                                    <input type="text" required id="team-member-name">
-                                                    <p class="input-explanation team-input-explanation">Type in Name of
-                                                        the member</p>
-                                                </div>
-                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                    <label for="">Email</label>
-                                                    <input type="email" required id="team-email">
-                                                    <p class="input-explanation team-input-explanation">Type in Email of
-                                                        the member</p>
-                                                </div>
-                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                    <label for="">BITS ID</label>
-                                                    <input pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]" type="text" required id="team-bitsid">
-                                                    <p class="input-explanation team-input-explanation">Type in BITS ID
-                                                        of the member</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="add-team-row">
-                                                <div class="input-cell" style="padding-top: 2%" id="">
-                                                    <label for="">Phone Number</label>
-                                                    <input type="text" required id="team-phone">
-                                                    <p class="input-explanation team-input-explanation">Type in Phone
-                                                        Number of the member</p>
-                                                </div>
-                                                <div class="input-cell" class="input-cell" style="margin-top: 2%;">
-                                                    <label for="" class="not-required">Gender </label>
-                                                    <select class="form-select gender-team" name="year" required
-                                                        id="team-member-gender">
-                                                        <option value="Male">Male</option>
-                                                        <option value="Female">Female</option>
-                                                    </select>
-                                                    <p class="input-explanation">Select Gender of the member</p>
-                                                </div>
-
-                                                <button id="newMemberAddBtn" onclick="addTeamMember()">Submit</button>
-
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="register-wrapper">
-                                    <div class="register-button">
-                                        <input type="submit" name="Register" value="Register" id="register"
-                                            onclick="bosmreg()">
-                                    </div>
+        <div class="modal fade" id="codModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="registration-container">
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            <h2>COD-MOBILE</h2>
+                            <div class="game-details">
+                                <div class="game-details-img"><img src="./ebosm/assets/bosm-logo.png" alt=""></div>
+                                <div class="game-details-text">
+                                    <!-- <span>FIFA</span> -->
+                                    <div>COD Mobile is a Traditional 5v5 team-based combat game. The game modes included in the tournament
+                                        are Hardpoint, Domination, and Search and Destroy. <br/>
+                                        The tournament will be played in a knockout elimination format.</div>
+                                    <div>The maps included in the pool are: </div>
+                                    <ul>
+                                        <li>
+                                            Crossfire
+                                        </li>
+                                        <li>Standoff</li>
+                                        <li>Takeoff</li>
+                                        <li>Firing Range</li>
+                                        <li>Raid</li>
+                                        <li>Crash</li>
+                                        <li>Hackney Yard</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -218,22 +125,101 @@
             </div>
         </div>
 
-        <!-- <div>
-            <div>
-                <span><a style = "text-decoration: none; color: white" href="https://dare2compete.com/o/aYItWdl?lb=etgXlJ8" target="_blank"></a></span>
-                <span><a style = "text-decoration: none; color: white" href="https://dare2compete.com/o/XBIoQ8Y?lb=etgXlJ8" target="_blank">Valorant</a></span>
+        <div class="modal fade" id="csgoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="registration-container">
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            <h2>CSGO</h2>
+                            <div class="game-details">
+                                <div class="game-details-img"><img src="./ebosm/assets/bosm-logo.png" alt=""></div>
+                                <div class="game-details-text">
+                                    <!-- <span>FIFA</span> -->
+                                    <div>The tournament will be played in knockout elimination format.</div>
+                                    <ul>
+                                        <li>Matches till the Round of 16: Best of 1</li>
+                                        <li>Quarters and Semis: Best of 3</li>
+                                        <li>Finals: Best of 5</li>
+                                    </ul>
+                                    <div>The maps included in the pool are: </div>
+                                    <ul>
+                                        <li>Mirage</li>
+                                        <li>Inferno</li>
+                                        <li>Dust2</li>
+                                        <li>Nuke</li>
+                                        <li>Train</li>
+                                        <li>Vertigo</li>
+                                        <li>Overpass</li>
+                                        <li>Ancient</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <span><a style = "text-decoration: none; color: white" href="https://dare2compete.com/o/kPxXunD?lb=etgXlJ8" target="_blank">CSGO</a></span>
-                <span><a style = "text-decoration: none; color: white" href="https://dare2compete.com/o/SEIlfFu?lb=etgXlJ8" target="_blank">COD-Mobile</a></span>
+        </div>
+
+        <div class="modal fade" id="valModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="registration-container">
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            <h2>VALORANT</h2>
+                            <div class="game-details">
+                                <div class="game-details-img"><img src="./ebosm/assets/bosm-logo.png" alt=""></div>
+                                <div class="game-details-text">
+                                    <!-- <span>FIFA</span> -->
+                                    <div>Knockout elimination format</div>
+                                    <ul>
+                                        <li>
+                                            Matches till Round of 16: Best of 1
+                                        </li>
+                                        <li>Quarters and Semifinals: Best of 3</li>
+                                        <li>Finals: Best of 5</li>
+                                    </ul>
+                                    <div>Map Pool: The tournament will be played on the following maps:</div>
+                                    <ul>
+                                        <li>Ascent</li>
+                                        <li>Bind</li>
+                                        <li>Split</li>
+                                        <li>Haven</li>
+                                        <li>Icebox</li>
+                                        <li>Breeze</li>
+                                        <li>Fracture</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
-        </div> -->
+        </div>
+
+
 
         <div class="gamesContainer">
-            <div><a style = "text-decoration: none; color: white" href="https://dare2compete.com/o/aYItWdl?lb=etgXlJ8" class="underline">Fifa</a></div>
-            <div><a style = "text-decoration: none; color: white" href="https://dare2compete.com/o/XBIoQ8Y?lb=etgXlJ8" class="underline">Valorant</a></div>
-            <div><a style = "text-decoration: none; color: white" href="https://dare2compete.com/o/kPxXunD?lb=etgXlJ8" class="underline">CSGO</a></div>
-            <div><a style = "text-decoration: none; color: white" href="https://dare2compete.com/o/SEIlfFu?lb=etgXlJ8" class="underline">COD-Mobile</a></div>
+            <div data-bs-toggle="modal" data-bs-target="#fifaModal" onclick="runAnimations()" style="color: white">
+                <span class="underline">Fifa</span></div>
+            <div data-bs-toggle="modal" data-bs-target="#valModal" onclick="runAnimations()" style="color: white">
+                <span class="underline">valorant</span></div>
+            <div data-bs-toggle="modal" data-bs-target="#csgoModal" onclick="runAnimations()" style="color: white">
+                <span class="underline">csgo</span></div>
+            <div data-bs-toggle="modal" data-bs-target="#codModal" onclick="runAnimations()" style="color: white">
+                <span class="underline">cod-mobile</span></div>
+            <!-- <div><a style = "text-decoration: none; color: white" href="https://dare2compete.com/o/aYItWdl?lb=etgXlJ8" class="underline">Fifa</a></div> -->
+            <!-- <div><a style="text-decoration: none; color: white" href="https://dare2compete.com/o/XBIoQ8Y?lb=etgXlJ8"
+                    class="underline">Valorant</a></div> -->
+            <!-- <div><a style="text-decoration: none; color: white" href="https://dare2compete.com/o/kPxXunD?lb=etgXlJ8"
+                    class="underline">CSGO</a></div> -->
+            <!-- <div><a style="text-decoration: none; color: white" href="https://dare2compete.com/o/SEIlfFu?lb=etgXlJ8"
+                    class="underline">COD-Mobile</a></div> -->
         </div>
 
 
@@ -241,10 +227,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
         integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./ebosm/scripts/index.js"></script>
