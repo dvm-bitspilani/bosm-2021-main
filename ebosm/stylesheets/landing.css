@@ -4,9 +4,13 @@
 }
 
 body {
-  overflow-x: hidden;
   margin: 0;
   background: #000000;
+  position: relative;
+}
+
+html, body{
+  overflow-x: hidden;
 }
 
 .main-section-landing {
