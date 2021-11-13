@@ -102,4 +102,8 @@ nav div {
   nav span{
     padding: 2px 2rem;
   }
+
+  nav{
+    padding: 10px;
+  }
 }

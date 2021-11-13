@@ -433,7 +433,7 @@ ul li{
 
     .registration-container {
         width: initial;
-        padding-bottom: 8%;
+        padding: 1rem
     }
 
     .input-cell {
