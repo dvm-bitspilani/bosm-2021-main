@@ -37,6 +37,16 @@ body {
   display: none;
 }
 
+.red-dash{
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+/* .red-dash:nth-child(3){
+  top: 125vh;
+} */
+
 .modal-dialog {
   max-width: 65vw !important;
 }
@@ -276,6 +286,12 @@ select option {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.gamesCard:hover {
+  transform: scale(1.02);
+  transition: linear 0.2s;
+  /* padding: 5px 25px 10px; */
 }
 
 .gamesCard img {
