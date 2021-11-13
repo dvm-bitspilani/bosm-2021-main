@@ -191,7 +191,7 @@ input[type="radio"]:focus {
     margin-right: 0;
     font-family: 'affirmative';
     letter-spacing: 2px;
-    font-size: 2.25rem;
+    font-size: 2rem;
     background-color: rgb(241, 241, 241);
     border-radius: 3px;
     border: none;
