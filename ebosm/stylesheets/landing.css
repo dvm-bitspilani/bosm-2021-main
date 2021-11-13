@@ -4,8 +4,9 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
+  background: #000000;
 }
 
 .main-section-landing {
@@ -135,13 +136,15 @@ select option {
   color: black;
 }
 
-.gamesContainer {
-  /* display: none; */
+/* .gamesContainer div:hover {
+  transform: scale(1.02);
+  transition: linear 0.4s;
+} */
+/* .gamesContainer {
   font-family: affirmative;
   font-size: 1.5rem;
   position: relative;
   top: 75vh;
-  /* font-weight: 600; */
   text-align: center;
   display: flex;
   justify-content: space-around;
@@ -153,10 +156,6 @@ select option {
   padding: 0 4rem;
 }
 
-/* .gamesContainer div:hover {
-  transform: scale(1.02);
-  transition: linear 0.4s;
-} */
 
 @media screen and (max-width: 768px) {
   .gamesContainer {
@@ -174,7 +173,7 @@ select option {
     padding: 1rem;
     margin-bottom: 2rem;
   }
-}
+} */
 
 .underline{
   position: relative;
@@ -230,4 +229,107 @@ select option {
     margin: 0;
     text-align: center;
     color: #EEEEEE;
+}
+
+.container{
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.games, .about{
+  margin-top: 3rem;
+}
+
+.subHeading{
+  font-size: 5.7rem;
+  color: #FFFFFF;
+  margin: 2rem 0;
+}
+
+.gamesContainer{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.gamesCard{
+  width:21%;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.gamesCard img{
+  width: initial;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.aboutContainer{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.aboutText{
+  width:70%;
+  margin-right: 2rem;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.aboutVid{
+  width: 30%;
+}
+
+@media screen and (max-width: 600px){
+  .games{
+        order: 2;
+  }
+
+  .about{
+        order: 1;
+  }
+
+  .gamesContainer{
+        flex-wrap: wrap;
+  }
+
+  .gamesCard{
+        width: 45%;
+        margin: 0 0 2rem 0;
+  }
+
+  .subHeading{
+        font-size: 8vw;
+        margin-bottom: 2rem;
+  }
+
+  .aboutContainer{
+        flex-direction: column;
+        justify-content: center;
+  }
+
+  .aboutText{
+        margin: 0;
+  }
+
+  .aboutText{
+        width: 100%;
+  }
+
+  .aboutVid{
+        width: 100%;
+        margin-top: 1rem;
+  }
 }
