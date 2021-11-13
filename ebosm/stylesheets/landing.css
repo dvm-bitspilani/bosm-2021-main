@@ -37,15 +37,25 @@ body {
   display: none;
 }
 
-.red-dash{
+.red-dash, .red-dash2, .red-dash3, .red-dash4{
   width: 100%;
   position: absolute;
   z-index: -1;
+  left: 4vw;
+  top: 110vh;
 }
 
-/* .red-dash:nth-child(3){
-  top: 125vh;
-} */
+.red-dash2{
+  top: 170vh;
+}
+
+.red-dash3{
+  top: 230vh;
+}
+
+.red-dash4{
+  display: none;
+}
 
 .modal-dialog {
   max-width: 65vw !important;
@@ -145,45 +155,6 @@ body {
 select option {
   color: black;
 }
-
-/* .gamesContainer div:hover {
-  transform: scale(1.02);
-  transition: linear 0.4s;
-} */
-/* .gamesContainer {
-  font-family: affirmative;
-  font-size: 1.5rem;
-  position: relative;
-  top: 75vh;
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  padding: 0 20px;
-  text-transform: uppercase;
-}
-
-.gamesContainer div{
-  padding: 0 4rem;
-}
-
-
-@media screen and (max-width: 768px) {
-  .gamesContainer {
-    display: block;
-    font-size: 1rem;
-    flex-direction: column;
-    top: 40%;
-    transform: translateY(-50%);
-  }
-
-  .gamesContainer div {
-    border: #ff4654 solid 2px;
-    border-radius: 12px;
-    margin: 0px 15vw;
-    padding: 1rem;
-    margin-bottom: 2rem;
-  }
-} */
 
 .underline {
   position: relative;
@@ -386,5 +357,18 @@ select option {
 
   .game-details-img{
     margin: 0;
+  }
+
+  .red-dash2{
+    top: 180vh;
+  }
+
+  .red-dash3{
+    top: 240vh;
+  }
+
+  .red-dash4{
+    display: block;
+    top: 300vh;
   }
 }
