@@ -6,7 +6,7 @@
 body {
   margin: 0;
   background: #000000;
-  position: relative;
+  /* position: relative; */
 }
 
 html, body{
@@ -31,7 +31,6 @@ html, body{
   font-size: 6.4rem;
   width: 100%;
   text-align: center;
-  /* letter-spacing: 0.1em; */
   font-family: "anurati";
   color: white;
   left: 50%;
@@ -48,14 +47,14 @@ html, body{
   left: 4vw;
   top: 110vh;
 }
-
+/* 
 .red-dash2{
   top: 170vh;
 }
 
 .red-dash3{
   top: 230vh;
-}
+} */
 
 .red-dash4{
   display: none;
