@@ -36,6 +36,21 @@ body {
       display: none;
 }
 
+
+.mobileRegister{
+      /* width: 100%; */
+      /* display: flex; */
+      justify-content: center;
+      transform: translate(-50%, -50%);
+      top: 90%;
+      color:white;
+      font-size: 28px;
+      font-family: 'affirmative';
+    align-items: center;
+    position: absolute;
+    left: 50%;
+}
+
 .modal-dialog {
       max-width: 65vw !important;
 }
