@@ -159,6 +159,9 @@ function bosmreg(e) {
 window.onload = function () {
   document.querySelector(".spinner").style.display = "none";
   document.querySelector(".main-heading").style.display = "initial";
+  if (screen.width < 768) {
+    document.querySelector(".mobileRegister").style.display = "initial";
+  }
 
   fetch("https://bits-bosm.org/bosm2021/registrations/all_games/")
   .then(response => response.json())

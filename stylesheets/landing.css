@@ -26,7 +26,6 @@ body {
       font-size: 6.4rem;
       width: 100%;
       text-align: center;
-      /* letter-spacing: 0.1em; */
       font-family: "anurati";
       color: white;
       left: 50%;
@@ -36,19 +35,17 @@ body {
       display: none;
 }
 
-
-.mobileRegister{
-      /* width: 100%; */
-      /* display: flex; */
+.mobileRegister {
+      display: none;
       justify-content: center;
       transform: translate(-50%, -50%);
       top: 90%;
-      color:white;
+      color: white;
       font-size: 28px;
-      font-family: 'affirmative';
-    align-items: center;
-    position: absolute;
-    left: 50%;
+      font-family: "affirmative";
+      align-items: center;
+      position: absolute;
+      left: 50%;
 }
 
 .modal-dialog {
@@ -67,14 +64,13 @@ body {
       opacity: 0.9 !important;
 }
 
-
 .modal-content::-webkit-scrollbar-thumb {
       background-color: white;
       width: 2px;
 }
 
 @media (max-width: 768px) {
-
+     
       .main-section-landing {
             background: url(../assets/mobile/mobile_bg.png) no-repeat;
             background-size: cover;
@@ -83,7 +79,6 @@ body {
             width: 100vw;
             overflow: hidden;
       }
-
 
       .main-heading {
             font-size: 10vw;
@@ -97,59 +92,56 @@ body {
             text-align: center;
       }
       nav span {
-            border: #FF4654 solid 2px;
+            border: #ff4654 solid 2px;
             border-radius: 12px;
             position: relative;
             top: 70vh;
             padding: 10px !important;
             font-size: 1.5rem !important;
-        
       }
 }
 
-.select2-search__field{
+.select2-search__field {
       color: black;
 }
-
 
 /* 
 .select2-results__message{
       color: blue !important;
 } */
 
-#add-college{
-cursor: pointer;
+#add-college {
+      cursor: pointer;
 }
 
-#newCollegeBtn, #newMemberBtn,#newMemberAddBtn{
-    border: none;
-    font-weight: 400;
-    width: 100px;
-    margin-left: 20px;
-    background: none;
-    color: white;
-    border: 1px solid white;
+#newCollegeBtn,
+#newMemberBtn,
+#newMemberAddBtn {
+      border: none;
+      font-weight: 400;
+      width: 100px;
+      margin-left: 20px;
+      background: none;
+      color: white;
+      border: 1px solid white;
 }
 
-
-#newMemberAddBtn{
+#newMemberAddBtn {
       height: 50px !important;
       margin-left: 50px;
 }
 
-
-#newCollegeBtn:hover, #newMemberBtn:hover, #newMemberAddBtn:hover{
+#newCollegeBtn:hover,
+#newMemberBtn:hover,
+#newMemberAddBtn:hover {
       background-color: rgb(247, 247, 247);
       color: rgb(143, 2, 2);
       transform: scale(1.05);
       transition: 0.5s all ease-in-out;
-      box-shadow:
-  3.3px 3.4px 6px -45px rgba(0, 0, 0, 0.031),
-  9.1px 9.5px 16.5px -45px rgba(0, 0, 0, 0.045),
-  22px 22.9px 39.8px -45px rgba(0, 0, 0, 0.059),
-  73px 76px 132px -45px rgba(0, 0, 0, 0.09)
-;
-
+      box-shadow: 3.3px 3.4px 6px -45px rgba(0, 0, 0, 0.031),
+            9.1px 9.5px 16.5px -45px rgba(0, 0, 0, 0.045),
+            22px 22.9px 39.8px -45px rgba(0, 0, 0, 0.059),
+            73px 76px 132px -45px rgba(0, 0, 0, 0.09);
 }
 select option {
       color: black;
