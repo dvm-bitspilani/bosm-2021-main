@@ -46,6 +46,7 @@ html, body{
   z-index: -1;
   left: 4vw;
   top: 110vh;
+  display: none;
 }
 
 .red-dash2{
