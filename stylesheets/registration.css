@@ -8,6 +8,19 @@
     src: url("../fonts/affirmative/Affirmative.ttf");
 }
 
+
+.techPower{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.606);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+}
+.boldName{
+    font-weight: 500;
+}
+
 .registration-container {
     /* width: 60vw; */
     /* height: 85vh; */
