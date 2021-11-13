@@ -39,7 +39,7 @@ body {
       display: none;
       justify-content: center;
       transform: translate(-50%, -50%);
-      top: 90%;
+      bottom:5%;
       color: white;
       font-size: 28px;
       font-family: "affirmative";
