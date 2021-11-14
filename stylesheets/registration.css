@@ -337,6 +337,7 @@ hr {
 
 #team-members-wrap {
     width: 100%;
+    color: #ffffff;
 }
 
 modal ul {
@@ -348,6 +349,7 @@ modal ul {
 
 modal ul li {
     margin: 1% 2%;
+    color: #ffffff;
 }
 
 .add-team-row {
