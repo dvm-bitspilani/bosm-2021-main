@@ -321,7 +321,7 @@ burger.addEventListener("click", function () {
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
 $(window).scroll(function () { 
-  if(window.scrollY > vh){
+  if(window.scrollY > (vh/2)){
     document.querySelector("nav").style.background="#00000080"
     document.querySelector("nav").style.backdropFilter="blur(10px)"
   }
