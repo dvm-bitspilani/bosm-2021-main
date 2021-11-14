@@ -39,7 +39,7 @@ body {
   cursor: default;
   user-select: none;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  /* letter-spacing: 3px; */
 }
 
 .red-dash,
