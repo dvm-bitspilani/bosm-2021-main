@@ -242,6 +242,10 @@ select option {
   margin-top: 5rem;
 }
 
+.about{
+  height: 80vh;
+}
+
 .subHeading {
   font-size: 4.5rem;
   color: #ffffff;
@@ -278,6 +282,11 @@ select option {
 .gamesCard img {
   width: initial;
   height: 100%;
+}
+
+.games-anchor{
+  position: absolute;
+  top: 100vh;
 }
 
 .aboutContainer {
