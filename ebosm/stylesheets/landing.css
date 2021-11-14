@@ -46,13 +46,11 @@ html, body{
   z-index: -1;
   left: 4vw;
   top: 110vh;
-
 }
 
 .red-dash2{
   top: 170vh;
-  display: none;
-
+  
 }
 
 .red-dash3{
@@ -61,7 +59,8 @@ html, body{
 }
 
 .red-dash4{
-  top: 147vh;
+  top: 207vh;
+  /* display: none; */
 }
 
 .modal-dialog {
@@ -252,7 +251,6 @@ select option {
   justify-content: space-between;
   margin-top: 2rem;
   flex-wrap: wrap;
-  height: 100vh;
 }
 
 .gamesCard {

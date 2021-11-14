@@ -322,9 +322,11 @@ const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeig
 
 $(window).scroll(function () { 
   if(window.scrollY > vh){
-    document.querySelector("nav").style.background="#00000094"
+    document.querySelector("nav").style.background="#00000080"
+    document.querySelector("nav").style.backdropFilter="blur(10px)"
   }
   else{
     document.querySelector("nav").style.background="none"
+    document.querySelector("nav").style.backdropFilter="blur(0)"
   }
 });
