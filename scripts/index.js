@@ -301,8 +301,9 @@ function showMember(memberDetails) {
 
 // showMember(membersArr);
 
-function showNewMemberForm() {
+function showNewMemberForm(e) {
   document.querySelector(".add-team-member").style.display = "block";
+  e.preventDefault();
 }
 
 function clearTeamInput(){
