@@ -356,6 +356,7 @@ select option {
 @media screen and (max-width: 600px) {
   .games {
     order: 2;
+    height: 90vh;
   }
 
   .about {
@@ -438,6 +439,7 @@ select option {
     border-radius: 40px;
     width: 40px;
     height: 40px;
+    top: 85vh;
   }
 
   .fa-chevron-down{
