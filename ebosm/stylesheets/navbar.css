@@ -34,6 +34,11 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  transition: background 0.5s ease;
+  /* background: #00000080; */
 }
 nav div {
   display: flex;
@@ -93,17 +98,111 @@ nav div {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .menu-btn {
     right: 20px;
     top: 10px;
   }
 
-  nav span{
+  nav span {
     padding: 2px 2rem;
   }
 
-  nav{
+  nav {
     padding: 10px;
+    position: initial;
+    flex-direction: column;
   }
+
+  .mobile-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: "affirmative";
+    font-size: 22px;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 12rem;
+    height: 115vh;
+    background: black;
+    list-style-type: none;
+    z-index: 20;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  .mobile-menu li {
+    padding-left: 50px;
+  }
+
+  .mobile-menu li a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  #hamburger {
+    display: block !important;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 25;
+  }
+  
+  .show {
+    display: none;
+  }
+  
+  .hide {
+    display: block;
+  }
+}
+
+#hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 25;
+}
+
+#hamburger div {
+  width: 30px;
+  margin: 5px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.5s ease;
+  border-radius: 3px;
+}
+
+.navActive {
+  transform: translateX(0%);
+}
+
+/* #hamburger.open .line:nth-last-child(-n+3) {
+  display: none;
+} */
+
+#hamburger.open .line:nth-child(1) {
+  transform: translateY(8px) rotateZ(45deg);
+}
+
+#hamburger.open .line:nth-child(3) {
+  transform: translateY(-8px) rotateZ(-45deg);
+}
+
+#hamburger.open .line:nth-child(2) {
+  width: 0;
 }

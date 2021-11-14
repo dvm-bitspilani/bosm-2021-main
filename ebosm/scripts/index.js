@@ -121,14 +121,14 @@ window.onload = function () {
   document.querySelector(".spinner").style.display = "none";
 
   fetch("https://bits-bosm.org/bosm2021/registrations/all_games/")
-  .then(response => response.json())
-  .then((result) =>{
-   document.getElementById("sports_opt").innerHTML = `<option value="" selected disabled>Select Your Sport</option>`;
-    result.data.forEach((game)=>{
-      document.getElementById("sports_opt").innerHTML = document.getElementById("sports_opt").innerHTML + `<option value="${game.name}" class="sports-tag" id="2">${game.name}</option>`;
+    .then(response => response.json())
+    .then((result) => {
+      document.getElementById("sports_opt").innerHTML = `<option value="" selected disabled>Select Your Sport</option>`;
+      result.data.forEach((game) => {
+        document.getElementById("sports_opt").innerHTML = document.getElementById("sports_opt").innerHTML + `<option value="${game.name}" class="sports-tag" id="2">${game.name}</option>`;
+      })
+      console.log(result.data);
     })
-    console.log(result.data);
-  })
 };
 
 // $(document).ready(function () {
@@ -303,5 +303,28 @@ window.onload = function () {
 //       document.getElementById("members").innerHTML = '';
 //     }
 //   }
-  
+
 // }
+
+const scrollFullPage = () => {
+  const back = document.querySelector(".background");
+  window.scrollTo(0, back.offsetHeight);
+};
+
+let burger = document.querySelector("#hamburger");
+let menu = document.querySelector(".mobile-menu");
+burger.addEventListener("click", function () {
+  menu.classList.toggle("navActive");
+  burger.classList.toggle("open");
+});
+
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
+$(window).scroll(function () { 
+  if(window.scrollY > vh){
+    document.querySelector("nav").style.background="#00000095"
+  }
+  else{
+    document.querySelector("nav").style.background="none"
+  }
+});

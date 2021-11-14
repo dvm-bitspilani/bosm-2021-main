@@ -305,6 +305,37 @@ select option {
   width: 100%;
 }
 
+.cross {
+  position: absolute;
+  top: 88vh;
+  padding: 5px;
+  background: #ffffff30;
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cross:hover {
+  background: white;
+}
+
+.fa-chevron-down {
+  color: rgb(255,255,255,0.9);
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.cross:hover .fa-chevron-down {
+  color: #000000;
+}
+
 @media screen and (max-width: 600px) {
   .games {
     order: 2;
