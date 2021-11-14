@@ -99,7 +99,7 @@ body {
   .main-heading {
     font-size: 10vw;
     width: 70%;
-    top: 40%;
+    bottom: 13%;
   }
 
   .main-section-landing a {
@@ -220,6 +220,10 @@ select option {
   letter-spacing: 0.3;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.game-details-text li{
+  padding: 0 0.5rem;
 }
 
 .modal-body h2 {
@@ -356,6 +360,7 @@ select option {
 
   .about {
     order: 1;
+    height: initial;
   }
 
   .gamesContainer {
@@ -437,5 +442,9 @@ select option {
 
   .fa-chevron-down{
     font-size: 1rem;
+  }
+
+  .games-anchor{
+    top: 240vh;
   }
 }
