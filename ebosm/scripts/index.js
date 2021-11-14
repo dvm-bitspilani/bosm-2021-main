@@ -322,7 +322,7 @@ const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeig
 
 $(window).scroll(function () { 
   if(window.scrollY > vh){
-    document.querySelector("nav").style.background="#00000095"
+    document.querySelector("nav").style.background="#00000094"
   }
   else{
     document.querySelector("nav").style.background="none"
