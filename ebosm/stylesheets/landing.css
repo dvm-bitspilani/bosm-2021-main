@@ -46,21 +46,22 @@ html, body{
   z-index: -1;
   left: 4vw;
   top: 110vh;
-  display: none;
+
 }
 
 .red-dash2{
   top: 170vh;
   display: none;
+
 }
 
 .red-dash3{
-display: none;
   top: 230vh;
+  display: none;
 }
 
 .red-dash4{
-  display: none;
+  top: 147vh;
 }
 
 .modal-dialog {
@@ -251,6 +252,7 @@ select option {
   justify-content: space-between;
   margin-top: 2rem;
   flex-wrap: wrap;
+  height: 100vh;
 }
 
 .gamesCard {
@@ -396,6 +398,10 @@ select option {
     margin: 0;
   }
 
+  .red-dash, .red-dash2,.red-dash3,.red-dash4{
+    display: none;
+  }
+
   .red-dash2{
     top: 180vh;
   }
@@ -405,7 +411,6 @@ select option {
   }
 
   .red-dash4{
-    display: none;
     top: 300vh;
   }
 }
