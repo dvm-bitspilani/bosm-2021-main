@@ -9,7 +9,8 @@ body {
   /* position: relative; */
 }
 
-html, body{
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -28,7 +29,7 @@ html, body{
 .main-heading {
   position: absolute;
   bottom: 5%;
-  font-size: 6.4rem;
+  font-size: 6.1rem;
   width: 100%;
   text-align: center;
   font-family: "anurati";
@@ -37,10 +38,14 @@ html, body{
   transform: translate(-50%, -50%);
   cursor: default;
   user-select: none;
-  display: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
-.red-dash, .red-dash2, .red-dash3, .red-dash4{
+.red-dash,
+.red-dash2,
+.red-dash3,
+.red-dash4 {
   width: 100%;
   position: absolute;
   z-index: -1;
@@ -48,17 +53,16 @@ html, body{
   top: 110vh;
 }
 
-.red-dash2{
+.red-dash2 {
   top: 170vh;
-  
 }
 
-.red-dash3{
+.red-dash3 {
   top: 230vh;
   display: none;
 }
 
-.red-dash4{
+.red-dash4 {
   top: 207vh;
   /* display: none; */
 }
@@ -301,13 +305,13 @@ select option {
   width: 35%;
 }
 
-.aboutVid img{
+.aboutVid img {
   width: 100%;
 }
 
 .cross {
   position: absolute;
-  top: 88vh;
+  top: 89vh;
   padding: 5px;
   background: #ffffff30;
   border-radius: 60px;
@@ -327,7 +331,7 @@ select option {
 }
 
 .fa-chevron-down {
-  color: rgb(255,255,255,0.9);
+  color: rgb(255, 255, 255, 0.9);
   font-size: 1.75rem;
   font-weight: 400;
 }
@@ -370,7 +374,7 @@ select option {
     width: 100%;
   }
 
-  .aboutText p{
+  .aboutText p {
     margin: 1rem 0;
   }
 
@@ -379,36 +383,50 @@ select option {
     margin-top: 1rem;
   }
 
-  .game-details{
+  .game-details {
     flex-direction: column;
   }
 
-  .game-details-img, .game-details-text{
+  .game-details-img,
+  .game-details-text {
     width: 100%;
     margin-top: 2rem;
   }
 
-  .game-details-text{
+  .game-details-text {
     padding: 0;
   }
 
-  .game-details-img{
+  .game-details-img {
     margin: 0;
   }
 
-  .red-dash, .red-dash2,.red-dash3,.red-dash4{
+  .red-dash,
+  .red-dash2,
+  .red-dash3,
+  .red-dash4 {
     display: none;
   }
 
-  .red-dash2{
+  .red-dash2 {
     top: 180vh;
   }
 
-  .red-dash3{
+  .red-dash3 {
     top: 240vh;
   }
 
-  .red-dash4{
+  .red-dash4 {
     top: 300vh;
+  }
+
+  .cross {
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .fa-chevron-down{
+    font-size: 1rem;
   }
 }
