@@ -28,11 +28,11 @@ body {
 
 .main-heading {
   position: absolute;
-  bottom: 5%;
+  bottom: 2%;
   font-size: 6.1rem;
   width: 100%;
   text-align: center;
-  font-family: "anurati";
+  font-family: "affirmative";
   color: white;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -63,7 +63,7 @@ body {
 }
 
 .red-dash4 {
-  top: 207vh;
+  top: 211vh;
   /* display: none; */
 }
 
