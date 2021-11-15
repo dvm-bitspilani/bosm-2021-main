@@ -167,7 +167,7 @@ document.querySelector(".mobileRegister").style.display = "none";
 setTimeout(() => {
   document.querySelector(".spinner").style.display = "none";
   console.log("Yo bitch");
-  body.style.overflow  = "scroll";
+  body.style.overflowY  = "scroll";
 if (screen.width < 768) {
     document.querySelector(".mobileRegister").style.display = "initial";
   }
