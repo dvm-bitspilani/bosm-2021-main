@@ -72,6 +72,10 @@ genderSelect.addEventListener("change", function () {
     showGenderStatus();
 })
 
+
+
+
+
 sportSelect.addEventListener("change", function () {
   // console.log("changed")
 
@@ -155,10 +159,19 @@ document.getElementById("register").addEventListener("click", function(event){
 function bosmreg(e) {
   
 }
+document.querySelector(".spinner").style.display = 'flex';
+var body = document.getElementsByTagName("BODY")[0];
+body.style.overflow = "hidden";
+
+
+setTimeout(() => {
+  document.querySelector(".spinner").style.display = "none";
+  console.log("Yo bitch");
+  body.style.overflow  = "scroll";
+  // document.querySelector(".main-heading").style.display = "initial";
+}, 5000);
 
 window.onload = function () {
-  document.querySelector(".spinner").style.display = "none";
-  document.querySelector(".main-heading").style.display = "initial";
   if (screen.width < 768) {
     document.querySelector(".mobileRegister").style.display = "initial";
   }
