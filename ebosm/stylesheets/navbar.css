@@ -46,6 +46,7 @@ nav {
 nav div {
   display: flex;
   /* justify-content: space-between; */
+  align-items: center;
 }
 
 .menu-btn {

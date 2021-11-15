@@ -8,8 +8,12 @@ body {
       overflow-x: hidden;
       margin: 0;
 }
-#navLogo {
-      width: 65px !important;
+#bosm-logo {
+      background-image: url("/assets/bosm-logo.png");
+      width: 100px;
+          height: 100px;
+          background-size: cover;
+          margin: 0px 20px;
 }
 .main-section-landing {
       background: url(../assets/bpl_bg.png) no-repeat;
@@ -112,12 +116,16 @@ section {
       font-size: 16px;
 }
 .about-right {
-      padding-top: 50px;
+      background-image: url('/assets/aboutImage.png');
+      width: 100%;
+      background-size: cover;
 }
-#about-image {
+/* #about-image {
       width: 400px;
+} */
+#register-span {
+      display: none;
 }
-
 
 @media (max-width: 768px) {
      
@@ -148,6 +156,9 @@ section {
             top: 70vh;
             padding: 10px !important;
             font-size: 1.5rem !important;
+      }
+      #register-span {
+            display: none;
       }
       .mobile-heading {
             width: 100%;
