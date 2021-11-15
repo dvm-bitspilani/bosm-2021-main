@@ -122,7 +122,7 @@ nav div{
    position: relative;
    top: 30px;
    left: 30px;
-   
+   width: 50%;
    z-index: 1;
    
    -webkit-user-select: none;
