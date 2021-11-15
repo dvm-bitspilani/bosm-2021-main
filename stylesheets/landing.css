@@ -157,6 +157,12 @@ section {
             justify-content: center;
             align-items: center;
       }
+      .about-description{
+            flex-direction: column;
+      }
+      #about-image {
+            width: 70vw;
+      }
 }
 
 .select2-search__field {

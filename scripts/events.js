@@ -7,16 +7,16 @@ const eventsNames = ['Basketball',
     'Football',
     'Athletics',
     'Squash',
-    'Chess',
+    // 'Chess',
     'Carrom',
-    'Snooker & Pool',
-    'Power Lifting',
-    'Bodybuilding',
+    'Snooker',
+    // 'Power Lifting',
+    // 'Bodybuilding',
     'Taekwondo',
     'Table Tennis',
     'Badminton',
     'Ultimate Frisbee',
-    'Swimming'
+    // 'Swimming'
 ];
 const eventsImgUrl = ['assets/events/Basketball-min.png',
     'assets/events/Lawn Tennis-min.png',
@@ -26,20 +26,20 @@ const eventsImgUrl = ['assets/events/Basketball-min.png',
     'assets/events/Football-min.png',
     'assets/events/Athletics-min.png',
     'assets/events/Squash-min.png',
-    'assets/events/Chess-min.png',
+    // 'assets/events/Chess-min.png',
     'assets/events/Carrom-min.png',
-    'assets/events/Snooker and Pool-min.png',
-    'assets/events/Powerlifting-min.png',
-    'assets/events/Body Building-min.png',
+    'assets/events/Snooker-min.png',
+    // 'assets/events/Powerlifting-min.png',
+    // 'assets/events/Body Building-min.png',
     'assets/events/Taekwondo-min.png',
     'assets/events/Table Tennis-min.png',
     'assets/events/Badminton-min.png',
     'assets/events/Ultimate Frisbee-min.png',
-    'assets/events/Swimming-min.png'
+    // 'assets/events/Swimming-min.png'
 ];
 const eventsContainer = document.getElementsByClassName("events-container")[0];
 
-const numberOfEvents = 18;
+const numberOfEvents = eventsImgUrl.length;
 let setNumber = 1;
 let numberOfEventsinOneSet;
 if (window.innerWidth < 600) {
@@ -189,7 +189,9 @@ const initiateAnimation = () => {
 
 document.addEventListener("touchmove", initiateAnimation);
 document.addEventListener("wheel", initiateAnimation);
-
+// window.onload =  function () {
+//     initiateAnimation;
+// }
 const changeEventSet = () => {
     const limit = (numberOfEventsinLastSet == 0) ? numberOfSet : (numberOfSet + 1);
     if (setNumber < limit) {
