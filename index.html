@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./stylesheets/navbar.css" />
     <link rel="stylesheet" href="./stylesheets/registration.css">
     <link rel="stylesheet" href="./stylesheets/loader.css">
+    <link rel="stylesheet" href="./stylesheets/events.css" />
 
     <style>
         .select2-container--default .select2-selection--single {
@@ -70,35 +71,37 @@
             </div>
         </nav>
         <div id="menuToggle">
-    
-         <input type="checkbox" />
-            
-        
+
+            <input type="checkbox" />
+
+
             <span></span>
             <span></span>
             <span></span>
-            
-        
-          
+
+
+
             <ul id="menu">
                 <!-- <li><a style="text-decoration: none; color: white" href="https://www.bits-bosm.org/">Home</a></li> -->
-                <li><a style="text-decoration: none; color: white" href="ebosm.html"
-                    target="_blank">Ignition</a></li>
-                    <li><a style="text-decoration: none; color: white" href="contact.html" target="_blank">Contact
+                <li><a style="text-decoration: none; color: white" href="ebosm.html" target="_blank">Ignition</a></li>
+                <li><a style="text-decoration: none; color: white" href="contact.html" target="_blank">Contact
                         Us</a></li>
-                    <!-- <li data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="runAnimations()" style="color: #FF4654;">Register</li> -->
+                <li data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="runAnimations()"
+                    style="color: #FF4654;">Register</li>
             </ul>
-          </div>
+        </div>
 
 
+        <!-- 
+        <div class="main-heading"><img src="assets/BPLtitle.png"> </div> -->
 
-        <div class="main-heading">BPL</div>
+        <div class="mobile-heading"><img id="mobile-bg" src="assets/BPLtitle.png"></div>
 
-<div class="mobileRegister">
-    <span data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="runAnimations()" style="border: #FF4654 solid 2px;padding: 2px 10px;
+        <div class="mobileRegister">
+            <span data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="runAnimations()" style="border: #FF4654 solid 2px;padding: 2px 10px;
     border-radius: 12px;">Register</span>
-</div>
-      
+        </div>
+
 
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -132,7 +135,8 @@
                                             style="padding-top: 2%;">
                                             <label for="">Captain's Phone</label>
                                             <input name="phone" type="tel" required id="phone">
-                                            <p class="input-explanation phone-explanation">Type your Phone Number (0123456789)
+                                            <p class="input-explanation phone-explanation">Type your Phone Number
+                                                (0123456789)
                                             </p>
                                         </div>
 
@@ -257,7 +261,10 @@
                                 </div>
 
 
-<div class="techPower"> <span>For Technical Queries contact: <br> <span> <span class="boldName">Manan Agrawal</span> (+91-8000007505),  <span class="boldName">Anshal Shukla</span> (+91-8058088802) </span> </span></div>
+                                <div class="techPower"> <span>For Technical Queries contact: <br> <span> <span
+                                                class="boldName">Manan Agrawal</span> (+91-8000007505), <span
+                                                class="boldName">Anshal Shukla</span> (+91-8058088802) </span> </span>
+                                </div>
 
                             </form>
 
@@ -274,6 +281,74 @@
 
     </section>
 
+
+
+
+
+
+    <!-- About Section -->
+
+    <section class="section" id="about-section">
+        <div class="about-wrapper">
+            <div class="about-heading">
+                ABOUT US
+            </div>
+            <div class="about-description">
+                <div class="about-left">
+                    The BITS Open Sports Meet (BOSM) is the annual sports festival of BITS Pilani, Pilani Campus. This
+                    much awaited sporting extravaganza, held from 13th November to 17th November, is a platform for
+                    college teams to exhibit their exceptional sporting talents and compete for superiority!<br><br>
+
+
+                    The first edition of BOSM was held way back in 1986 and has grown to be one of the largest and most
+                    competitive college sports fests in the country. Baxter, the desert eagle, is the official mascot of
+                    BOSM. A student-managed fest, BOSM 2021 is the 35th edition of this prestigious and exemplary
+                    carnival of sports.<br><br>
+
+
+                    With a plethora of sporting contests to compete in, alongside exhibitions, talks, prof shows and
+                    various other sports related events, BOSM promises to be a thrilling four day experience full of
+                    adrenaline and fierce competition amongst the best in India.<br><br>
+
+
+                    Grit. Guts. Glory.<br>
+
+                    Train rigorously, and prepare to go out all guns blazing in the quest for victory!
+                </div>
+                <div class="about-right">
+                    <img id="about-image" src="/assets/about-image.png" alt="BPL image">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- events Section -->
+
+        <div class="events-wrapper">
+            <div class="events-wrapper" id="events">
+                <div class="events-index">
+                    <div class="events-title">EVENTS</div>
+    
+                    <div class="events-container">
+                        <!-- Events card goes here -->
+                    </div>
+    
+                    <div class="events-msg">"Growing footfalls over the year, 2000+"</div>
+    
+                    <div class="events-nav-dots">
+                        <!-- Events card pages naigation dot goes here -->
+                    </div>
+                </div>
+                <div class="event-background-asset-01"></div>
+                <div class="event-background-asset-02"></div>
+                <div class="event-background-asset-03"></div>
+            </div>
+        </div>
+
+    </section>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous">
         </script>
@@ -284,6 +359,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/events.js"></script>
     <script>
         AOS.init({
             duration: 1200,

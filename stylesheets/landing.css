@@ -2,29 +2,32 @@
       font-family: "anurati";
       src: url("../fonts/anurati/Anurati-Regular.otf");
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
 
 body {
-      overflow: hidden;
+      /* overflow: hidden; */
       margin: 0;
 }
 
 .main-section-landing {
-      background: url(../assets/pc/new-desktop.png) no-repeat;
-      background-size: 100% 100%;
+      background: url(../assets/bpl_bg.png) no-repeat;
       height: 100vh;
       background-size: cover;
+      background-position: center center;
 }
 
 .blitz {
       font-family: "affirmative";
       letter-spacing: 0.1em;
 }
-
+.mobile-heading {
+      display: none;
+}
 .main-heading {
       position: absolute;
       bottom: 5%;
       font-size: 6.4rem;
-      width: 100%;
+      width: 50%;
       text-align: center;
       font-family: "anurati";
       color: white;
@@ -68,6 +71,51 @@ body {
       background-color: white;
       width: 2px;
 }
+#mobile-bg {
+      width: 50%;
+}
+
+
+
+/* About Us Section  */ 
+section {
+      /* height: 100vh; */
+      width: 100vw;
+}
+#about-section {
+      background: url(../assets/about-bg.png);
+      background-color: black;
+      color: white;
+      font-family: "affirmative";
+      /* height: 200vh; */
+}
+.about-heading {
+      font-size: 60px;
+      margin: 50px;
+      margin-bottom: 0px;
+}
+.about-wrapper {
+      display: flex;
+      flex-direction: column;
+}
+.about-description {
+      display: flex;
+      flex-direction: row;
+      margin: 50px;
+      
+}
+.about-left {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding-right: 50px;
+      font-size: 16px;
+}
+.about-right {
+      padding-top: 50px;
+}
+#about-image {
+      width: 400px;
+}
+
 
 @media (max-width: 768px) {
      
@@ -77,14 +125,14 @@ body {
             background-position: center center;
             height: 100vh;
             width: 100vw;
-            overflow: hidden;
+            /* overflow: hidden; */
       }
 
       .main-heading {
-            font-size: 10vw;
+            font-size: 1vw;
             width: 70%;
             color: #998b8b;
-            top: 56%;
+            /* top: 56%; */
       }
 
       span {
@@ -98,6 +146,16 @@ body {
             top: 70vh;
             padding: 10px !important;
             font-size: 1.5rem !important;
+      }
+      .mobile-heading {
+            width: 100%;
+            display: flex;
+            /* background-color: red; */
+            position: absolute;
+            bottom: 5vh;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
       }
 }
 
