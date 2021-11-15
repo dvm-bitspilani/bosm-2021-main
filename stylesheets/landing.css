@@ -9,7 +9,7 @@ body {
       margin: 0;
 }
 #bosm-logo {
-      background-image: url("/assets/bosm-logo.png");
+      background: url(../assets/bosm-logo.png) no-repeat;
       width: 100px;
           height: 100px;
           background-size: cover;
@@ -46,15 +46,16 @@ body {
 
 .mobileRegister {
       display: none;
-      justify-content: center;
-      transform: translate(-50%, -50%);
-      bottom:5%;
-      color: white;
-      font-size: 28px;
-      font-family: "affirmative";
-      align-items: center;
-      position: absolute;
-      left: 50%;
+    justify-content: center;
+    /* transform: translate(-50%, -50%); */
+    top: 3%;
+    right: 5%;
+    color: white;
+    font-size: 28px;
+    font-family: "affirmative";
+    align-items: center;
+    position: absolute;
+    /* left: 50%;*/
 }
 
 .modal-dialog {
@@ -116,9 +117,10 @@ section {
       font-size: 16px;
 }
 .about-right {
-      background-image: url('/assets/aboutImage.png');
-      width: 100%;
-      background-size: cover;
+      background: url(../assets/aboutImage.png) no-repeat;
+      width: 200%;
+      /* height: 400px; */
+      background-size: contain;
 }
 /* #about-image {
       width: 400px;
@@ -137,7 +139,9 @@ section {
             width: 100vw;
             /* overflow: hidden; */
       }
-
+      .mobileRegister {
+            display: initial;
+      }
       .main-heading {
             font-size: 1vw;
             width: 70%;
@@ -158,7 +162,9 @@ section {
             font-size: 1.5rem !important;
       }
       #register-span {
-            display: none;
+            display: block;
+            position: absolute;
+            top: 0;
       }
       .mobile-heading {
             width: 100%;

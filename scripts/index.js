@@ -162,19 +162,22 @@ function bosmreg(e) {
 document.querySelector(".spinner").style.display = 'flex';
 var body = document.getElementsByTagName("BODY")[0];
 body.style.overflow = "hidden";
-
+document.querySelector(".mobileRegister").style.display = "none";
 
 setTimeout(() => {
   document.querySelector(".spinner").style.display = "none";
   console.log("Yo bitch");
   body.style.overflow  = "scroll";
+if (screen.width < 768) {
+    document.querySelector(".mobileRegister").style.display = "initial";
+  }
   // document.querySelector(".main-heading").style.display = "initial";
 }, 5000);
 
 window.onload = function () {
-  if (screen.width < 768) {
-    document.querySelector(".mobileRegister").style.display = "initial";
-  }
+  // if (screen.width < 768) {
+  //   document.querySelector(".mobileRegister").style.display = "initial";
+  // }
 
   fetch("https://bits-bosm.org/bosm2021/registrations/all_games/")
   .then(response => response.json())
