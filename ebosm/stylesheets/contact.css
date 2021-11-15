@@ -12,8 +12,8 @@ body {
       background-image: url("../assets/Bg.png");
       background-size: cover;
       background-position: center;
-      padding: 2% 5% 1%;
-      /* overflow-x: hidden; */
+      padding: 5% 5% 1%;
+      overflow-x: hidden;
       opacity: 0.95;
 }
 
@@ -30,6 +30,7 @@ body {
       grid-template-columns: auto auto auto;
       gap: 40px;
       justify-content: center;
+      margin-top: 2rem;
 }
 
 .contactCard {
@@ -78,10 +79,18 @@ font-weight: 400;
       object-fit: cover;
 }
 
+nav span{
+      padding: 2px 3rem;
+}
+
 @media screen and (max-width: 768px) {
+      .main-section-landing{
+            padding: 5rem 1rem; 
+      }
       .cardsContainer {
           display: flex;
             flex-direction: column;
+            margin-top: 0;
       }
 
       .contactCard {

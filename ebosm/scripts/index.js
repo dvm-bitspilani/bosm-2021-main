@@ -321,10 +321,12 @@ burger.addEventListener("click", function () {
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
 $(window).scroll(function () { 
-  if(window.scrollY > vh){
-    document.querySelector("nav").style.background="#00000094"
+  if(window.scrollY > (vh/2)){
+    document.querySelector("nav").style.background="#00000080"
+    document.querySelector("nav").style.backdropFilter="blur(10px)"
   }
   else{
     document.querySelector("nav").style.background="none"
+    document.querySelector("nav").style.backdropFilter="blur(0)"
   }
 });

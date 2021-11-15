@@ -9,8 +9,9 @@ body {
   /* position: relative; */
 }
 
-html, body{
-  /* overflow-x: hidden; */
+html,
+body {
+  overflow-x: hidden;
 }
 
 .main-section-landing {
@@ -27,40 +28,43 @@ html, body{
 
 .main-heading {
   position: absolute;
-  bottom: 5%;
-  font-size: 6.4rem;
+  bottom: 2%;
+  font-size: 6.1rem;
   width: 100%;
   text-align: center;
-  font-family: "anurati";
+  font-family: "affirmative";
   color: white;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: default;
   user-select: none;
-  display: none;
+  text-transform: uppercase;
+  /* letter-spacing: 3px; */
 }
 
-.red-dash, .red-dash2, .red-dash3, .red-dash4{
+.red-dash,
+.red-dash2,
+.red-dash3,
+.red-dash4 {
   width: 100%;
   position: absolute;
   z-index: -1;
   left: 4vw;
   top: 110vh;
-  display: none;
 }
 
-.red-dash2{
+.red-dash2 {
   top: 170vh;
-  display: none;
 }
 
-.red-dash3{
-display: none;
+.red-dash3 {
   top: 230vh;
+  display: none;
 }
 
-.red-dash4{
-  display: none;
+.red-dash4 {
+  top: 211vh;
+  /* display: none; */
 }
 
 .modal-dialog {
@@ -95,7 +99,7 @@ display: none;
   .main-heading {
     font-size: 10vw;
     width: 70%;
-    top: 40%;
+    bottom: 10%;
   }
 
   .main-section-landing a {
@@ -218,6 +222,10 @@ select option {
   margin-bottom: 2rem;
 }
 
+.game-details-text li{
+  padding: 0 0.5rem;
+}
+
 .modal-body h2 {
   font-family: "affirmative";
   font-weight: 500;
@@ -236,6 +244,10 @@ select option {
 .games,
 .about {
   margin-top: 5rem;
+}
+
+.about{
+  height: 80vh;
 }
 
 .subHeading {
@@ -276,6 +288,11 @@ select option {
   height: 100%;
 }
 
+.games-anchor{
+  position: absolute;
+  top: 95vh;
+}
+
 .aboutContainer {
   display: flex;
   width: 100%;
@@ -301,13 +318,13 @@ select option {
   width: 35%;
 }
 
-.aboutVid img{
+.aboutVid img {
   width: 100%;
 }
 
 .cross {
   position: absolute;
-  top: 88vh;
+  top: 89vh;
   padding: 5px;
   background: #ffffff30;
   border-radius: 60px;
@@ -327,7 +344,7 @@ select option {
 }
 
 .fa-chevron-down {
-  color: rgb(255,255,255,0.9);
+  color: rgb(255, 255, 255, 0.9);
   font-size: 1.75rem;
   font-weight: 400;
 }
@@ -339,10 +356,12 @@ select option {
 @media screen and (max-width: 600px) {
   .games {
     order: 2;
+    height: 90vh;
   }
 
   .about {
     order: 1;
+    height: initial;
   }
 
   .gamesContainer {
@@ -370,7 +389,7 @@ select option {
     width: 100%;
   }
 
-  .aboutText p{
+  .aboutText p {
     margin: 1rem 0;
   }
 
@@ -379,33 +398,55 @@ select option {
     margin-top: 1rem;
   }
 
-  .game-details{
+  .game-details {
     flex-direction: column;
   }
 
-  .game-details-img, .game-details-text{
+  .game-details-img,
+  .game-details-text {
     width: 100%;
     margin-top: 2rem;
   }
 
-  .game-details-text{
+  .game-details-text {
     padding: 0;
   }
 
-  .game-details-img{
+  .game-details-img {
     margin: 0;
   }
 
-  .red-dash2{
+  .red-dash,
+  .red-dash2,
+  .red-dash3,
+  .red-dash4 {
+    display: none;
+  }
+
+  .red-dash2 {
     top: 180vh;
   }
 
-  .red-dash3{
+  .red-dash3 {
     top: 240vh;
   }
 
-  .red-dash4{
-    display: none;
+  .red-dash4 {
     top: 300vh;
+  }
+
+  .cross {
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    top: 85vh;
+  }
+
+  .fa-chevron-down{
+    font-size: 1rem;
+  }
+
+  .games-anchor{
+    top: 240vh;
   }
 }
