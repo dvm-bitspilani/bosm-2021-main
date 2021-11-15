@@ -5,15 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
 
 body {
-      /* overflow: hidden; */
+      overflow-x: hidden;
       margin: 0;
 }
-
+#navLogo {
+      width: 65px !important;
+}
 .main-section-landing {
       background: url(../assets/bpl_bg.png) no-repeat;
       height: 100vh;
       background-size: cover;
-      background-position: center center;
+      background-position: bottom center;
 }
 
 .blitz {

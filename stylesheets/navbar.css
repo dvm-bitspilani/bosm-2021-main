@@ -38,8 +38,15 @@ nav span:hover{
 
 nav{
   display: flex;
-  justify-content: flex-end;
-  padding: 20px 2rem;
+  justify-content: space-between;
+  padding: 10px 2rem;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  align-items: center;
+  z-index: 999;
 }
 
 .hide span{

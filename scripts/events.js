@@ -161,7 +161,7 @@ const openCard = () => {
         } else {
             clearInterval(flip);
         }
-    }, 200);
+    }, 50);
 }
 
 
@@ -179,7 +179,7 @@ const initiateAnimation = () => {
     if (eventsContainer.getBoundingClientRect().top - 10 <= window.innerHeight) {
         if (!isEventsAnimationInitiated) {
             openCard();
-            eventSetChangeInterval = setInterval(changeEventSet, 5000);
+            eventSetChangeInterval = setInterval(changeEventSet, 3300);
             document.removeEventListener("wheel", initiateAnimation);
             document.removeEventListener("touchmove", initiateAnimation);
             isEventsAnimationInitiated = true;
@@ -200,7 +200,7 @@ const changeEventSet = () => {
         for (dot of document.getElementsByClassName('event-nav-dot')) {
             dot.style.background = 'none';
         }
-        setTimeout(openCard, 1100);
+        setTimeout(openCard, 1000);
     } else {
         setNumber = 0;
         changeEventSet();
@@ -212,6 +212,6 @@ const navigateEvent = (dotIndex) => {
         setNumber = dotIndex - 1;
         changeEventSet();
         clearInterval(eventSetChangeInterval);
-        eventSetChangeInterval = setInterval(changeEventSet, 5000);
+        eventSetChangeInterval = setInterval(changeEventSet, 3000);
     }
 }

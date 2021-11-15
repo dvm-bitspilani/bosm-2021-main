@@ -2,7 +2,9 @@
   font-family: "affirmative";
   src: url("../fonts/affirmative/Affirmative.ttf");
 }
-
+#navLogo {
+  width: 100px;
+}
 * {
   box-sizing: border-box;
 }
@@ -39,6 +41,7 @@ nav {
   z-index: 20;
   transition: background 0.5s ease;
   /* background: #00000080; */
+  
 }
 nav div {
   display: flex;
@@ -104,6 +107,10 @@ nav div {
 
 .show {
   display: block;
+}
+
+#nav-logo {
+  width: 100px;
 }
 
 @media (max-width: 768px) {
