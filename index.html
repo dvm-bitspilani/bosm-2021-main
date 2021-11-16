@@ -46,352 +46,266 @@
             <div class="violet"></div>
         </div>
     </div>
-
-    <section class="main-section-landing">
-        <div class="viewMobile"><a style="text-decoration: none; color: white"
-                href="https://www.bits-bosm.org/ebosm.html" target="_blank">Ignition</a></div>
-        <nav>
-            <div class="left-stuff">
-                <div class="sub-left">
-                    <div id="bosm-logo">
-                        <!-- <img id="navLogo" src="/assets/bosm-logo.png" alt=""> -->
-
-                    </div>
-                    <div class="left-nav">
-                        <span><a style="text-decoration: none; color: white" href="#about-section">About Us
-                        </a></span>
-                        <span><a style="text-decoration: none; color: white" href="#events">Games</a></span>
-                    </div>
-                    
-                </div>
-
-            </div>
-            <div class="right-stuff">
-
-                <div class="hide">
-
-                    <span><a style="text-decoration: none; color: white" href="ebosm.html"
-                        target="_blank">Ignition</a></span>
-                    <span><a style="text-decoration: none; color: white" href="contact.html">Contact
-                            Us</a></span>
-
-                </div>
-                <div> <span> <span data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            onclick="runAnimations()" style="     border: #FF4654 solid 2px;padding: 2px 10px;
-                border-radius: 8px; padding: 10px 10px;">Register</span></span></div>
-            </div>
-            </div>
-        </nav>
-        <div id="menuToggle">
-
-            <input type="checkbox" />
-
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-
-
-            <ul id="menu">
-                <!-- <li><a style="text-decoration: none; color: white" href="https://www.bits-bosm.org/">Home</a></li> -->
-                <li><a style="text-decoration: none; color: white" href="ebosm.html" target="_blank">Ignition</a></li>
-                <li><a style="text-decoration: none; color: white" href="contact.html" target="_blank">Contact
-                        Us</a></li>
-                <li data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="runAnimations()"
-                    style="color: #FF4654;">Register</li>
-            </ul>
-        </div>
-
-
-        <!-- 
-        <div class="main-heading"><img src="assets/BPLtitle.png"> </div> -->
-
-        <div class="mobile-heading"><img id="mobile-bg" src="assets/BPLtitle.png"></div>
-
-        <div class="mobileRegister">
-            <span data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="runAnimations()" style="border: #FF4654 solid 2px;padding: 2px 10px;
-    border-radius: 10px;">Register</span>
-        </div>
-
-
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-
-
-                    <div class="modal-body">
-
-                        <div class="registration-container">
-                            <button class="btn-close btn-close-white" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                            <h1>Registration</h1>
-                            <form action="#" method="PUT" id="regform">
-                                <div class="input-row">
-                                    <div class="input-column">
-                                        <div class="input-cell" data-aos="zoom-in" style="padding-top: 2%"
-                                            id="name-wrap">
-                                            <label for="">Captain's Name</label>
-                                            <input name="name" type="text" required id="name">
-                                            <p class="input-explanation">Type in your first and last name</p>
-                                        </div>
-                                        <div class="input-cell" data-aos="zoom-in" class="input-cell"
-                                            style="padding-top: 2%;">
-                                            <label for="">Captain's BITS Mail</label>
-                                            <input name="email" type="email" required id="email"
-                                                pattern="[a-zA-Z][0-9]+@[a-zA-Z]+\.bits-pilani\.ac\.in">
-                                            <p class="input-explanation">Type in your BITS Mail</p>
-                                        </div>
-                                        <div class="input-cell" data-aos="zoom-in" class="input-cell"
-                                            style="padding-top: 2%;">
-                                            <label for="">Captain's Phone</label>
-                                            <input name="phone" type="tel" required id="phone">
-                                            <p class="input-explanation phone-explanation">Type your Phone Number
-                                                (0123456789)
-                                            </p>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="input-column">
-
-                                        <div class="input-cell" class="input-cell" style="padding-top: 2%;">
-
-                                            <label for="">Captain's BITS ID </label>
-                                            <input name="bits-id" type="text"
-                                                pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]||FACULTY" required
-                                                id="bits-id">
-                                            <p class="input-explanation" style="
-                                            font-size: 0.79rem;
-                                        ">Type in your BITS ID or "FACULTY" if you are faculty member</p>
-
-                                        </div>
-
-                                        <div class="input-cell" class="input-cell" style="padding-top: 2%;">
-
-                                            <label for="" class="not-required">Sports</label>
-                                            <select name="sports" id="sports_opt" class="form-select select-input"
-                                                onchange="showGenderStatus()">
-                                            </select>
-
-                                            <div class="selected-sports">
-                                                <p class="input-explanation">You can select your Sport</p>
-                                            </div>
-
-                                        </div>
-
-
-                                        <div class="input-cell" class="input-cell" style="margin-top: 2%;">
-                                            <label for="" class="not-required">Captain's Gender </label>
-                                            <select name="gender" class="form-select gender-team" name="year" required
-                                                onchange="showGenderStatus()" id="member-gender">
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                            </select>
-                                            <p class="input-explanation">Select Your Gender</p>
-                                        </div>
-
-
-                                    </div>
-
-                                </div>
-
-
-                                <div id="add-team-wrapper">
-
-                                    <hr>
-                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                        <label for="">Team Name</label>
-                                        <input name="team-name" type="text" required id="team-name">
-                                        <p class="input-explanation team-input-explanation">Type in Team Name</p>
-                                    </div>
-                                    <span id="team-gender-status"></span>
-                                    <div class="input-cell" style="padding-top: 2%" id="team-members-wrap">
-                                        <label for="">Team Members</label>
-                                        <button type="button" id="newMemberBtn" onclick="showNewMemberForm()">Add a
-                                            Teammate</button>
-                                        <ul id="members"></ul>
-                                        <div class="add-team-member">
-
-                                            <div class="add-team-row">
-                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                    <label for="">Name</label>
-                                                    <input name="team-member-name" type="text" id="team-member-name">
-                                                    <p class="input-explanation team-input-explanation">Type in Name
-                                                        of
-                                                        the member</p>
-                                                </div>
-                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                    <label for="">Email</label>
-                                                    <input name="team-member-email" type="email" id="team-email">
-                                                    <p class="input-explanation team-input-explanation">Type in
-                                                        Email of
-                                                        the member</p>
-                                                </div>
-                                                <div class="input-cell" style="padding-top: 2%" id="name-wrap">
-                                                    <label for="">BITS ID</label>
-                                                    <input name="team-member-bitsid"
-                                                        pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]" type="text"
-                                                        id="team-bitsid">
-                                                    <p class="input-explanation team-input-explanation">Type in BITS
-                                                        ID
-                                                        of the member</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="add-team-row">
-                                                <div class="input-cell" style="padding-top: 2%" id="">
-                                                    <label for="">Phone Number</label>
-                                                    <input name="team-member-phone" type="text" id="team-phone">
-                                                    <p class="input-explanation team-input-explanation">Type in
-                                                        Phone
-                                                        Number of the member (0123456789)</p>
-                                                </div>
-                                                <div class="input-cell" class="input-cell" style="margin-top: 2%;">
-                                                    <label for="" class="not-required">Gender </label>
-                                                    <select name="team-gender" class="form-select gender-team"
-                                                        name="year" required id="team-member-gender">
-                                                        <option value="Male">Male</option>
-                                                        <option value="Female">Female</option>
-                                                    </select>
-                                                    <p class="input-explanation">Select Gender of the member</p>
-                                                </div>
-
-                                                <button id="newMemberAddBtn" onclick="addTeamMember()">Submit</button>
-
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="register-wrapper">
-                                    <div class="register-button">
-                                        <button type="submit" name="Register" value="Register"
-                                            id="register">Register</button>
-                                    </div>
-                                </div>
-
-
-                                <div class="techPower"> <span>For Technical Queries contact: <br> <span> <span
-                                                class="boldName">Manan Agrawal</span> (+91-8000007505), <span
-                                                class="boldName">Anshal Shukla</span> (+91-8058088802) </span> </span>
-                                </div>
-
-                            </form>
-
+    <marquee direction="right">
+        Registrations have closed
+    </marquee>
+    <div id="wrapper">
+        <section class="main-section-landing">
+            <div class="viewMobile"><a style="text-decoration: none; color: white"
+                    href="https://www.bits-bosm.org/ebosm.html" target="_blank">Ignition</a></div>
+            <nav>
+                <div class="left-stuff">
+                    <div class="sub-left">
+                        <div id="bosm-logo">
+                            <!-- <img id="navLogo" src="/assets/bosm-logo.png" alt=""> -->
                         </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-
-
-    </section>
-
-
-
-
-
-
-    <!-- About Section -->
-
-    <section class="section" id="about-section">
-        <div class="about-wrapper">
-            <div class="about-heading">
-                About Us
-            </div>
-            <div class="about-description">
-                <div class="about-left">
-
-                    <p>
-                        After more than a year-long wait and boredom due to the pandemic, all of us have been waiting to
-                        taste the campus life. Sports events are an integral part of our campus life and a way to bond
-                        among our peers. We have an exciting event lined up for you. We present BITS Premier League
-                        (BPL), a competition for everyone to showcase their talents and strive to be the best. <br><br>
-
-
-                        Mark your calendar for a couple of engaging and refreshing weekends, 19th to 21st November and
-                        26th to 28th November, and be prepared to get tested among your peers. The event will consist of
-                        various sports tournaments including Cricket, Ultimate Frisbee, Athletics, Football, Table
-                        Tennis and many more. The online games included are CSGO, Valorant, CODM and FIFA. The dates for
-                        the same are 21st - 24th November.<br><br>
-
-                    </p>
-                    <h3>Updated Rules</h3><br>
-                    <ol>
-                        <li>All BITSians and Faculty members are welcome to participate in all sports.</li>
-                        <li>On-spot registrations won’t be allowed.</li>
-                        <li>We are extending the deadline to register for BPL to 15th November 11:59 PM. Students can
-                            register for events using the registration portal.</li>
-                        <li>We are adding the following events for Badminton-
-
-                            Badminton Boys doubles- Two boys should register together. Matches would be best of 3.
-
-                            Badminton Girls doubles- Two girls should register together. Matches would be best of
-                            3.<br>You may participate in both the mixed team and doubles events.</li>
-                        <li>BITSian Boys are now allowed to register in any two sports.
-
-                            For those who have already registered in any sport - You can now register in any other sport
-                            except for Cricket and Football.
-
-                            For those who have not registered in BPL -
-
-                            You can either register in Cricket or Football as your first sport and register in any other
-                            sport except for Cricket and Football as your second sport.
-
-                            Or, you can register in any two sports, neither of them can be Cricket/Football.
-
-                            The registration portal would accept registrations for the 2nd sport from 15th November 7 AM
-                            till 15th November EOD. </li>
-                    </ol><br>Note: Any individual can participate in only a maximum of two sports. We will try to
-                    resolve all the clashes as much as possible.
-
-
-
-
-
-
-
-                </div>
-                <div class="about-right">
-                    <!-- <img id="about-image" src="/assets/aboutImage.png" alt="BPL image"> -->
-                </div>
-            </div>
-        </div>
-
-
-
-        <!-- events Section -->
-
-        <div class="events-wrapper">
-            <div class="events-wrapper" id="events">
-                <div class="events-index">
-                    <div class="events-title">GAMES</div>
-
-                    <div class="events-container">
-                        <!-- Events card goes here -->
-                    </div>
-
-
-                    <div class="events-nav-dots">
-                        <!-- Events card pages naigation dot goes here -->
+                        <div class="left-nav">
+                            <span><a style="text-decoration: none; color: white" href="#about-section">About Us
+                                </a></span>
+                            <span><a style="text-decoration: none; color: white" href="#events">Games</a></span>
+                        </div>
                     </div>
                 </div>
-                <div class="event-background-asset-01"></div>
-                <div class="event-background-asset-02"></div>
-                <div class="event-background-asset-03"></div>
+                <div class="right-stuff">
+                    <div class="hide">
+                        <span><a style="text-decoration: none; color: white" href="ebosm.html"
+                                target="_blank">Ignition</a></span>
+                        <span><a style="text-decoration: none; color: white" href="contact.html">Contact
+                                Us</a></span>
+                    </div>
+                    <div> <span> <span data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="runAnimations()"
+                                style="     border: #FF4654 solid 2px;padding: 2px 10px;
+                    border-radius: 8px; padding: 10px 10px;">Register</span></span></div>
+                </div>
+                </div>
+            </nav>
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <!-- <li><a style="text-decoration: none; color: white" href="https://www.bits-bosm.org/">Home</a></li> -->
+                    <li><a style="text-decoration: none; color: white" href="ebosm.html" target="_blank">Ignition</a></li>
+                    <li><a style="text-decoration: none; color: white" href="contact.html" target="_blank">Contact
+                            Us</a></li>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="runAnimations()"
+                        style="color: #FF4654;">Register</li>
+                </ul>
             </div>
-        </div>
-
-    </section>
+            <!--
+            <div class="main-heading"><img src="assets/BPLtitle.png"> </div> -->
+            <div class="mobile-heading"><img id="mobile-bg" src="assets/BPLtitle.png"></div>
+            <div class="mobileRegister">
+                <span data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="runAnimations()" style="border: #FF4654 solid 2px;padding: 2px 10px;
+        border-radius: 10px;">Register</span>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="registration-container">
+                                <button class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <h1>Registration</h1>
+                                <form action="#" method="PUT" id="regform">
+                                    <div class="input-row">
+                                        <div class="input-column">
+                                            <div class="input-cell" data-aos="zoom-in" style="padding-top: 2%"
+                                                id="name-wrap">
+                                                <label for="">Captain's Name</label>
+                                                <input name="name" type="text" required id="name">
+                                                <p class="input-explanation">Type in your first and last name</p>
+                                            </div>
+                                            <div class="input-cell" data-aos="zoom-in" class="input-cell"
+                                                style="padding-top: 2%;">
+                                                <label for="">Captain's BITS Mail</label>
+                                                <input name="email" type="email" required id="email"
+                                                    pattern="[a-zA-Z][0-9]+@[a-zA-Z]+\.bits-pilani\.ac\.in">
+                                                <p class="input-explanation">Type in your BITS Mail</p>
+                                            </div>
+                                            <div class="input-cell" data-aos="zoom-in" class="input-cell"
+                                                style="padding-top: 2%;">
+                                                <label for="">Captain's Phone</label>
+                                                <input name="phone" type="tel" required id="phone">
+                                                <p class="input-explanation phone-explanation">Type your Phone Number
+                                                    (0123456789)
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="input-column">
+                                            <div class="input-cell" class="input-cell" style="padding-top: 2%;">
+                                                <label for="">Captain's BITS ID </label>
+                                                <input name="bits-id" type="text"
+                                                    pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]||FACULTY" required
+                                                    id="bits-id">
+                                                <p class="input-explanation" style="
+                                                font-size: 0.79rem;
+                                            ">Type in your BITS ID or "FACULTY" if you are faculty member</p>
+                                            </div>
+                                            <div class="input-cell" class="input-cell" style="padding-top: 2%;">
+                                                <label for="" class="not-required">Sports</label>
+                                                <select name="sports" id="sports_opt" class="form-select select-input"
+                                                    onchange="showGenderStatus()">
+                                                </select>
+                                                <div class="selected-sports">
+                                                    <p class="input-explanation">You can select your Sport</p>
+                                                </div>
+                                            </div>
+                                            <div class="input-cell" class="input-cell" style="margin-top: 2%;">
+                                                <label for="" class="not-required">Captain's Gender </label>
+                                                <select name="gender" class="form-select gender-team" name="year" required
+                                                    onchange="showGenderStatus()" id="member-gender">
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                </select>
+                                                <p class="input-explanation">Select Your Gender</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="add-team-wrapper">
+                                        <hr>
+                                        <div class="input-cell" style="padding-top: 2%" id="name-wrap">
+                                            <label for="">Team Name</label>
+                                            <input name="team-name" type="text" required id="team-name">
+                                            <p class="input-explanation team-input-explanation">Type in Team Name</p>
+                                        </div>
+                                        <span id="team-gender-status"></span>
+                                        <div class="input-cell" style="padding-top: 2%" id="team-members-wrap">
+                                            <label for="">Team Members</label>
+                                            <button type="button" id="newMemberBtn" onclick="showNewMemberForm()">Add a
+                                                Teammate</button>
+                                            <ul id="members"></ul>
+                                            <div class="add-team-member">
+                                                <div class="add-team-row">
+                                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
+                                                        <label for="">Name</label>
+                                                        <input name="team-member-name" type="text" id="team-member-name">
+                                                        <p class="input-explanation team-input-explanation">Type in Name
+                                                            of
+                                                            the member</p>
+                                                    </div>
+                                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
+                                                        <label for="">Email</label>
+                                                        <input name="team-member-email" type="email" id="team-email">
+                                                        <p class="input-explanation team-input-explanation">Type in
+                                                            Email of
+                                                            the member</p>
+                                                    </div>
+                                                    <div class="input-cell" style="padding-top: 2%" id="name-wrap">
+                                                        <label for="">BITS ID</label>
+                                                        <input name="team-member-bitsid"
+                                                            pattern="20[1-2][0-9][A-Za-z0-9]{4}[0-9]{4}[pP]" type="text"
+                                                            id="team-bitsid">
+                                                        <p class="input-explanation team-input-explanation">Type in BITS
+                                                            ID
+                                                            of the member</p>
+                                                    </div>
+                                                </div>
+                                                <div class="add-team-row">
+                                                    <div class="input-cell" style="padding-top: 2%" id="">
+                                                        <label for="">Phone Number</label>
+                                                        <input name="team-member-phone" type="text" id="team-phone">
+                                                        <p class="input-explanation team-input-explanation">Type in
+                                                            Phone
+                                                            Number of the member (0123456789)</p>
+                                                    </div>
+                                                    <div class="input-cell" class="input-cell" style="margin-top: 2%;">
+                                                        <label for="" class="not-required">Gender </label>
+                                                        <select name="team-gender" class="form-select gender-team"
+                                                            name="year" required id="team-member-gender">
+                                                            <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+                                                        </select>
+                                                        <p class="input-explanation">Select Gender of the member</p>
+                                                    </div>
+                                                    <button id="newMemberAddBtn" onclick="addTeamMember()">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="register-wrapper">
+                                        <div class="register-button">
+                                            <button type="submit" name="Register" value="Register"
+                                                id="register">Register</button>
+                                        </div>
+                                    </div>
+                                    <div class="techPower"> <span>For Technical Queries contact: <br> <span> <span
+                                                    class="boldName">Manan Agrawal</span> (+91-8000007505), <span
+                                                    class="boldName">Anshal Shukla</span> (+91-8058088802) </span> </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="section" id="about-section">
+            <div class="about-wrapper">
+                <div class="about-heading">
+                    About Us
+                </div>
+                <div class="about-description">
+                    <div class="about-left">
+                        <p>
+                            After more than a year-long wait and boredom due to the pandemic, all of us have been waiting to
+                            taste the campus life. Sports events are an integral part of our campus life and a way to bond
+                            among our peers. We have an exciting event lined up for you. We present BITS Premier League
+                            (BPL), a competition for everyone to showcase their talents and strive to be the best. <br><br>
+                            Mark your calendar for a couple of engaging and refreshing weekends, 19th to 21st November and
+                            26th to 28th November, and be prepared to get tested among your peers. The event will consist of
+                            various sports tournaments including Cricket, Ultimate Frisbee, Athletics, Football, Table
+                            Tennis and many more. The online games included are CSGO, Valorant, CODM and FIFA. The dates for
+                            the same are 21st - 24th November.<br><br>
+                        </p>
+                        <h3>Updated Rules</h3><br>
+                        <ol>
+                            <li>All BITSians and Faculty members are welcome to participate in all sports.</li>
+                            <li>On-spot registrations won’t be allowed.</li>
+                            <li>We are extending the deadline to register for BPL to 15th November 11:59 PM. Students can
+                                register for events using the registration portal.</li>
+                            <li>We are adding the following events for Badminton-
+                                Badminton Boys doubles- Two boys should register together. Matches would be best of 3.
+                                Badminton Girls doubles- Two girls should register together. Matches would be best of
+                                3.<br>You may participate in both the mixed team and doubles events.</li>
+                            <li>BITSian Boys are now allowed to register in any two sports.
+                                For those who have already registered in any sport - You can now register in any other sport
+                                except for Cricket and Football.
+                                For those who have not registered in BPL -
+                                You can either register in Cricket or Football as your first sport and register in any other
+                                sport except for Cricket and Football as your second sport.
+                                Or, you can register in any two sports, neither of them can be Cricket/Football.
+                                The registration portal would accept registrations for the 2nd sport from 15th November 7 AM
+                                till 15th November EOD. </li>
+                        </ol><br>Note: Any individual can participate in only a maximum of two sports. We will try to
+                        resolve all the clashes as much as possible.
+                    </div>
+                    <div class="about-right">
+                        <!-- <img id="about-image" src="/assets/aboutImage.png" alt="BPL image"> -->
+                    </div>
+                </div>
+            </div>
+            <!-- events Section -->
+            <div class="events-wrapper">
+                <div class="events-wrapper" id="events">
+                    <div class="events-index">
+                        <div class="events-title">GAMES</div>
+                        <div class="events-container">
+                            <!-- Events card goes here -->
+                        </div>
+                        <div class="events-nav-dots">
+                            <!-- Events card pages naigation dot goes here -->
+                        </div>
+                    </div>
+                    <div class="event-background-asset-01"></div>
+                    <div class="event-background-asset-02"></div>
+                    <div class="event-background-asset-03"></div>
+                </div>
+            </div>
+        </section>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
