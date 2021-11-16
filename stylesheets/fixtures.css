@@ -1,0 +1,326 @@
+
+.fixtureContainer {
+    width: 100%;
+  }
+  
+  .fixtures {
+    background: #2c2c2c;
+    display: flex;
+    border-radius: 4px;
+    width: 80%;
+    justify-content: space-between;
+    margin-bottom: 4%;
+  }
+  
+  .game {
+    width: 100%;
+    text-align: center;
+    padding: 2.5% 0;
+    cursor: pointer;
+  }
+  
+  .selected {
+    color: #070507;
+    font-weight: bold;
+    background: white;
+  }
+  
+  .gameName::before {
+    content: "";
+    width: 10%;
+    background: #2196f3;
+    height: 3px;
+    margin-right: 2%;
+  }
+  
+  .gameName {
+    display: flex;
+    color: #2196f3;
+    align-items: center;
+    margin: 10vh 0 1vh 0;
+    letter-spacing: 2.5px;
+  }
+  
+  .gameMembers {
+    display: flex;
+    padding: 0 10%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .member {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 3vh 0;
+  }
+  
+  .member:before {
+    content: "";
+    display: block;
+    position: relative;
+    background: #2196f3;
+    /* left: 50%; */
+    width: 1.5px;
+    border-radius: 0.75px;
+    height: 10%;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index: 1;
+    transition: 0.2s;
+  }
+  
+  .member:hover:before {
+    transform: scaleY(2);
+  }
+  
+  .memberImage {
+    width: 200px;
+  
+    height: 240px;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    overflow: hidden;
+  
+    -webkit-user-drag: none;
+  
+    filter: grayscale(100%) brightness(0.5);
+  
+    transition: 0.3s;
+  }
+  
+  .memberImage img {
+    height: 100%;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+  
+  .memberName {
+    text-transform: uppercase;
+    text-shadow: 0px 3px 6px #00000033;
+    color: #2196f3;
+  
+    letter-spacing: 3px;
+  
+    font-size: 1;
+  
+    font-family: "Poppins-SemiBold";
+  
+    transform: translateY(30%) scale(0.2);
+  
+    transform-origin: bottom left;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .designation {
+    font-family: "Poppins";
+  
+    transform: translateY(20%);
+  
+    font-size: 0.9em;
+  
+    color: #e0e0e0;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .hide {
+    opacity: 0;
+  }
+  
+  .links {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.2s;
+    transform: translateY(50%);
+  }
+  .links img {
+    width: 20px;
+  }
+  .links a {
+    text-decoration: none;
+  }
+  
+  .member:hover .hide {
+    opacity: 1;
+  }
+  
+  .member:hover .memberName {
+    transform: translateY(0%) scale(1);
+  }
+  
+  .member:hover .designation {
+    transform: translateY(-10%) scale(1);
+  }
+  
+  .member:hover .links {
+    transform: translateY(20%);
+  }
+  
+  .member:hover .memberImage {
+    filter: grayscale(0%) brightness(1);
+  }
+  
+  .custom-select {
+    display: none;
+    position: relative;
+    text-transform: uppercase;
+    /* font-family: Arial; */
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: #2c2c2c;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    /* top: 14px; */
+    right: 5%;
+    width: 0;
+    height: 0;
+    transform: translateY(25%);
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,
+  .select-selected {
+    display: flex;
+    color: #ffffff;
+    padding: 4%;
+    /* border: 1px solid transparent; */
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: #2c2c2c;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover,
+  .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+    background-color: hsl(240deg 8% 93%);
+    color: #2c2c2c !important;
+  }
+  .memberTopLine {
+    display: none;
+  }
+  @media only screen and (max-width: 1024px) {
+    .member {
+      width: 33%;
+      height: max-content;
+      overflow: hidden;
+    }
+    .memberTopLine {
+      display: flex;
+      content: "";
+  
+      background: #2196f3;
+      /* left: 50%; */
+      width: 1.5px;
+      border-radius: 0.75px;
+      height: 20px;
+      transform: scaleY(0);
+      transform-origin: top;
+      z-index: 1;
+      transition: 0.2s;
+    }
+    .member:hover .memberTopLine {
+      transform: scaleY(2);
+    }
+    .artworkWrapper {
+      font-size: 1em;
+    }
+    .gameMembers {
+      padding: 2%;
+    }
+  
+    .hide {
+      opacity: 1;
+    }
+  
+    .memberName {
+      font-size: 1.3em;
+  
+      /* transform: translateY(-40%) scale(1); */
+      transform: scale(1) translateY(10%);
+    }
+  
+    .select-items div,
+    .select-selected {
+      padding: 2%;
+    }
+    .designation {
+      font-size: 1em;
+      /* transform: translateY(-50%) scale(1); */
+      transform: scale(1) translateY(10%);
+    }
+    .member:hover .memberName {
+      transform: translateY(0%) scale(1);
+    }
+  
+    .member:hover .designation {
+      transform: translateY(0%) scale(1);
+    }
+  
+    .links {
+      width: 100%;
+      z-index: 1;
+      margin-top: 10px;
+      justify-content: space-evenly;
+      transform: translateY(0%) scale(0.9);
+    }
+    .links img {
+      width: 20px;
+    }
+  
+    .departments {
+      display: none;
+    }
+  
+    .custom-select {
+      display: block;
+      width: 90%;
+    }
+    .landingSection h1 {
+      letter-spacing: 0;
+    }
+    .gameContainer {
+      padding-bottom: 10vh;
+    }
+  }
+  
