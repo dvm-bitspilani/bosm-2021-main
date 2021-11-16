@@ -1,43 +1,41 @@
-
 @font-face {
   font-family: "affirmative";
   src: url("../fonts/affirmative/Affirmative.ttf");
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-nav *{
-  font-family:  "affirmative";
+nav * {
+  font-family: "affirmative";
 }
 
-nav span, .viewMobile{
-  color:white;
+nav span,
+.viewMobile {
+  color: white;
   font-size: 26px;
   padding: 2px 0px;
   text-decoration: none;
   letter-spacing: 0.1em;
- cursor: pointer;
- margin: 0px 12px;
-
+  cursor: pointer;
+  margin: 0px 12px;
 }
 
-.viewMobile{
-  font-family:  "affirmative";
+.viewMobile {
+  font-family: "affirmative";
   padding: 1rem;
   display: none;
   text-transform: uppercase;
 }
 
-nav span:hover{
+nav span:hover {
   transform: scale(1.05);
   transition: 0.6s;
   /* padding: 5px 25px 10px; */
-
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   padding: 10px 2rem;
@@ -50,238 +48,215 @@ nav{
   z-index: 19;
 }
 
-.hide span{
+.hide span {
   margin-right: 40px;
 }
-nav div{
+nav div {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
 }
 
+.left-nav span{
+  padding: 2px 1rem;
+}
 
-  .menu-btn {
-    --box-shadow-color: rgba(255, 101, 47, 0.2);
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    right: 30px;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    cursor: pointer;
-    /* border: 5px solid #fff; */
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .menu-btn__burger,
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
-    width: 42px;
-    height: 2.4px;
+.menu-btn {
+  --box-shadow-color: rgba(255, 101, 47, 0.2);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 30px;
 
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px var(--box-shadow-color);
-  
-    transition: all 0.5s ease-in-out;
-  }
-  .menu-btn__burger::before,
-  .menu-btn__burger::after {
-    content: "";
-    position: absolute;
-  }
-  .menu-btn__burger::before {
-    transform: translateY(-16px);
-  }
-  .menu-btn__burger::after {
-    transform: translateY(16px);
-  }
-  
-  /* ANIMATION */
-  .menu-btn.open .menu-btn__burger {
-    transform: translateX(-50px);
-    background-color: transparent;
-    box-shadow: none;
-  }
-  .menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-  }
-  .menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  cursor: pointer;
+  /* border: 5px solid #fff; */
+  transition: all 0.5s ease-in-out;
+}
 
+.menu-btn__burger,
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  width: 42px;
+  height: 2.4px;
 
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px var(--box-shadow-color);
 
- #menuToggle
- {
-   display: none;
-   position: relative;
-   top: 30px;
-   left: 30px;
-   width: 50%;
-   z-index: 1;
-   
-   -webkit-user-select: none;
-   user-select: none;
- }
- 
- #menuToggle a
- {
-   text-decoration: none;
-   color: #232323;
-   
-   transition: color 0.3s ease;
- }
- 
- #menuToggle a:hover
- {
-   color: tomato;
- }
- 
- 
- #menuToggle input
- {
-   display: block;
-   width: 40px;
-   height: 32px;
-   position: absolute;
-   top: -7px;
-   left: -5px;
-   
-   cursor: pointer;
-   
-   opacity: 0; /* hide this */
-   z-index: 2; /* and place it over the hamburger */
-   
-   -webkit-touch-callout: none;
- }
- 
- /*
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background-color: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+#menuToggle {
+  display: none;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  width: 50%;
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
   * Just a quick hamburger
   */
- #menuToggle span
- {
-   display: block;
-   width: 33px;
-   height: 4px;
-   margin-bottom: 5px;
-   position: relative;
-   
-   background: #cdcdcd;
-   border-radius: 3px;
-   
-   z-index: 1;
-   
-   transform-origin: 4px 0px;
-   
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               opacity 0.55s ease;
- }
- 
- #menuToggle span:first-child
- {
-   transform-origin: 0% 0%;
- }
- 
- #menuToggle span:nth-last-child(2)
- {
-   transform-origin: 0% 100%;
- }
- 
- /* 
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
   * Transform all the slices of hamburger
   * into a crossmark.
   */
- #menuToggle input:checked ~ span
- {
-   opacity: 1;
-   transform: rotate(45deg) translate(-2px, -1px);
-   background: #b7b7b7;
- }
- 
- /*
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #b7b7b7;
+}
+
+/*
   * But let's hide the middle one.
   */
- #menuToggle input:checked ~ span:nth-last-child(3)
- {
-   opacity: 0;
-   transform: rotate(0deg) scale(0.2, 0.2);
- }
- 
- /*
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
   * Ohyeah and the last one should go the other direction
   */
- #menuToggle input:checked ~ span:nth-last-child(2)
- {
-   transform: rotate(-45deg) translate(0, -1px);
- }
- 
- /*
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
   * Make this absolute positioned
   * at the top left of the screen
   */
- #menu
- {
-   position: absolute;
-   width: 300px;
-   margin: -100px 0 0 -50px;
-   padding: 50px;
-   padding-top: 125px;
-   height: 107vh;
-   background: black;
-   list-style-type: none;
-   -webkit-font-smoothing: antialiased;
-   /* to stop flickering of text in safari */
-   
-   transform-origin: 0% 0%;
-   transform: translate(-100%, 0);
-   
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
- }
- 
- #menu li
- {font-family: 'affirmative';
-   padding: 10px 0;
-   font-size: 22px;
- }
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  height: 107vh;
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
 
- #menuToggle input:checked ~ ul
- {
-   transform: none;
- }
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
 
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
 
+#menu li {
+  font-family: "affirmative";
+  padding: 10px 0;
+  font-size: 22px;
+}
 
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
 
-  @media (max-width:768px) {
-
-    #menuToggle{
-      display: block;
-    }
-    .menu-btn{
-        right: 20px;
-        top: 10px;
-    }
-
-    nav{
-     display: none;
-    }
-
-    .hide{
-      display: none;
-    }
-
-    .viewMobile{
-      display: none;
-    }
-
-
-  
-
-    
+@media (max-width: 768px) {
+  #menuToggle {
+    display: block;
   }
+  .menu-btn {
+    right: 20px;
+    top: 10px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .viewMobile {
+    display: none;
+  }
+}
