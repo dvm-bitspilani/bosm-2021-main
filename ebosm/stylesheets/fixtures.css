@@ -1,0 +1,67 @@
+.fixtures{
+    width: 90%;
+    margin:auto;
+  
+    /* flex-wrap: wrap;; */
+}
+.fixtures-wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    gap:40px;
+    margin-top: 40px;
+}
+.date-wise-fixtures h3{
+    color: white;
+    text-align: center;
+font-family: 'Affirmative';
+}
+
+
+.fixture-card {
+    /* flex:50%; */
+    padding: 20px 30px;
+color: white;
+      background: linear-gradient(
+            101.48deg,
+            #000000 0.59%,
+            rgba(0, 0, 0, 0.7) 56.65%,
+            rgba(0, 0, 0, 0.4) 98.59%
+      );
+      /* backdrop-filter: blur(10px); */
+      border-radius: 20px;
+      width: 320px;
+}
+
+.fixture-card h6{
+    text-align: center;
+
+}
+.match-info{
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+}
+
+.match-date p{
+    margin-bottom: 8px;
+}
+.match-teams p{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.scores p{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.match-date-no{
+    font-family: 'Affirmative';
+    letter-spacing: 0.5px;
+}
+.match-time-no{
+    font-family: 'Affirmative';
+    letter-spacing: 0.5px;
+
+}
