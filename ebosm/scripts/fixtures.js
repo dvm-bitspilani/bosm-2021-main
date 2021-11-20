@@ -14,7 +14,7 @@ for (let k = 0; k < 4; k++) {
   const data = await allDates.json();
   console.log(data);
   for (let i = 0; i < 4; i++) {
-    date[i].map(({ game, teamA, teamB, scoreA,scoreB, time }) => {
+    data[i].map(({ game, teamA, teamB, scoreA,scoreB, time }) => {
       let gameCard = document.createElement("div");
       let dateObj = new Date(time);
       if ((new Date()).getDate() <= dateObj.getDate()) {
