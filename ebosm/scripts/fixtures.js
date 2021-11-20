@@ -1,111 +1,70 @@
-const fixtureContainer = document.getElementsByClassName(".fixtures")[0];
+for (let k = 0; k < 4; k++) {
+  let gameName;
+  k == 0
+    ? (gameName = "valo")
+    : k == 1
+      ? (gameName = "csgo")
+      : k == 2
+        ? (gameName = "codm")
+        : (gameName = "fifa");
+
+  const allDates = await fetch(
+    `https://bits-bosm.org/bosm2021/registrations/bosm_fixtures/${gameName}/`
+  );
+  const data = await allDates.json();
+  console.log(data);
+  for (let i = 0; i < 4; i++) {
+    date[i].map(({ game, teamA, teamB, scoreA,scoreB, time }) => {
+      let gameCard = document.createElement("div");
+      let dateObj = new Date(time);
+      if ((new Date()).getDate() <= dateObj.getDate()) {
+        gameCard.className = "fixture-card";
+        gameCard.innerHTML = `
+  <h6>${game} match</h6>
+  <div class="match-info">
+      <div class="match-teams">
+          <p>${teamA}</p>
+          <p>${teamB}</p>
+      </div>
+      <div class="match-date">
+          <p>${dateObj.toString().split(' ')[0]}<span class="match-date-no">${dateObj.getDate()}</span> ${dateObj.toLocaleString("default", {
+          month: "short",
+        })}</p>
+          <h4 class="match-time-no">${dateObj.getHours() + ":" + dateObj.getMinutes()
+          }</h4>
+      </div>
 
 
-var ids = [1, 2, 3, 4];
-const developers = ids.map(() => {
-  return [
-    {
-      year: 2017,
-      members: [],
-    },
+  </div>>`;
+      }
 
-    {
-      year: 2018,
-      members: [],
-    },
+      else {
+        gameCard.className = "fixture-card past-events";
+        gameCard.innerHTML = `
+        <div style="display:flex; justify-content:space-between">
+        <h6>${game} match</h6> <span>${dateObj.toString().split(' ')[0]}, ${dateObj.getDate()} + ${dateObj.toLocaleString("default", {
+          month: "short",
+        })} </span>
+    </div>
+    <div class="match-info">
+        <div class="match-teams">
+            <p>${teamA}</p>
+            <p>${teamB}</p>
+        </div>
+        <div class="scores">
+            <p>${scoreA}</p>
+            <p>${scoreB}</p>
+        </div>
+    </div>
 
-    {
-      year: 2019,
-      members: [],
-    },
-    {
-      year: 2020,
-      members: [],
-    },
-  ];
-});
+    <h6 style="text-align: center;width: 100%;">${(scoreA>scoreB)?teamA:teamB} <span
+            style="font-family:'affirmative'">WON</span></h6>
+`;   
 
-
-const updategame = async (num) => {
-  for (let j = 0; j < 5; j++) {
-    let game;
-    j == 0
-      ? (game = "Frontend")
-      : j == 1
-      ? (game = "AppDev")
-      : j == 2
-      ? (game = "Video")
-      : j == 3
-      ? (game = "Design")
-      : (game = "Backend");
-    for (let i = 0; i < 4; i++) {
-      const mem = await fetch(
-        `https://bits-dvm.org/portfolio/members/20${i + 17}/${game}`
-      );
-      const data = await mem.json();
-      developers[j][i].members = data;
-    }
+}
+        document
+          .getElementById(`${gameName + (i + 1)}`)
+          .appendChild(gameCard);
+            });
   }
-  gameContainer.innerHTML = "";
-
-  developers[num].map(({ year, members }) => {
-    let gameName = document.createElement("h2");
-    let createDiv = document.createElement("div");
-
-    createDiv.innerHTML = "";
-    gameName.className = "gameName";
-    gameName.innerHTML = year;
-    if (members.length != 0) {
-      gameContainer.appendChild(gameName);
-      gameContainer.appendChild(createDiv);
-      createDiv.className = "gameMembers";
-
-      members.map(
-        ({
-          name,
-          designation,
-          PhotoLink,
-          TwitterLink,
-          GithubLink,
-          DribbleLink,
-          InstagramLink,
-          BehanceLink,
-          LinkedInLink,
-        }) => {
-          let member = document.createElement("div");
-          member.className = "member";
-          member.innerHTML = `
-          <div class="memberTopLine"></div>
-          <div class="memberImage">
-                        <img src="${PhotoLink}">
-                    </div>
-                    <div class="memberName hide">
-                        ${name}
-                    </div>
-                    <div class="designation hide">
-                        ${designation || "Sport"} 
-                    </div>
-                    <div class="links hide">
-                    </div>`;
-
-          createDiv.appendChild(member);
-        }
-      );
-      gameContainer.appendChild(createDiv);
-    }
-  });
-};
-
-const gameChange = (e) => {
-  let num = 0;
-
-  for (let i = 0; i < elements.length; i++) {
-    elements[i].className = "game";
-    if (elements[i] === e) {
-      num = i;
-    }
-  }
-  e.classList.add("selected");
-
-  updategame(num);
-};
+}

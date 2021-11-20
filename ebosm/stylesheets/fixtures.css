@@ -65,3 +65,12 @@ color: white;
     letter-spacing: 0.5px;
 
 }
+
+@media (max-width:768px){
+.fixtures-wrapper{
+    grid-template-columns: auto;
+}
+.date-wise-fixtures{
+margin-top: 30px;
+}
+}
