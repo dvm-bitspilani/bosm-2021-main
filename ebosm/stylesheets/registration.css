@@ -8,9 +8,7 @@
     src: url("../fonts/affirmative/Affirmative.ttf");
 }
 
-.registration-container {
-    /* width: 60vw; */
-    /* height: 85vh; */
+.modal-body{
     /* background-image: url("../assets/Bg.png"); */
     background-color: #FF2748;
     background-size: cover;
@@ -20,6 +18,12 @@
     overflow-x: hidden;
     /* overflow-y: scroll; */
     opacity: 0.95;
+}
+
+.registration-container {
+    /* width: 60vw; */
+    /* height: 85vh; */
+
 }
 
 .registration-container>h1 {
