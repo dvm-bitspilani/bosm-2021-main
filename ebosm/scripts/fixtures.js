@@ -15,7 +15,7 @@ async function fetchData() {
     const data = await allDates.json();
     console.log(data);
     for (let i = 0; i < data.length; i++) {
-      data[i].map(({ Game, teamA, teamB, score, Time, Type }) => {
+      data[i].map(({ Game, teamA, teamB, score, Time, Type, Status }) => {
     
         let matchType;
        switch (Type) {
@@ -32,7 +32,7 @@ case 3: matchType="Finals"
 
         let gameCard = document.createElement("div");
         let dateObj = new Date(Time);
-        if ((new Date()).getDate() <= dateObj.getDate()) {
+        if (Status===2||Status===1) {
           gameCard.className = "fixture-card";
           gameCard.innerHTML = `
   <h6>${matchType}</h6>
@@ -57,7 +57,7 @@ case 3: matchType="Finals"
           gameCard.className = "fixture-card past-events";
           gameCard.innerHTML = `
         <div style="display:flex; justify-content:space-between">
-        <h6>${matchType}</h6> <span>${dateObj.toString().split(' ')[0]}, ${dateObj.getDate()} + ${dateObj.toLocaleString("default", {
+        <h6>${matchType}</h6> <span>${dateObj.toString().split(' ')[0]}, ${dateObj.getDate()} ${dateObj.toLocaleString("default", {
             month: "short",
           })} </span>
     </div>
@@ -82,6 +82,23 @@ case 3: matchType="Finals"
           .appendChild(gameCard);
       });
     }
+    
+    
+    let r;
+switch (new Date().getDate()) {
+  case 21: r=1
+    break;
+  case 22: r = 2
+    break;
+  case 23: r = 3
+    break;
+  case 24: r = 4
+    break;
+    
+}
+
+document.getElementById(gameName+'Tag').setAttribute('href','#'+ gameName +'-'+  r)
+
   }
 }
 
