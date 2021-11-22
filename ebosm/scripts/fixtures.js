@@ -27,9 +27,8 @@ async function fetchData() {
            break;
 case 3: matchType="Finals"
         }
-        let scoreA = score.split('-')[0];
-        let scoreB = score.split('-')[1];
-
+        let scoreA = parseInt(score.split('-')[0]) ;
+        let scoreB = parseInt(score.split('-')[1]) ;
         let gameCard = document.createElement("div");
         let dateObj = new Date(Time);
         if (Status===2||Status===1) {
