@@ -14,7 +14,7 @@
     background-size: cover;
     background-position: center;
     /* border-radius: 10px; */
-    padding: 2% 5% 1%;
+    padding: 2% 5% 5% !important;
     overflow-x: hidden;
     /* overflow-y: scroll; */
     opacity: 0.95;
@@ -435,7 +435,7 @@ ul li{
 
     .registration-container {
         width: initial;
-        padding: 1rem
+        padding: 0.5rem
     }
 
     .input-cell {
@@ -461,5 +461,7 @@ ul li{
     hr{
         display: none;
     }
-
+.btn-close{
+    right: 1% !important;
+}
 }

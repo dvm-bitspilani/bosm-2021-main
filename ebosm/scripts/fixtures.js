@@ -13,9 +13,26 @@ async function fetchData() {
       `https://bits-bosm.org/bosm2021/registrations/bosm_fixtures/${gameName}/`
     );
     const data = await allDates.json();
-    console.log(data);
-    for (let i = 0; i < data.length; i++) {
-      data[i].map(({ Game, teamA, teamB, score, Time, Type, Status }) => {
+    const newDates = await fetch(`https://bits-bosm.org/bosm2021/registrations/ebosm_fixtures/${gameName}`);
+    const data2 = await newDates.json();
+    let newData = [];
+    if (data[0] != null) {
+      newData.push(data[0])
+    }
+    else {
+      newData.push([]);
+    }
+    for (let a = 0;a < 3;a++) {
+      if (data2[a] != null) {
+        newData.push(data2[a])
+      }
+      else {
+        newData.push([]);
+      }
+    }
+    console.log(newData);
+    for (let i = 0; i < newData.length; i++) {
+      newData[i].map(({ Game, teamA, teamB, score, Time, Type, Status }) => {
     
         let matchType;
        switch (Type) {
@@ -27,9 +44,8 @@ async function fetchData() {
            break;
 case 3: matchType="Finals"
         }
-        let scoreA = score.split('-')[0];
-        let scoreB = score.split('-')[1];
-
+        let scoreA = parseInt(score.split('-')[0]) ;
+        let scoreB = parseInt(score.split('-')[1]) ;
         let gameCard = document.createElement("div");
         let dateObj = new Date(Time);
         if (Status===2||Status===1) {
